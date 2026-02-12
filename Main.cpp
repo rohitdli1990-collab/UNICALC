@@ -366,11 +366,10 @@ public:
     static float Weight() {
         int a;
 
-        cout<<"Welcome Weight Conveter";
-        cout<<"1. ";
+        cout<<"Welcome Weight Converter";
+        cout<<"1. Gram to ";
         cout<<"2. ";
-        cout<<"1. ";
-        cout<<"2. ";
+
         return 0;
     }
 };
