@@ -594,7 +594,7 @@ public:
             case 1:
                 result = a*0.000000000926566931;
                 cout<<"Your result is "<<result<<endl;
-            case 2;
+            case 2:
                 result = a*0.000816273222973193;
                 cout<<"Your result is "<<result<<endl;
             case 3:
