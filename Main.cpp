@@ -598,11 +598,64 @@ public:
                 result = a*0.000816273222973193;
                 cout<<"Your result is "<<result<<endl;
             case 3:
-                result =
+                result = a*0.277777777777777777;
+                cout<<"Your result is "<<result<<endl;
+            case 4:
+                result = a*0.000277777777777777;
+                cout<<"Your result is "<<result<<endl;
+            case 5:
+                result = a*0.539956803455723542;
+                cout<<"Your result is "<<result<<endl;
+            case 6:
+                result = a*0.621371192237333969;
+                cout<<"Your result is "<<result<<endl;
+            case 7:
+                result = a*0.911344415281423155;
+                cout<<"Your result is "<<result<<endl;
+            case 8:
+                result = a*10.93613298337707786;
+                cout<<"Your result is "<<result<<endl;
             default:
                 cout<<"Invaild input";
         }
+        return 0;
     }
+
+    static float Temperature() {
+        float a;
+        int Choose;
+        float result;
+
+        cout<<"Welcome to Temperature Convertor";
+        cout<<"Celsius to Fahrenheit";
+        cout<<"Celsius to Kelvin";
+        cout<<"Celsius to Rankine";
+        cout<<"Celsius to Reaumur";
+        cout<<"Enter your choose";
+        cin>>Choose;
+        cout<<"Enter your temperature in celsius";
+        cin>>a;
+
+        switch (Choose) {
+            case 1:
+                result = a*33.8;
+                cout<<"Your result is "<<result<<endl;
+            case 2:
+                result = a*274.15;
+                cout<<"Your result is "<<result<<endl;
+            case 3:
+                result = a*493.47;
+                cout<<"your result is "<<result<<endl;
+            case 4:
+                result = a*0.8;
+                cout<<"your result is "<<result<<endl;
+            default:
+                cout<<"Invaid Input";
+        }
+        return 0;
+    }
+
+
 };
 int main() {
 
