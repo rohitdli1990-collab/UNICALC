@@ -655,7 +655,106 @@ public:
         return 0;
     }
 
+    static float Time() {
+        float a;
+        int Choose;
+        float result;
 
+        cout<<"Welcome to Time Convertor";
+        cout<<"1. Minute to year";
+        cout<<"2. Minute to week";
+        cout<<"3. Minute to Day";
+        cout<<"4. Minute to hour";
+        cout<<"5. Minute to Second";
+        cout<<"6. Minute to Millisecond";
+        cout<<"7. Minute to Microsecond";
+        cout<<"8. Minute to Picosecond";
+        cout<<"Enter your Choose";
+        cin>>Choose;
+        cout<<"Enter time in minute";
+        cin>>a;
+
+        switch (Choose) {
+            case 1:
+                result = a*0.000001902587519025;
+                cout<<"Your result is "<<result<<endl;
+            case 2:
+                result = a*0.000099206349206349;
+                cout<<"Your result is "<<result<<endl;
+            case 3:
+                result = a*0.000694444444444444;
+                cout<<"Your result is "<<result<<endl;
+            case 4:
+                result = a*0.016666666666666666;
+                cout<<"Your result is "<<result<<endl;
+            case 5:
+                result = a*60;
+                cout<<"Your result is "<<result<<endl;
+            case 6:
+                result = a*60000;
+                cout<<"your result is "<<result<<endl;
+            case 7:
+                result = a*60000000;
+                cout<<"Your result is "<<result<<endl;
+            case 8:
+                result = a*60000000000000;
+                cout<<"Your result is "<<result<<endl;
+            default:
+                cout<<"Invaild Input";
+        }
+        return 0;
+    }
+};
+
+class Currency_Convertor {
+public:
+    static float currency() {
+        float a;
+        int Currency_Choose;
+        int Pair_Choose;
+        float result;
+
+        cout<<"Welcome to Currency Convertor";
+        cout<<"1. Indian rupee(INR)";
+        cout<<"2. US Dollar(USD)";
+        cout<<"3. Euro (EUR)";
+        cout<<"4. Japanese Yen(JPY)";
+        cout<<"5. British Pound(GBP)";
+        cout<<"6. Chinese Yuan(CNY)";
+        cout<<"7. Australian Dollar(AUD)";
+        cout<<"8. Canadian Dollar(CAD)";
+        cout<<"9. Swiss Franc(CHF)";
+        cout<<"10. Hong Kong Dollar(HKD)";
+        cout<<"11. Singapore Dollar(SGD)";
+        cout<<"Enter your Serial no of Currency:- ";
+        cin>>Currency_Choose;
+
+        switch (Currency_Choose) {
+            case 1:
+                cout<<"Pairs of Indian rupee";
+                cout<<"1. USD/INR";
+                cout<<"2. EUR/INR";
+                cout<<"3. GBP/INR";
+                cout<<"4. JPY/INR";
+                cout<<"5. AUD/INR";
+                cout<<"6. CAD/INR";
+                cout<<"7. SGD/INR";
+                cout<<"8. AED/INR";
+                cout<<"9. SAR/INR";
+                cout<<"10. CHF/INR";
+                cout<<"Enter your serial no of pair:- ";
+                cin>>Pair_Choose;
+
+                if (Pair_Choose == 1) {
+
+                }
+
+            default:
+                cout<<"Invaild input";
+        }
+
+        return 0;
+    }
 };
 int main() {
 
