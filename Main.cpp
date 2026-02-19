@@ -799,6 +799,52 @@ public:
                 {
                     cout<<"Invaild Input"<<endl;
                 }
+            case 2:
+                cout<<"Pairs of US Dollar";
+                cout<<"1. INR/USD";
+                cout<<"2. EUR/USD";
+                cout<<"3. GBP/USD";
+                cout<<"4. JPY/USD";
+                cout<<"5. AUD/USD";
+                cout<<"6. CAD/USD";
+                cout<<"7. SGD/USD";
+                cout<<"8. AED/USD";
+                cout<<"9. SAR/USD";
+                cout<<"10. CHF/USD";
+                cout<<"Enter your serial number of Pair";
+                cin>>Pair_Choose;
+                cout<<"Enter your amount in us dollar";
+                cin>>a;
+
+                if (Pair_Choose == 1)
+                {
+                    result = a*0.01;
+                    cout<<"the result is "<<result<<endl;
+                }
+                else if (Pair_Choose == 2)
+                {
+                    result = a*1.18;
+                    cout<<"the result is "<<result<<endl;
+                }
+                else if (Pair_Choose == 3)
+                {
+                    result = a*1.35;
+                    cout<<"the result is "<<result<<endl;
+                }
+                else if (Pair_Choose == 4)
+                {
+                    result = a*0.0065;
+                    cout<<"the result is "<<result<<endl;
+                }
+                else if (Pair_Choose == 5)
+                {
+                    result = a+0.71;
+                    cout<<"the result is "<<result<<endl;
+                }
+                else if (Pair_Choose == 6) {
+                    result = a*0.73;
+                    cout<<"the result is "<<result<<endl;
+                }
             default:
                 cout<<"Invaild input";
         }
