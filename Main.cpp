@@ -744,11 +744,61 @@ public:
                 cout<<"10. CHF/INR";
                 cout<<"Enter your serial no of pair:- ";
                 cin>>Pair_Choose;
+                cout<<"Enter your money in Rupee:- ";
+                cin>>a;
 
                 if (Pair_Choose == 1) {
-
+                    result = a*91.07;
+                    cout<<"the result is "<<result<<endl;
                 }
-
+                else if (Pair_Choose == 2) {
+                    result = a*107.37;
+                    cout<<"the result is "<<result<<endl;
+                }
+                else if (Pair_Choose == 3)
+                {
+                    result = a*122.61;
+                    cout<<"the result is "<<result<<endl;
+                }
+                else if (Pair_Choose == 4)
+                {
+                    result = a*0.59;
+                    cout<<"the result is "<<result<<endl;
+                }
+                else if (Pair_Choose == 5)
+                {
+                    result = a*64.23;
+                    cout<<"the result is "<<result<<endl;
+                }
+                else if (Pair_Choose == 6)
+                {
+                    result = a*66.3;
+                    cout<<"the result is "<<result<<endl;
+                }
+                else if (Pair_Choose == 7)
+                {
+                    result = a*71.69;
+                    cout<<"the result is "<<result<<endl;
+                }
+                else if (Pair_Choose == 8)
+                {
+                    result = a*24.74;
+                    cout<<"The result is "<<result<<endl;
+                }
+                else if (Pair_Choose == 9)
+                {
+                    result = a*24.22;
+                    cout<<"the result is "<<result<<endl;
+                }
+                else if (Pair_Choose == 10)
+                {
+                    result = a*117.56;
+                    cout<<"the result is "<<result<<endl;
+                }
+                else
+                {
+                    cout<<"Invaild Input"<<endl;
+                }
             default:
                 cout<<"Invaild input";
         }
