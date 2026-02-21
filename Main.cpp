@@ -7,10 +7,10 @@ class Basic_Calc
 public:
     static float add()
     {
-        cout << "Enter your first number";
+        cout << "Enter your first number\n";
         float a = 0;
         cin >> a;
-        cout << "Enter your second number";
+        cout << "Enter your second number\n";
         float b = 0;
         cin >> b;
         float c = a + b;
@@ -20,10 +20,10 @@ public:
 
     static float subtract()
     {
-        cout << "Enter your first number";
+        cout << "Enter your first number\n";
         float a = 0;
         cin >> a;
-        cout << "Enter your second number";
+        cout << "Enter your second number\n";
         float b = 0;
         cin >> b;
         float c = a - b;
@@ -33,10 +33,10 @@ public:
 
     static float multiplication()
     {
-        cout << "Enter your First number ";
+        cout << "Enter your First number\n ";
         float a = 0;
         cin >> a;
-        cout << "Enter your second number";
+        cout << "Enter your second number\n";
         float b = 0;
         cin >> b;
         float c = a * b;
@@ -46,10 +46,10 @@ public:
 
     static float Percentage()
     {
-        cout << "Enter the number";
+        cout << "Enter the number\n";
         float a = 0;
         cin >> a;
-        cout << "Enter the Percentage";
+        cout << "Enter the Percentage\n";
         float b = 0;
         cin >> b;
         float c = a / b * 100;
@@ -59,7 +59,7 @@ public:
 
     static float square()
     {
-        cout << "Enter the number";
+        cout << "Enter the number\n";
         float a = 0;
         cin >> a;
         float b = a * a;
@@ -421,19 +421,19 @@ public:
         int Choose;
         float result;
 
-        cout << "Welcome Weight Converter";
-        cout << "1. Gram to Tonne";
-        cout << "2. Gram to Kilogram";
-        cout << "3. Gram to Milligram";
-        cout << "4. Gram to Microgram";
-        cout << "5. Gram to Quintal";
-        cout << "6. Gram to Pound";
-        cout << "7. Gram to Ounce";
-        cout << "8. Gram to Carat";
-        cout << "9. Gram to Liang";
-        cout << "10. Gram to Dan";
-        cout << "11. Gram to Jin";
-        cout << "12. Gram to Qian";
+        cout << "Welcome Weight Converter\n";
+        cout << "1. Gram to Tonne\n";
+        cout << "2. Gram to Kilogram\n";
+        cout << "3. Gram to Milligram\n";
+        cout << "4. Gram to Microgram\n";
+        cout << "5. Gram to Quintal\n";
+        cout << "6. Gram to Pound\n";
+        cout << "7. Gram to Ounce\n";
+        cout << "8. Gram to Carat\n";
+        cout << "9. Gram to Liang\n";
+        cout << "10. Gram to Dan\n";
+        cout << "11. Gram to Jin\n";
+        cout << "12. Gram to Qian\n";
         cout << "Enter your Choose:- ";
         cin >> Choose;
         cout << "Enter Weight in gram:- ";
@@ -489,19 +489,19 @@ public:
         int Choose;
         float result;
 
-        cout << "Welcome Area Converter";
-        cout << "1. Square meter to Square kilometer";
-        cout << "2. Square meter to Hectare";
-        cout << "3. Square meter to Are";
-        cout << "4. Square meter to Square decimeter";
-        cout << "5. Square meter to Square centimeter";
-        cout << "6. Square meter to Square millimeter";
-        cout << "7. Square meter to Acre";
-        cout << "8. Square meter to Square mile";
-        cout << "9. Square meter to Square yard";
-        cout << "10. Square meter to Square foot";
-        cout << "11. Square meter to Square inch";
-        cout << "12. Square meter to Square rod";
+        cout << "Welcome Area Converter\n";
+        cout << "1. Square meter to Square kilometer\n";
+        cout << "2. Square meter to Hectare\n";
+        cout << "3. Square meter to Are\n";
+        cout << "4. Square meter to Square decimeter\n";
+        cout << "5. Square meter to Square centimeter\n";
+        cout << "6. Square meter to Square millimeter\n";
+        cout << "7. Square meter to Acre\n";
+        cout << "8. Square meter to Square mile\n";
+        cout << "9. Square meter to Square yard\n";
+        cout << "10. Square meter to Square foot\n";
+        cout << "11. Square meter to Square inch\n";
+        cout << "12. Square meter to Square rod\n";
         cout << "Enter your Choose:- ";
         cin >> Choose;
         cout << "Enter Area in Square Meter:- ";
@@ -580,20 +580,20 @@ public:
         int Choose;
         float result;
 
-        cout << "Welcome to Volume Converter";
-        cout << "1. Cubic meter to cubic millimeter";
-        cout << "2. Cubic meter to cubic decimeter";
-        cout << "3. Cubic meter to cubic centimeter";
-        cout << "4. Cubic meter to Hectoliter";
-        cout << "5. Cubic meter to liter";
-        cout << "6. Cubic meter to Deciliter";
-        cout << "7. Cubic meter to Centiliter";
-        cout << "8. Cubic meter to Millilitre";
-        cout << "9. Cubic meter to Cubic foot";
-        cout << "10. Cubic meter to Cubic inch";
-        cout << "11. Cubic meter to cubic yard";
-        cout << "12. Cubic meter to Acre-foot";
-        cout << "Enter your choose";
+        cout << "Welcome to Volume Converter\n";
+        cout << "1. Cubic meter to cubic millimeter\n";
+        cout << "2. Cubic meter to cubic decimeter\n";
+        cout << "3. Cubic meter to cubic centimeter\n";
+        cout << "4. Cubic meter to Hectoliter\n";
+        cout << "5. Cubic meter to liter\n";
+        cout << "6. Cubic meter to Deciliter\n";
+        cout << "7. Cubic meter to Centiliter\n";
+        cout << "8. Cubic meter to Millilitre\n";
+        cout << "9. Cubic meter to Cubic foot\n";
+        cout << "10. Cubic meter to Cubic inch\n";
+        cout << "11. Cubic meter to cubic yard\n";
+        cout << "12. Cubic meter to Acre-foot\n";
+        cout << "Enter your choose:- ";
         cin >> Choose;
         cout << "Enter your Volume in cubic meter:- ";
         cin >> a;
@@ -647,15 +647,15 @@ public:
         int Choose;
         float result;
 
-        cout << "Welcome to Speed Convertor";
-        cout << "1. Km/hr to Lightspeed";
-        cout << "2. Km/hr to Mach";
-        cout << "3. Km/hr to Meter/sec";
-        cout << "4. Km/hr to Km/sec";
-        cout << "5. Km/hr to Knot";
-        cout << "6. Km/hr to Mile/hr";
-        cout << "7. Km/hr to Foot/sec";
-        cout << "8. Km/hr to Inch/sec";
+        cout << "Welcome to Speed Convertor\n";
+        cout << "1. Km/hr to Lightspeed\n";
+        cout << "2. Km/hr to Mach\n";
+        cout << "3. Km/hr to Meter/sec\n";
+        cout << "4. Km/hr to Km/sec\n";
+        cout << "5. Km/hr to Knot\n";
+        cout << "6. Km/hr to Mile/hr\n";
+        cout << "7. Km/hr to Foot/sec\n";
+        cout << "8. Km/hr to Inch/sec\n";
         cout << "Enter your Choose:- ";
         cin >> Choose;
         cout << "Enter speed in Km/hr:= ";
@@ -699,14 +699,14 @@ public:
         int Choose;
         float result;
 
-        cout << "Welcome to Temperature Convertor";
-        cout << "Celsius to Fahrenheit";
-        cout << "Celsius to Kelvin";
-        cout << "Celsius to Rankine";
-        cout << "Celsius to Reaumur";
-        cout << "Enter your choose";
+        cout << "Welcome to Temperature Convertor\n";
+        cout << "Celsius to Fahrenheit\n";
+        cout << "Celsius to Kelvin\n";
+        cout << "Celsius to Rankine\n";
+        cout << "Celsius to Reaumur\n";
+        cout << "Enter your choose:- ";
         cin >> Choose;
-        cout << "Enter your temperature in celsius";
+        cout << "Enter your temperature in celsius:- ";
         cin >> a;
 
         switch (Choose)
@@ -735,18 +735,18 @@ public:
         int Choose;
         float result;
 
-        cout << "Welcome to Time Convertor";
-        cout << "1. Minute to year";
-        cout << "2. Minute to week";
-        cout << "3. Minute to Day";
-        cout << "4. Minute to hour";
-        cout << "5. Minute to Second";
-        cout << "6. Minute to Millisecond";
-        cout << "7. Minute to Microsecond";
-        cout << "8. Minute to Picosecond";
-        cout << "Enter your Choose";
+        cout << "Welcome to Time Convertor\n";
+        cout << "1. Minute to year\n";
+        cout << "2. Minute to week\n";
+        cout << "3. Minute to Day\n";
+        cout << "4. Minute to hour\n";
+        cout << "5. Minute to Second\n";
+        cout << "6. Minute to Millisecond\n";
+        cout << "7. Minute to Microsecond\n";
+        cout << "8. Minute to Picosecond\n";
+        cout << "Enter your Choose:- ";
         cin >> Choose;
-        cout << "Enter time in minute";
+        cout << "Enter time in minute:- ";
         cin >> a;
 
         switch (Choose)
@@ -792,35 +792,35 @@ public:
         int Pair_Choose;
         float result;
 
-        cout << "Welcome to Currency Convertor";
-        cout << "1. Indian rupee(INR)";
-        cout << "2. US Dollar(USD)";
-        cout << "3. Euro (EUR)";
-        cout << "4. Japanese Yen(JPY)";
-        cout << "5. British Pound(GBP)";
-        cout << "6. Chinese Yuan(CNY)";
-        cout << "7. Australian Dollar(AUD)";
-        cout << "8. Canadian Dollar(CAD)";
-        cout << "9. Swiss Franc(CHF)";
-        cout << "10. Hong Kong Dollar(HKD)";
-        cout << "11. Singapore Dollar(SGD)";
+        cout << "Welcome to Currency Convertor\n";
+        cout << "1. Indian rupee(INR)\n";
+        cout << "2. US Dollar(USD)\n";
+        cout << "3. Euro (EUR)\n";
+        cout << "4. Japanese Yen(JPY)\n";
+        cout << "5. British Pound(GBP)\n";
+        cout << "6. Chinese Yuan(CNY)\n";
+        cout << "7. Australian Dollar(AUD)\n";
+        cout << "8. Canadian Dollar(CAD)\n";
+        cout << "9. Swiss Franc(CHF)\n";
+        cout << "10. Hong Kong Dollar(HKD)\n";
+        cout << "11. Singapore Dollar(SGD)\n";
         cout << "Enter your Serial no of Currency:- ";
         cin >> Currency_Choose;
 
         switch (Currency_Choose)
         {
         case 1:
-            cout << "Pairs of Indian rupee";
-            cout << "1. USD/INR";
-            cout << "2. EUR/INR";
-            cout << "3. GBP/INR";
-            cout << "4. JPY/INR";
-            cout << "5. AUD/INR";
-            cout << "6. CAD/INR";
-            cout << "7. SGD/INR";
-            cout << "8. AED/INR";
-            cout << "9. SAR/INR";
-            cout << "10. CHF/INR";
+            cout << "Pairs of Indian rupee\n";
+            cout << "1. USD/INR\n";
+            cout << "2. EUR/INR\n";
+            cout << "3. GBP/INR\n";
+            cout << "4. JPY/INR\n";
+            cout << "5. AUD/INR\n";
+            cout << "6. CAD/INR\n";
+            cout << "7. SGD/INR\n";
+            cout << "8. AED/INR\n";
+            cout << "9. SAR/INR\n";
+            cout << "10. CHF/INR\n";
             cout << "Enter your serial no of pair:- ";
             cin >> Pair_Choose;
             cout << "Enter your money in Rupee:- ";
@@ -881,20 +881,20 @@ public:
                 cout << "Invaild Input" << endl;
             }
         case 2:
-            cout << "Pairs of US Dollar";
-            cout << "1. INR/USD";
-            cout << "2. EUR/USD";
-            cout << "3. GBP/USD";
-            cout << "4. JPY/USD";
-            cout << "5. AUD/USD";
-            cout << "6. CAD/USD";
-            cout << "7. SGD/USD";
-            cout << "8. AED/USD";
-            cout << "9. SAR/USD";
-            cout << "10. CHF/USD";
-            cout << "Enter your serial number of Pair";
+            cout << "Pairs of US Dollar\n";
+            cout << "1. INR/USD\n";
+            cout << "2. EUR/USD\n";
+            cout << "3. GBP/USD\n";
+            cout << "4. JPY/USD\n";
+            cout << "5. AUD/USD\n";
+            cout << "6. CAD/USD\n";
+            cout << "7. SGD/USD\n";
+            cout << "8. AED/USD\n";
+            cout << "9. SAR/USD\n";
+            cout << "10. CHF/USD\n";
+            cout << "Enter your serial number of Pair:- ";
             cin >> Pair_Choose;
-            cout << "Enter your amount in us dollar";
+            cout << "Enter your amount in us dollar:- ";
             cin >> a;
 
             if (Pair_Choose == 1)
@@ -949,24 +949,97 @@ public:
             }
             else
             {
-                cout << "Invaild input";
+                cout << "Invaild input" << endl;
             }
         case 3:
-            cout << "Pairs of ";
-            cout << "1. INR/USD";
-            cout << "2. EUR/USD";
-            cout << "3. GBP/USD";
-            cout << "4. JPY/USD";
-            cout << "5. AUD/USD";
-            cout << "6. CAD/USD";
-            cout << "7. SGD/USD";
-            cout << "8. AED/USD";
-            cout << "9. SAR/USD";
-            cout << "10. CHF/USD";
-            cout << "Enter your serial number of Pair";
+            cout << "Pairs of EURO\n";
+            cout << "1. INR/EUR\n";
+            cout << "2. USD/EUR\n";
+            cout << "3. GBP/EUR\n";
+            cout << "4. JPY/EUR\n";
+            cout << "5. AUD/EUR\n";
+            cout << "6. CAD/EUR\n";
+            cout << "7. SGD/EUR\n";
+            cout << "8. AED/EUR\n";
+            cout << "9. SAR/EUR\n";
+            cout << "10. CHF/EUR\n";
+            cout << "Enter your serial number of Pair:- ";
             cin >> Pair_Choose;
+            cout << "Enter your amount in EUR:- ";
+            cin >> a;
+
+            if (Pair_Choose == 1)
+            {
+                result = a*0.009348;
+                cout<<"the result is "<<result<<endl;
+            }
+            else if (Pair_Choose == 2)
+            {
+                result = a*0.8492;
+                cout<<"the result is "<<result<<endl;
+            }
+            else if (Pair_Choose == 3)
+            {
+                result = a*1.15;
+                cout<<"The result is "<<result<<endl;
+            }
+            else if (Pair_Choose == 4)
+            {
+                result = a*0.005476;
+                cout<<"The result is "<<result<<endl;
+            }
+            else if (Pair_Choose == 5)
+            {
+                result = a*0.6006;
+                cout<<"The result is "<<result<<endl;
+            }
+            else if (Pair_Choose == 6)
+            {
+                result = a*0.6205;
+                cout<<"the result is "<<result<<endl;
+            }
+            else if (Pair_Choose == 7)
+            {
+                result = a*0.670062;
+                cout<<"the result is "<<result<<endl;
+            }
+            else if (Pair_Choose == 8)
+            {
+                result = a*0.23;
+                cout<<"The result is "<<result<<endl;
+            }
+            else if (Pair_Choose == 9)
+            {
+                result = a * 0.226388;
+                cout<<"The result is "<<result<<endl;
+            }
+            else if (Pair_Choose == 10)
+            {
+                result = a*1.09;
+                cout<<"the result is "<<result<<endl;
+            }
+            else
+            {
+                cout<<"Invaild input"<<endl;
+            }
+        case 4:
+            cout << "Pairs of EURO\n";
+            cout << "1. INR/EUR\n";
+            cout << "2. USD/EUR\n";
+            cout << "3. GBP/EUR\n";
+            cout << "4. JPY/EUR\n";
+            cout << "5. AUD/EUR\n";
+            cout << "6. CAD/EUR\n";
+            cout << "7. SGD/EUR\n";
+            cout << "8. AED/EUR\n";
+            cout << "9. SAR/EUR\n";
+            cout << "10. CHF/EUR\n";
+            cout << "Enter your serial number of Pair:- ";
+            cin >> Pair_Choose;
+            cout << "Enter your amount in EUR:- ";
+            cin >> a;
         default:
-            cout << "Invaild input";
+            cout << "Invaild input"<<endl;
         }
 
         return 0;
