@@ -1309,6 +1309,150 @@ public:
             {
                 cout<<"Invaild input"<<endl;
             }
+
+        case 8:
+            cout << "Pairs of Canadian Dollar\n";
+            cout << "1. INR/CAD\n";
+            cout << "2. USD/CAD\n";
+            cout << "3. JPY/CAD\n";
+            cout << "4. EUR/CAD\n";
+            cout << "5. GBP/CAD\n";
+            cout << "6. AUD/CAD\n";
+            cout << "7. SGD/CAD\n";
+            cout << "8. AED/CAD\n";
+            cout << "9. SAR/CAD\n";
+            cout << "10. CHF/CAD\n";
+            cout << "Enter your serial number of Pair:- ";
+            cin >> Pair_Choose;
+            cout << "Enter your amount in Canadian Dollar:- ";
+            cin >> a;
+
+            if (Pair_Choose == 1)
+            {
+                result = a*66.32;
+                cout<<"the result is "<<result<<endl;
+            }
+            else if (Pair_Choose == 2)
+            {
+                result = a*0.73;
+                cout<<"the result is "<<result<<endl;
+            }
+            else if (Pair_Choose == 3)
+            {
+                result = a*113.61;
+                cout<<"the result is "<<result<<endl;
+            }
+            else if (Pair_Choose == 4)
+            {
+                result = a*0.62;
+                cout<<"the result is "<<result<<endl;
+            }
+            else if (Pair_Choose == 5)
+            {
+                result = a*0.54;
+                cout<<"The result is "<<result<<endl;
+            }
+            else if (Pair_Choose == 6)
+            {
+                result = a*0.92;
+                cout<<"The result is "<<result<<endl;
+            }
+            else if (Pair_Choose == 7)
+            {
+                result = a*2.68;
+                cout<<"the result is "<<result<<endl;
+            }
+            else if (Pair_Choose == 8)
+            {
+                result = a*2.74;
+                cout<<"the result is "<<result<<endl;
+            }
+            else if (Pair_Choose == 9)
+            {
+                result = a*0.56;
+                cout<<"the result is "<<result<<endl;
+            }
+            else if (Pair_Choose == 10)
+            {
+                result = a*1.03;
+                cout<<"the result is "<<result<<endl;
+            }
+            else
+            {
+                cout<<"invaild input";
+            }
+
+        case 9:
+            cout << "Pairs of Swiss franc\n";
+            cout << "1. INR/CHF\n";
+            cout << "2. USD/CHF\n";
+            cout << "3. JPY/CHF\n";
+            cout << "4. EUR/CHF\n";
+            cout << "5. GBP/CHF\n";
+            cout << "6. AUD/CHF\n";
+            cout << "7. SGD/CHF\n";
+            cout << "8. AED/CHF\n";
+            cout << "9. SAR/CHF\n";
+            cout << "10. CAD/CHF\n";
+            cout << "Enter your serial number of Pair:- ";
+            cin >> Pair_Choose;
+            cout << "Enter your amount in Swiss Franc:- ";
+            cin >> a;
+
+            if (Pair_Choose == 1)
+            {
+                result = a*117.52;
+                cout<<"the result is "<<result<<endl;
+            }
+            else if (Pair_Choose == 2)
+            {
+                result = a*1.29;
+                cout<<"the result is "<<result<<endl;
+            }
+            else if (Pair_Choose == 3)
+            {
+                result = a*201.36;
+                cout<<"the result is "<<result<<endl;
+            }
+            else if (Pair_Choose == 4)
+            {
+                result = a*1.10;
+                cout<<"the result is "<<result<<endl;
+            }
+            else if (Pair_Choose == 5)
+            {
+                result = a*0.96;
+                cout<<"The result is "<<result<<endl;
+            }
+            else if (Pair_Choose == 6)
+            {
+                result = a*1.83;
+                cout<<"the result is "<<result<<endl;
+            }
+            else if (Pair_Choose == 7)
+            {
+                result = a*1.64;
+                cout<<"the result is "<<result<<endl;
+            }
+            else if (Pair_Choose == 8)
+            {
+                result = a*4.74;
+                cout<<"the result is "<<result<<endl;
+            }
+            else if (Pair_Choose == 9)
+            {
+                result = a*4.85;
+                cout<<"the result is "<<result<<endl;
+            }
+            else if (Pair_Choose == 10)
+            {
+                result = a*1.77;
+                cout<<"the result is "<<result<<endl;
+            }
+            else
+            {
+                cout<<"Invaild input";
+            }
         default:
             cout << "Invaild input"<<endl;
         }
