@@ -232,6 +232,7 @@ class Scientific_calculation
             }
             cout << num << "! = " << fact;
         }
+        return 0;
     }
 
     static float Constants()
@@ -278,6 +279,8 @@ class Scientific_calculation
             cout << "Invalid mode!";
             return 0;
         }
+        cout << "Angle in radians: " << rad << endl;
+        return 0;
     }
 };
 
@@ -639,6 +642,7 @@ public:
         default:
             cout << "Invaild input";
         }
+        return 0;
     }
 
     static float Speed()
@@ -1656,6 +1660,7 @@ class Fitness
         cin>>weigth>>height>>age;
         float bmr = (10*weigth)+(6.25*height)-(5*age)+5;
         cout<<"Your BMR is "<<bmr<<endl;
+        return 0;
     }
     static float TDEE() {
         cout<<"Total daily Energy expenditure"<<endl;
@@ -1695,6 +1700,7 @@ class Fitness
         else {
             cout<<"your input is wrong."<<endl;
         }
+        return 0;
     }
     static float BFP() {
         cout<<"Welcome to Body Fat Percentage"<<endl;
@@ -1735,6 +1741,7 @@ class Fitness
         else {
             cout << "Invalid gender selection!" << endl;
         }
+        return 0;
     }
     static float IBW() {
         cout<<"Welcome to Ideal body weight calculator"<<endl;
@@ -1762,6 +1769,7 @@ class Fitness
         else {
             cout<<"Invaild input!"<<endl;
         }
+        return 0;
     }
     static int DC() {
         int weight;
@@ -1795,6 +1803,7 @@ class Fitness
             deadlift = weight * 3;
             cout<<"Your deadlift target should be "<<deadlift<<endl;
         }
+        return 0;
     }
     static int BP() {
         int weight;
@@ -1828,6 +1837,7 @@ class Fitness
             default:
                 cout<<"Invalid input";
         }
+        return 0;
     }
     static int Squat() {
         int weight;
@@ -1861,6 +1871,7 @@ class Fitness
             default:
                 cout<<"Invaild Input"<<endl;
         }
+        return 0;
     }
 };
 
@@ -1904,7 +1915,7 @@ class Student_calculation
         int subject5;
         int subject6;
         float result;
-        int subject1grade,subject2grade,subject3grade,subject4grade,subject5grade,subject6grade;
+        int subject1grade = 0;
 
         cout<<"Enter your first number:- ";
         cin>>subject1;
@@ -1962,6 +1973,8 @@ class Student_calculation
         {
             subject1grade = 0;
         }
+        cout << "Subject 1 grade point: " << subject1grade << endl;
+        return 0;
     }
 };
 int main()
