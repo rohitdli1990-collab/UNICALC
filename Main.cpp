@@ -1526,7 +1526,443 @@ public:
         }
         return 0;
     }
+};
 
+class Finance
+{
+public :
+    static float Simple_interest()
+{
+    float Princepal;
+    float interset;
+    int time;
+
+    cout<<"Enter Amount:- ";
+    cin>>Princepal;
+    cout<<"Enter interset in percentage:- ";
+    cin>>interset;
+    cout<<"Enter time period of princepal:- ";
+    cin>>time;
+
+    float simple_interest = (Princepal*interset*time)/100;
+    cout<<"the interest of princepal is:-  "<<simple_interest<<endl;
+    return 0;
+}
+    static float Compound_interest()
+{
+    float Princepal;
+    float interset;
+    int time;
+    float amount;
+    float compoundInterest;
+
+    cout<<"enter the princepal amount:- "<<endl;
+    cin>>Princepal;
+    cout<<"enter the interset on princepal:- "<<endl;
+    cin>>interset;
+    cout<<"enter time of loan:- ";
+    cin>>time;
+
+    amount = Princepal * pow((1 + interset / 100), time);
+    compoundInterest = amount - Princepal;
+
+    cout << "your interset amount is "<<compoundInterest<<endl;
+    return 0;
+}
+    static float EMI_calculator()
+{
+    double loanAmount, annualRate, monthlyRate;
+    int years, months;
+    double emi, totalPayment, totalInterest;
+
+    cout << "Enter Loan Amount: ";
+    cin >> loanAmount;
+
+    cout << "Enter Annual Interest Rate (%): ";
+    cin >> annualRate;
+
+    cout << "Enter Loan Tenure (in years): ";
+    cin >> years;
+
+    // Convert values
+    monthlyRate = annualRate / (12 * 100);
+    months = years * 12;
+
+    // EMI Calculation
+    emi = (loanAmount * monthlyRate * pow(1 + monthlyRate, months)) /
+          (pow(1 + monthlyRate, months) - 1);
+
+    totalPayment = emi * months;
+    totalInterest = totalPayment - loanAmount;
+
+    cout << "\n------ EMI Details ------\n";
+    cout << "Monthly EMI = " << emi << endl;
+    cout << "Total Payment = " << totalPayment << endl;
+    cout << "Total Interest = " << totalInterest << endl;
+    return 0;
+}
+    static float GST_calculator()
+{
+    double amount, gstRate, gstAmount, finalAmount;
+
+    cout << "\nEnter Original Amount: ";
+    cin >> amount;
+    cout << "Enter GST Rate (%): ";
+    cin >> gstRate;
+
+    gstAmount = (amount * gstRate) / 100;
+    finalAmount = amount + gstAmount;
+
+    cout << "GST Amount = " << gstAmount << endl;
+    cout << "Final Amount (Including GST) = " << finalAmount << endl;
+    return 0;
+}
+    static float Discount_Calculator()
+{
+    double price, discountRate, discountAmount, finalPrice;
+
+    cout << "\nEnter Original Price: ";
+    cin >> price;
+    cout << "Enter Discount Rate (%): ";
+    cin >> discountRate;
+
+    discountAmount = (price * discountRate) / 100;
+    finalPrice = price - discountAmount;
+
+    cout << "Discount Amount = " << discountAmount << endl;
+    cout << "Final Price After Discount = " << finalPrice << endl;
+    return 0;
+}
+};
+
+class Fitness
+{
+    static float BMI(){
+        cout<<"Welcome to Body Mass index(BMI)"<<endl;
+        cout<<"enter weigth in lbs and height in inchs"<<endl;
+        float weigth = 0;
+        float heigth = 0;
+        cin>>heigth>>weigth;
+        float bmi = weigth/(heigth*heigth)*703;
+        cout<<"Your body bmi is "<<bmi<<endl;
+        return 0;
+    }
+    static float BMR() {
+        cout<<"Welcome to Basal matabolic rate(BMR)"<<endl;
+        cout<<"Enter weight in KG and heights in cm and age in year"<<endl;
+        float weigth = 0;
+        float height = 0;
+        int age;
+        cin>>weigth>>height>>age;
+        float bmr = (10*weigth)+(6.25*height)-(5*age)+5;
+        cout<<"Your BMR is "<<bmr<<endl;
+    }
+    static float TDEE() {
+        cout<<"Total daily Energy expenditure"<<endl;
+        int a;
+        int height;
+        int weight;
+        int age;
+        cout<<"Enter how many days you are going for a workout"<<endl;
+        cin>>a;
+        cout<<"Enter your height in cm"<<endl;
+        cin>>height;
+        cout<<"Enter your weight in KG"<<endl;
+        cin>>weight;
+        cout<<"Enter your age in years"<<endl;
+        cin>>age;
+
+        if (a>=0) {
+            cout<<"you are sedentary"<<endl;
+            const float b = (10*weight)+(6.25*height)-(5*age)+5 * 1.2;
+            cout<<"your TDEE is "<<b<<endl;
+        }
+        else if (a>=1 && a<=2) {
+            cout<<"you are lightly active"<<endl;
+            float c = (10*weight)+(6.25*height)-(5*age)+5 * 1.175;
+            cout<<"your TDEE is "<<c<<endl;
+        }
+        else if (a>=3 && a>=4 && a<=5) {
+            cout<<"you are moderately active"<<endl;
+            float d = (10*weight)+(6.25*height)-(5*age)+5 *1.55;
+            cout<<"your TDEE is "<<d<<endl;
+        }
+        else if (a>=6 && a<=7) {
+           cout<<"you are very active"<<endl;
+           float e = (10*weight)+(6.25*height)-(5*age)+5 *1.725;
+           cout<<"your TDEE is "<<e<<endl;
+        }
+        else {
+            cout<<"your input is wrong."<<endl;
+        }
+    }
+    static float BFP() {
+        cout<<"Welcome to Body Fat Percentage"<<endl;
+        int gender;
+        double height, neck, waist, hip, bodyFat;
+
+        cout << "Body Fat Percentage Calculator\n";
+        cout << "1. Male\n";
+        cout << "2. Female\n";
+        cout << "Enter your gender (1 or 2): ";
+        cin >> gender;
+
+        cout << "Enter height (in cm): ";
+        cin >> height;
+
+        cout << "Enter neck circumference (in cm): ";
+        cin >> neck;
+
+        cout << "Enter waist circumference (in cm): ";
+        cin >> waist;
+
+        if (gender == 1) {
+            bodyFat = 86.010 * log10(waist - neck)
+                      - 70.041 * log10(height)
+                      + 36.76;
+
+            cout << "Body Fat Percentage (Male): " << bodyFat << " %" << endl;
+        }
+        else if (gender == 2) {
+            cout << "Enter hip circumference (in cm): ";
+            cin >> hip;
+            bodyFat = 163.205 * log10(waist + hip - neck)
+                      - 97.684 * log10(height)
+                      - 78.387;
+
+            cout << "Body Fat Percentage (Female): " << bodyFat << " %" << endl;
+        }
+        else {
+            cout << "Invalid gender selection!" << endl;
+        }
+    }
+    static float IBW() {
+        cout<<"Welcome to Ideal body weight calculator"<<endl;
+        float height;
+        float weight;
+        float ibw;
+        int gender;
+
+        cout<<"enter 1 for men and 2 for women"<<endl;
+        cin>>gender;
+
+        cout<<"Enter Your weight"<<endl;
+        cin>>weight;
+        cout<<"Enter your height"<<endl;
+        cin>>height;
+
+        if (gender == 1) {
+                ibw = 50 + 0.9 * (height - 152);
+                cout<<"Your ideal weight is "<<ibw<<"KGs"<<endl;
+        }
+        else if (gender == 2) {
+                ibw = 45.5 + 0.9 *(height - 152);
+                cout<<"your ideal weight is "<<ibw<<"KGs"<<endl;
+        }
+        else {
+            cout<<"Invaild input!"<<endl;
+        }
+    }
+    static int DC() {
+        int weight;
+        int deadlift;
+        int choose;
+
+        cout<<"Welcome to deadlift calculator"<<endl;
+        cout<<"1. beginner"<<endl;
+        cout<<"2. intermediate"<<endl;
+        cout<<"3. advance"<<endl;
+        cout<<"4. Elite"<<endl;
+        cout<<"Enter your choose"<<endl;
+        cin>>choose;
+
+        cout<<"Enter your weight"<<endl;
+        cin>>weight;
+
+        if (choose == 1) {
+            deadlift = weight;
+            cout<<"Your deadlift target should be "<<deadlift<<endl;
+        }
+        else if (choose == 2) {
+            deadlift = weight * 1.5;
+            cout<<"your deadlift target should be "<<deadlift<<endl;
+        }
+        else if (choose == 3) {
+            deadlift = weight * 2.25;
+            cout<<"Your deadlift target should be "<<deadlift<<endl;
+        }
+        else if (choose == 4) {
+            deadlift = weight * 3;
+            cout<<"Your deadlift target should be "<<deadlift<<endl;
+        }
+    }
+    static int BP() {
+        int weight;
+        int Bp;
+        int Choose;
+
+        cout<<"Welcome to bench press calculator"<<endl;
+        cout<<"1. begineer"<<endl;
+        cout<<"2. intermediate"<<endl;
+        cout<<"3. Advance"<<endl;
+        cout<<"4. Elite"<<endl;
+        cout<<"Enter your choose "<<endl;
+        cin>>Choose;
+
+        cout<<"Enter your weight"<<endl;
+        cin>>weight;
+
+        switch (Choose) {
+            case 1:
+                Bp = weight*0.75;
+                cout<<"your Bench press target should be "<<Bp<<"KG"<<endl;
+            case 2:
+                Bp = weight*1.25;
+                cout<<"your Bench press target should be "<<Bp<<"KG"<<endl;
+            case 3:
+                Bp = weight*1.5;
+                cout<<"Your Bench press target should be "<<Bp<<"KG"<<endl;
+            case 4:
+                Bp = weight * 2;
+                cout<<"Your Bench press target should be "<<Bp<<"KG"<<endl;
+            default:
+                cout<<"Invalid input";
+        }
+    }
+    static int Squat() {
+        int weight;
+        int choose;
+        int squat;
+
+        cout<<"Welcome to the squat calculator"<<endl;
+        cout<<"1. Beginner"<<endl;
+        cout<<"2. Intermediate"<<endl;
+        cout<<"3. Advance"<<endl;
+        cout<<"4. Elite"<<endl;
+        cout<<"Choose your type:- ";
+        cin>>choose;
+
+        cout<<"Enter your Weight"<<endl;
+        cin>>weight;
+
+        switch (choose) {
+            case 1:
+                squat = weight*0.75;
+                cout<<"Your Ideal Squat target is "<<squat<<endl;
+            case 2:
+                squat = weight*1.25;
+                cout<<"Your ideal squat Target is "<<squat<<endl;
+            case 3:
+                squat = weight*1.75;
+                cout<<"Your ideal squat target is "<<squat<<endl;
+            case 4:
+                squat = weight*2.75;
+                cout<<"Your ideal squat target is "<<squat<<endl;
+            default:
+                cout<<"Invaild Input"<<endl;
+        }
+    }
+};
+
+class Student_calculation
+{
+    static float percentage()
+    {
+        int subject1;
+        int subject2;
+        int subject3;
+        int subject4;
+        int subject5;
+        int subject6;
+        float result;
+
+        cout<<"Enter your first number:- ";
+        cin>>subject1;
+        cout<<"enter your second number:- ";
+        cin>>subject2;
+        cout<<"enter your third number:- ";
+        cin>>subject3;
+        cout<<"Enter your fourth number:- ";
+        cin>>subject4;
+        cout<<"enter your fifth number:- ";
+        cin>>subject5;
+        cout<<"Enter your sixth number:- ";
+        cin>>subject6;
+
+        result = ((subject1+subject2+subject3+subject4+subject5+subject6)/600)*100;
+
+        cout<<"your Percentage is:- "<<result<<endl;
+        return 0;
+    }
+
+    static float CGPA()
+    {
+        int subject1;
+        int subject2;
+        int subject3;
+        int subject4;
+        int subject5;
+        int subject6;
+        float result;
+        int subject1grade,subject2grade,subject3grade,subject4grade,subject5grade,subject6grade;
+
+        cout<<"Enter your first number:- ";
+        cin>>subject1;
+        cout<<"enter your second number:- ";
+        cin>>subject2;
+        cout<<"enter your third number:- ";
+        cin>>subject3;
+        cout<<"Enter your fourth number:- ";
+        cin>>subject4;
+        cout<<"enter your fifth number:- ";
+        cin>>subject5;
+        cout<<"Enter your sixth number:- ";
+        cin>>subject6;
+
+        result = ((subject1+subject2+subject3+subject4+subject5+subject6)/600)*100;
+        cout<<"Your percentage is:- "<<result<<endl;
+
+        if (subject1<= 100 && subject1 == 90)
+        {
+            subject1grade = 9;
+        }
+        else if (subject1<= 89 && subject1 == 80)
+        {
+            subject1grade = 8;
+        }
+        else if (subject1<= 79 && subject1 == 70)
+        {
+            subject1grade = 7;
+        }
+        else if (subject1<= 69 && subject1 == 60)
+        {
+            subject1grade = 6;
+        }
+        else if (subject1<= 59 && subject1 == 50)
+        {
+            subject1grade = 5;
+        }
+        else if (subject1<= 49 && subject1 == 40)
+        {
+            subject1grade = 4;
+        }
+        else if (subject1<= 39 && subject1 == 30)
+        {
+            subject1grade = 3;
+        }
+        else if (subject1<= 29 && subject1 == 20)
+        {
+            subject1grade = 2;
+        }
+        else if (subject1<= 19 && subject1 == 10)
+        {
+            subject1grade = 1;
+        }
+        else if (subject1 <= 9 && subject1 == 0)
+        {
+            subject1grade = 0;
+        }
+    }
 };
 int main()
 {
