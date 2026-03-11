@@ -974,57 +974,57 @@ public:
 
             if (Pair_Choose == 1)
             {
-                result = a*0.009348;
-                cout<<"the result is "<<result<<endl;
+                result = a * 0.009348;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 2)
             {
-                result = a*0.8492;
-                cout<<"the result is "<<result<<endl;
+                result = a * 0.8492;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 3)
             {
-                result = a*1.15;
-                cout<<"The result is "<<result<<endl;
+                result = a * 1.15;
+                cout << "The result is " << result << endl;
             }
             else if (Pair_Choose == 4)
             {
-                result = a*0.005476;
-                cout<<"The result is "<<result<<endl;
+                result = a * 0.005476;
+                cout << "The result is " << result << endl;
             }
             else if (Pair_Choose == 5)
             {
-                result = a*0.6006;
-                cout<<"The result is "<<result<<endl;
+                result = a * 0.6006;
+                cout << "The result is " << result << endl;
             }
             else if (Pair_Choose == 6)
             {
-                result = a*0.6205;
-                cout<<"the result is "<<result<<endl;
+                result = a * 0.6205;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 7)
             {
-                result = a*0.670062;
-                cout<<"the result is "<<result<<endl;
+                result = a * 0.670062;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 8)
             {
-                result = a*0.23;
-                cout<<"The result is "<<result<<endl;
+                result = a * 0.23;
+                cout << "The result is " << result << endl;
             }
             else if (Pair_Choose == 9)
             {
                 result = a * 0.226388;
-                cout<<"The result is "<<result<<endl;
+                cout << "The result is " << result << endl;
             }
             else if (Pair_Choose == 10)
             {
-                result = a*1.09;
-                cout<<"the result is "<<result<<endl;
+                result = a * 1.09;
+                cout << "the result is " << result << endl;
             }
             else
             {
-                cout<<"Invaild input"<<endl;
+                cout << "Invaild input" << endl;
             }
         case 4:
             cout << "Pairs of Japanese Yen\n";
@@ -1045,57 +1045,57 @@ public:
 
             if (Pair_Choose == 1)
             {
-                result = a*1.7092;
-                cout<<"The result is "<<result<<endl;
+                result = a * 1.7092;
+                cout << "The result is " << result << endl;
             }
             else if (Pair_Choose == 2)
             {
-                result = a*155.08;
-                cout<<"the result is "<<result<<endl;
+                result = a * 155.08;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 3)
             {
-                result = a*208.93;
-                cout<<"the result is "<<result<<endl;
+                result = a * 208.93;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 4)
             {
-                result = a*182.7;
-                cout<<"the result is "<<result<<endl;
+                result = a * 182.7;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 5)
             {
-                result = a*0.0091;
-                cout<<"the result is "<<result<<endl;
+                result = a * 0.0091;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 6)
             {
-                result = a*0.0088;
-                cout<<"the result is "<<result<<endl;
+                result = a * 0.0088;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 7)
             {
-                result = a*0.0082;
-                cout<<"the result is "<<result<<endl;
+                result = a * 0.0082;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 8)
             {
-                result = a*0.024;
-                cout<<"the result is "<<result<<endl;
+                result = a * 0.024;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 9)
             {
-                result = a*0.024;
-                cout<<"the result is "<<result<<endl;
+                result = a * 0.024;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 10)
             {
-                result = a*0.0050;
-                cout<<"the result is "<<result<<endl;
+                result = a * 0.0050;
+                cout << "the result is " << result << endl;
             }
             else
             {
-                cout<<"Invaild input"<<endl;
+                cout << "Invaild input" << endl;
             }
 
         case 5:
@@ -1117,57 +1117,57 @@ public:
 
             if (Pair_Choose == 1)
             {
-                result = a*122.29;
-                cout<<"The result is "<<result<<endl;
+                result = a * 122.29;
+                cout << "The result is " << result << endl;
             }
             else if (Pair_Choose == 2)
             {
-                result = a*1.35;
-                cout<<"The result is "<<result<<endl;
+                result = a * 1.35;
+                cout << "The result is " << result << endl;
             }
             else if (Pair_Choose == 3)
             {
-                result = a*209.08;
-                cout<<"the result is "<<result<<endl;
+                result = a * 209.08;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 4)
             {
-                result = a*1.14;
-                cout<<"the result is "<<result<<endl;
+                result = a * 1.14;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 5)
             {
-                result = a*1.90;
-                cout<<"the result is "<<result<<endl;
+                result = a * 1.90;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 6)
             {
-                result = a*1.84;
-                cout<<"the result is "<<result<<endl;
+                result = a * 1.84;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 7)
             {
-                result = a*1.71;
-                cout<<"the result is "<<result<<endl;
+                result = a * 1.71;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 8)
             {
-                result = a*4.95;
-                cout<<"the result is "<<result<<endl;
+                result = a * 4.95;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 9)
             {
-                result = a*5.06;
-                cout<<"the result is "<<result<<endl;
+                result = a * 5.06;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 10)
             {
-                result = a*1.05;
-                cout<<"the result is "<<result<<endl;
+                result = a * 1.05;
+                cout << "the result is " << result << endl;
             }
             else
             {
-                cout<<"Invaild input"<<endl;
+                cout << "Invaild input" << endl;
             }
 
         case 6:
@@ -1189,57 +1189,57 @@ public:
 
             if (Pair_Choose == 1)
             {
-                result = a*13.13;
-                cout<<"the result is "<<result<<endl;
+                result = a * 13.13;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 2)
             {
-                result = a*0.14;
-                cout<<"the result is "<<result<<endl;
+                result = a * 0.14;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 3)
             {
-                result = a*22.38;
-                cout<<"the result is "<<result<<endl;
+                result = a * 22.38;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 4)
             {
-                result = a*0.12;
-                cout<<"the result is "<<result<<endl;
+                result = a * 0.12;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 5)
             {
                 result = 0.20;
-                cout<<"the result is "<<result<<endl;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 6)
             {
-                result = a*0.20;
-                cout<<"the result is "<<result<<endl;
+                result = a * 0.20;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 7)
             {
-                result = a*0.18;
-                cout<<"the result is "<<result<<endl;
+                result = a * 0.18;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 8)
             {
-                result = a*0.53;
-                cout<<"the result is "<<result<<endl;
+                result = a * 0.53;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 9)
             {
-                result = a*0.54;
-                cout<<"the result is "<<result<<endl;
+                result = a * 0.54;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 10)
             {
-                result = a*0.11;
-                cout<<"the result is "<<result<<endl;
+                result = a * 0.11;
+                cout << "the result is " << result << endl;
             }
             else
             {
-                cout<<"Invaild input";
+                cout << "Invaild input";
             }
 
         case 7:
@@ -1261,57 +1261,57 @@ public:
 
             if (Pair_Choose == 1)
             {
-                result = a*64.26;
-                cout<<"the result is "<<result<<endl;
+                result = a * 64.26;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 2)
             {
-                result = a*0.71;
-                cout<<"the result is "<<result<<endl;
+                result = a * 0.71;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 3)
             {
-                result = a*109.63;
-                cout<<"the result is "<<result<<endl;
+                result = a * 109.63;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 4)
             {
-                result = a*0.60;
-                cout<<"the result is "<<result<<endl;
+                result = a * 0.60;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 5)
             {
-                result = a*0.53;
-                cout<<"the result is "<<result<<endl;
+                result = a * 0.53;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 6)
             {
-                result = a*0.97;
-                cout<<"the result is "<<result<<endl;
+                result = a * 0.97;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 7)
             {
-                result = a*0.90;
-                cout<<"The result is "<<result<<endl;
+                result = a * 0.90;
+                cout << "The result is " << result << endl;
             }
             else if (Pair_Choose == 8)
             {
-                result = a*2.59;
-                cout<<"the result is "<<result<<endl;
+                result = a * 2.59;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 9)
             {
-                result = a*2.64;
-                cout<<"the result is "<<result<<endl;
+                result = a * 2.64;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 10)
             {
-                result = a*0.55;
-                cout<<"the result is "<<result<<endl;
+                result = a * 0.55;
+                cout << "the result is " << result << endl;
             }
             else
             {
-                cout<<"Invaild input"<<endl;
+                cout << "Invaild input" << endl;
             }
 
         case 8:
@@ -1333,57 +1333,57 @@ public:
 
             if (Pair_Choose == 1)
             {
-                result = a*66.32;
-                cout<<"the result is "<<result<<endl;
+                result = a * 66.32;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 2)
             {
-                result = a*0.73;
-                cout<<"the result is "<<result<<endl;
+                result = a * 0.73;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 3)
             {
-                result = a*113.61;
-                cout<<"the result is "<<result<<endl;
+                result = a * 113.61;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 4)
             {
-                result = a*0.62;
-                cout<<"the result is "<<result<<endl;
+                result = a * 0.62;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 5)
             {
-                result = a*0.54;
-                cout<<"The result is "<<result<<endl;
+                result = a * 0.54;
+                cout << "The result is " << result << endl;
             }
             else if (Pair_Choose == 6)
             {
-                result = a*0.92;
-                cout<<"The result is "<<result<<endl;
+                result = a * 0.92;
+                cout << "The result is " << result << endl;
             }
             else if (Pair_Choose == 7)
             {
-                result = a*2.68;
-                cout<<"the result is "<<result<<endl;
+                result = a * 2.68;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 8)
             {
-                result = a*2.74;
-                cout<<"the result is "<<result<<endl;
+                result = a * 2.74;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 9)
             {
-                result = a*0.56;
-                cout<<"the result is "<<result<<endl;
+                result = a * 0.56;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 10)
             {
-                result = a*1.03;
-                cout<<"the result is "<<result<<endl;
+                result = a * 1.03;
+                cout << "the result is " << result << endl;
             }
             else
             {
-                cout<<"invaild input";
+                cout << "invaild input";
             }
 
         case 9:
@@ -1405,57 +1405,57 @@ public:
 
             if (Pair_Choose == 1)
             {
-                result = a*117.52;
-                cout<<"the result is "<<result<<endl;
+                result = a * 117.52;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 2)
             {
-                result = a*1.29;
-                cout<<"the result is "<<result<<endl;
+                result = a * 1.29;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 3)
             {
-                result = a*201.36;
-                cout<<"the result is "<<result<<endl;
+                result = a * 201.36;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 4)
             {
-                result = a*1.10;
-                cout<<"the result is "<<result<<endl;
+                result = a * 1.10;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 5)
             {
-                result = a*0.96;
-                cout<<"The result is "<<result<<endl;
+                result = a * 0.96;
+                cout << "The result is " << result << endl;
             }
             else if (Pair_Choose == 6)
             {
-                result = a*1.83;
-                cout<<"the result is "<<result<<endl;
+                result = a * 1.83;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 7)
             {
-                result = a*1.64;
-                cout<<"the result is "<<result<<endl;
+                result = a * 1.64;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 8)
             {
-                result = a*4.74;
-                cout<<"the result is "<<result<<endl;
+                result = a * 4.74;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 9)
             {
-                result = a*4.85;
-                cout<<"the result is "<<result<<endl;
+                result = a * 4.85;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 10)
             {
-                result = a*1.77;
-                cout<<"the result is "<<result<<endl;
+                result = a * 1.77;
+                cout << "the result is " << result << endl;
             }
             else
             {
-                cout<<"Invaild input";
+                cout << "Invaild input";
             }
 
         case 10:
@@ -1477,56 +1477,56 @@ public:
 
             if (Pair_Choose == 1)
             {
-                result = a*11.62;
-                cout<<"the result is "<<result<<endl;
+                result = a * 11.62;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 2)
             {
-                result = a*0.13;
-                cout<<"the result is "<<result<<endl;
+                result = a * 0.13;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 3)
             {
-                result = a*0.11;
-                cout<<"the result is "<<result<<endl;
+                result = a * 0.11;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 4)
             {
-                result = a*20;
-                cout<<"the result is "<<result<<endl;
+                result = a * 20;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 5)
             {
-                result = a*0.094;
-                cout<<"the result is "<<result<<endl;
+                result = a * 0.094;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 6)
             {
-                result = a*0.88;
-                cout<<"the result is "<<result<<endl;
+                result = a * 0.88;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 7)
             {
-                result = a*0.18;
-                cout<<"the result is "<<result<<endl;
+                result = a * 0.18;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 8)
             {
-                result = a*0.17;
-                cout<<"the result is "<<result<<endl;
+                result = a * 0.17;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 9)
             {
-                result = a*0.099;
-                cout<<"the result is "<<result<<endl;
+                result = a * 0.099;
+                cout << "the result is " << result << endl;
             }
             else if (Pair_Choose == 10)
             {
-                result = a*0.16;
-                cout<<"the result is "<<result<<endl;
+                result = a * 0.16;
+                cout << "the result is " << result << endl;
             }
         default:
-            cout << "Invaild input"<<endl;
+            cout << "Invaild input" << endl;
         }
         return 0;
     }
@@ -1534,176 +1534,185 @@ public:
 
 class Finance
 {
-public :
+public:
     static float Simple_interest()
-{
-    float Princepal;
-    float interset;
-    int time;
+    {
+        float Princepal;
+        float interset;
+        int time;
 
-    cout<<"Enter Amount:- ";
-    cin>>Princepal;
-    cout<<"Enter interset in percentage:- ";
-    cin>>interset;
-    cout<<"Enter time period of princepal:- ";
-    cin>>time;
+        cout << "Enter Amount:- ";
+        cin >> Princepal;
+        cout << "Enter interset in percentage:- ";
+        cin >> interset;
+        cout << "Enter time period of princepal:- ";
+        cin >> time;
 
-    float simple_interest = (Princepal*interset*time)/100;
-    cout<<"the interest of princepal is:-  "<<simple_interest<<endl;
-    return 0;
-}
+        float simple_interest = (Princepal * interset * time) / 100;
+        cout << "the interest of princepal is:-  " << simple_interest << endl;
+        return 0;
+    }
     static float Compound_interest()
-{
-    float Princepal;
-    float interset;
-    int time;
-    float amount;
-    float compoundInterest;
+    {
+        float Princepal;
+        float interset;
+        int time;
+        float amount;
+        float compoundInterest;
 
-    cout<<"enter the princepal amount:- "<<endl;
-    cin>>Princepal;
-    cout<<"enter the interset on princepal:- "<<endl;
-    cin>>interset;
-    cout<<"enter time of loan:- ";
-    cin>>time;
+        cout << "enter the princepal amount:- " << endl;
+        cin >> Princepal;
+        cout << "enter the interset on princepal:- " << endl;
+        cin >> interset;
+        cout << "enter time of loan:- ";
+        cin >> time;
 
-    amount = Princepal * pow((1 + interset / 100), time);
-    compoundInterest = amount - Princepal;
+        amount = Princepal * pow((1 + interset / 100), time);
+        compoundInterest = amount - Princepal;
 
-    cout << "your interset amount is "<<compoundInterest<<endl;
-    return 0;
-}
+        cout << "your interset amount is " << compoundInterest << endl;
+        return 0;
+    }
     static float EMI_calculator()
-{
-    double loanAmount, annualRate, monthlyRate;
-    int years, months;
-    double emi, totalPayment, totalInterest;
+    {
+        double loanAmount, annualRate, monthlyRate;
+        int years, months;
+        double emi, totalPayment, totalInterest;
 
-    cout << "Enter Loan Amount: ";
-    cin >> loanAmount;
+        cout << "Enter Loan Amount: ";
+        cin >> loanAmount;
 
-    cout << "Enter Annual Interest Rate (%): ";
-    cin >> annualRate;
+        cout << "Enter Annual Interest Rate (%): ";
+        cin >> annualRate;
 
-    cout << "Enter Loan Tenure (in years): ";
-    cin >> years;
+        cout << "Enter Loan Tenure (in years): ";
+        cin >> years;
 
-    // Convert values
-    monthlyRate = annualRate / (12 * 100);
-    months = years * 12;
+        // Convert values
+        monthlyRate = annualRate / (12 * 100);
+        months = years * 12;
 
-    // EMI Calculation
-    emi = (loanAmount * monthlyRate * pow(1 + monthlyRate, months)) /
-          (pow(1 + monthlyRate, months) - 1);
+        // EMI Calculation
+        emi = (loanAmount * monthlyRate * pow(1 + monthlyRate, months)) /
+              (pow(1 + monthlyRate, months) - 1);
 
-    totalPayment = emi * months;
-    totalInterest = totalPayment - loanAmount;
+        totalPayment = emi * months;
+        totalInterest = totalPayment - loanAmount;
 
-    cout << "\n------ EMI Details ------\n";
-    cout << "Monthly EMI = " << emi << endl;
-    cout << "Total Payment = " << totalPayment << endl;
-    cout << "Total Interest = " << totalInterest << endl;
-    return 0;
-}
+        cout << "\n------ EMI Details ------\n";
+        cout << "Monthly EMI = " << emi << endl;
+        cout << "Total Payment = " << totalPayment << endl;
+        cout << "Total Interest = " << totalInterest << endl;
+        return 0;
+    }
     static float GST_calculator()
-{
-    double amount, gstRate, gstAmount, finalAmount;
+    {
+        double amount, gstRate, gstAmount, finalAmount;
 
-    cout << "\nEnter Original Amount: ";
-    cin >> amount;
-    cout << "Enter GST Rate (%): ";
-    cin >> gstRate;
+        cout << "\nEnter Original Amount: ";
+        cin >> amount;
+        cout << "Enter GST Rate (%): ";
+        cin >> gstRate;
 
-    gstAmount = (amount * gstRate) / 100;
-    finalAmount = amount + gstAmount;
+        gstAmount = (amount * gstRate) / 100;
+        finalAmount = amount + gstAmount;
 
-    cout << "GST Amount = " << gstAmount << endl;
-    cout << "Final Amount (Including GST) = " << finalAmount << endl;
-    return 0;
-}
+        cout << "GST Amount = " << gstAmount << endl;
+        cout << "Final Amount (Including GST) = " << finalAmount << endl;
+        return 0;
+    }
     static float Discount_Calculator()
-{
-    double price, discountRate, discountAmount, finalPrice;
+    {
+        double price, discountRate, discountAmount, finalPrice;
 
-    cout << "\nEnter Original Price: ";
-    cin >> price;
-    cout << "Enter Discount Rate (%): ";
-    cin >> discountRate;
+        cout << "\nEnter Original Price: ";
+        cin >> price;
+        cout << "Enter Discount Rate (%): ";
+        cin >> discountRate;
 
-    discountAmount = (price * discountRate) / 100;
-    finalPrice = price - discountAmount;
+        discountAmount = (price * discountRate) / 100;
+        finalPrice = price - discountAmount;
 
-    cout << "Discount Amount = " << discountAmount << endl;
-    cout << "Final Price After Discount = " << finalPrice << endl;
-    return 0;
-}
+        cout << "Discount Amount = " << discountAmount << endl;
+        cout << "Final Price After Discount = " << finalPrice << endl;
+        return 0;
+    }
 };
 
 class Fitness
 {
-    static float BMI(){
-        cout<<"Welcome to Body Mass index(BMI)"<<endl;
-        cout<<"enter weigth in lbs and height in inchs"<<endl;
+    static float BMI()
+    {
+        cout << "Welcome to Body Mass index(BMI)" << endl;
+        cout << "enter weigth in lbs and height in inchs" << endl;
         float weigth = 0;
         float heigth = 0;
-        cin>>heigth>>weigth;
-        float bmi = weigth/(heigth*heigth)*703;
-        cout<<"Your body bmi is "<<bmi<<endl;
+        cin >> heigth >> weigth;
+        float bmi = weigth / (heigth * heigth) * 703;
+        cout << "Your body bmi is " << bmi << endl;
         return 0;
     }
-    static float BMR() {
-        cout<<"Welcome to Basal matabolic rate(BMR)"<<endl;
-        cout<<"Enter weight in KG and heights in cm and age in year"<<endl;
+    static float BMR()
+    {
+        cout << "Welcome to Basal matabolic rate(BMR)" << endl;
+        cout << "Enter weight in KG and heights in cm and age in year" << endl;
         float weigth = 0;
         float height = 0;
         int age;
-        cin>>weigth>>height>>age;
-        float bmr = (10*weigth)+(6.25*height)-(5*age)+5;
-        cout<<"Your BMR is "<<bmr<<endl;
+        cin >> weigth >> height >> age;
+        float bmr = (10 * weigth) + (6.25 * height) - (5 * age) + 5;
+        cout << "Your BMR is " << bmr << endl;
         return 0;
     }
-    static float TDEE() {
-        cout<<"Total daily Energy expenditure"<<endl;
+    static float TDEE()
+    {
+        cout << "Total daily Energy expenditure" << endl;
         int a;
         int height;
         int weight;
         int age;
-        cout<<"Enter how many days you are going for a workout"<<endl;
-        cin>>a;
-        cout<<"Enter your height in cm"<<endl;
-        cin>>height;
-        cout<<"Enter your weight in KG"<<endl;
-        cin>>weight;
-        cout<<"Enter your age in years"<<endl;
-        cin>>age;
+        cout << "Enter how many days you are going for a workout" << endl;
+        cin >> a;
+        cout << "Enter your height in cm" << endl;
+        cin >> height;
+        cout << "Enter your weight in KG" << endl;
+        cin >> weight;
+        cout << "Enter your age in years" << endl;
+        cin >> age;
 
-        if (a>=0) {
-            cout<<"you are sedentary"<<endl;
-            const float b = (10*weight)+(6.25*height)-(5*age)+5 * 1.2;
-            cout<<"your TDEE is "<<b<<endl;
+        if (a >= 0)
+        {
+            cout << "you are sedentary" << endl;
+            const float b = (10 * weight) + (6.25 * height) - (5 * age) + 5 * 1.2;
+            cout << "your TDEE is " << b << endl;
         }
-        else if (a>=1 && a<=2) {
-            cout<<"you are lightly active"<<endl;
-            float c = (10*weight)+(6.25*height)-(5*age)+5 * 1.175;
-            cout<<"your TDEE is "<<c<<endl;
+        else if (a >= 1 && a <= 2)
+        {
+            cout << "you are lightly active" << endl;
+            float c = (10 * weight) + (6.25 * height) - (5 * age) + 5 * 1.175;
+            cout << "your TDEE is " << c << endl;
         }
-        else if (a>=3 && a>=4 && a<=5) {
-            cout<<"you are moderately active"<<endl;
-            float d = (10*weight)+(6.25*height)-(5*age)+5 *1.55;
-            cout<<"your TDEE is "<<d<<endl;
+        else if (a >= 3 && a >= 4 && a <= 5)
+        {
+            cout << "you are moderately active" << endl;
+            float d = (10 * weight) + (6.25 * height) - (5 * age) + 5 * 1.55;
+            cout << "your TDEE is " << d << endl;
         }
-        else if (a>=6 && a<=7) {
-           cout<<"you are very active"<<endl;
-           float e = (10*weight)+(6.25*height)-(5*age)+5 *1.725;
-           cout<<"your TDEE is "<<e<<endl;
+        else if (a >= 6 && a <= 7)
+        {
+            cout << "you are very active" << endl;
+            float e = (10 * weight) + (6.25 * height) - (5 * age) + 5 * 1.725;
+            cout << "your TDEE is " << e << endl;
         }
-        else {
-            cout<<"your input is wrong."<<endl;
+        else
+        {
+            cout << "your input is wrong." << endl;
         }
         return 0;
     }
-    static float BFP() {
-        cout<<"Welcome to Body Fat Percentage"<<endl;
+    static float BFP()
+    {
+        cout << "Welcome to Body Fat Percentage" << endl;
         int gender;
         double height, neck, waist, hip, bodyFat;
 
@@ -1722,154 +1731,166 @@ class Fitness
         cout << "Enter waist circumference (in cm): ";
         cin >> waist;
 
-        if (gender == 1) {
-            bodyFat = 86.010 * log10(waist - neck)
-                      - 70.041 * log10(height)
-                      + 36.76;
+        if (gender == 1)
+        {
+            bodyFat = 86.010 * log10(waist - neck) - 70.041 * log10(height) + 36.76;
 
             cout << "Body Fat Percentage (Male): " << bodyFat << " %" << endl;
         }
-        else if (gender == 2) {
+        else if (gender == 2)
+        {
             cout << "Enter hip circumference (in cm): ";
             cin >> hip;
-            bodyFat = 163.205 * log10(waist + hip - neck)
-                      - 97.684 * log10(height)
-                      - 78.387;
+            bodyFat = 163.205 * log10(waist + hip - neck) - 97.684 * log10(height) - 78.387;
 
             cout << "Body Fat Percentage (Female): " << bodyFat << " %" << endl;
         }
-        else {
+        else
+        {
             cout << "Invalid gender selection!" << endl;
         }
         return 0;
     }
-    static float IBW() {
-        cout<<"Welcome to Ideal body weight calculator"<<endl;
+    static float IBW()
+    {
+        cout << "Welcome to Ideal body weight calculator" << endl;
         float height;
         float weight;
         float ibw;
         int gender;
 
-        cout<<"enter 1 for men and 2 for women"<<endl;
-        cin>>gender;
+        cout << "enter 1 for men and 2 for women" << endl;
+        cin >> gender;
 
-        cout<<"Enter Your weight"<<endl;
-        cin>>weight;
-        cout<<"Enter your height"<<endl;
-        cin>>height;
+        cout << "Enter Your weight" << endl;
+        cin >> weight;
+        cout << "Enter your height" << endl;
+        cin >> height;
 
-        if (gender == 1) {
-                ibw = 50 + 0.9 * (height - 152);
-                cout<<"Your ideal weight is "<<ibw<<"KGs"<<endl;
+        if (gender == 1)
+        {
+            ibw = 50 + 0.9 * (height - 152);
+            cout << "Your ideal weight is " << ibw << "KGs" << endl;
         }
-        else if (gender == 2) {
-                ibw = 45.5 + 0.9 *(height - 152);
-                cout<<"your ideal weight is "<<ibw<<"KGs"<<endl;
+        else if (gender == 2)
+        {
+            ibw = 45.5 + 0.9 * (height - 152);
+            cout << "your ideal weight is " << ibw << "KGs" << endl;
         }
-        else {
-            cout<<"Invaild input!"<<endl;
+        else
+        {
+            cout << "Invaild input!" << endl;
         }
         return 0;
     }
-    static int DC() {
+    static int DC()
+    {
         int weight;
         int deadlift;
         int choose;
 
-        cout<<"Welcome to deadlift calculator"<<endl;
-        cout<<"1. beginner"<<endl;
-        cout<<"2. intermediate"<<endl;
-        cout<<"3. advance"<<endl;
-        cout<<"4. Elite"<<endl;
-        cout<<"Enter your choose"<<endl;
-        cin>>choose;
+        cout << "Welcome to deadlift calculator" << endl;
+        cout << "1. beginner" << endl;
+        cout << "2. intermediate" << endl;
+        cout << "3. advance" << endl;
+        cout << "4. Elite" << endl;
+        cout << "Enter your choose" << endl;
+        cin >> choose;
 
-        cout<<"Enter your weight"<<endl;
-        cin>>weight;
+        cout << "Enter your weight" << endl;
+        cin >> weight;
 
-        if (choose == 1) {
+        if (choose == 1)
+        {
             deadlift = weight;
-            cout<<"Your deadlift target should be "<<deadlift<<endl;
+            cout << "Your deadlift target should be " << deadlift << endl;
         }
-        else if (choose == 2) {
+        else if (choose == 2)
+        {
             deadlift = weight * 1.5;
-            cout<<"your deadlift target should be "<<deadlift<<endl;
+            cout << "your deadlift target should be " << deadlift << endl;
         }
-        else if (choose == 3) {
+        else if (choose == 3)
+        {
             deadlift = weight * 2.25;
-            cout<<"Your deadlift target should be "<<deadlift<<endl;
+            cout << "Your deadlift target should be " << deadlift << endl;
         }
-        else if (choose == 4) {
+        else if (choose == 4)
+        {
             deadlift = weight * 3;
-            cout<<"Your deadlift target should be "<<deadlift<<endl;
+            cout << "Your deadlift target should be " << deadlift << endl;
         }
         return 0;
     }
-    static int BP() {
+    static int BP()
+    {
         int weight;
         int Bp;
         int Choose;
 
-        cout<<"Welcome to bench press calculator"<<endl;
-        cout<<"1. begineer"<<endl;
-        cout<<"2. intermediate"<<endl;
-        cout<<"3. Advance"<<endl;
-        cout<<"4. Elite"<<endl;
-        cout<<"Enter your choose "<<endl;
-        cin>>Choose;
+        cout << "Welcome to bench press calculator" << endl;
+        cout << "1. begineer" << endl;
+        cout << "2. intermediate" << endl;
+        cout << "3. Advance" << endl;
+        cout << "4. Elite" << endl;
+        cout << "Enter your choose " << endl;
+        cin >> Choose;
 
-        cout<<"Enter your weight"<<endl;
-        cin>>weight;
+        cout << "Enter your weight" << endl;
+        cin >> weight;
 
-        switch (Choose) {
-            case 1:
-                Bp = weight*0.75;
-                cout<<"your Bench press target should be "<<Bp<<"KG"<<endl;
-            case 2:
-                Bp = weight*1.25;
-                cout<<"your Bench press target should be "<<Bp<<"KG"<<endl;
-            case 3:
-                Bp = weight*1.5;
-                cout<<"Your Bench press target should be "<<Bp<<"KG"<<endl;
-            case 4:
-                Bp = weight * 2;
-                cout<<"Your Bench press target should be "<<Bp<<"KG"<<endl;
-            default:
-                cout<<"Invalid input";
+        switch (Choose)
+        {
+        case 1:
+            Bp = weight * 0.75;
+            cout << "your Bench press target should be " << Bp << "KG" << endl;
+        case 2:
+            Bp = weight * 1.25;
+            cout << "your Bench press target should be " << Bp << "KG" << endl;
+        case 3:
+            Bp = weight * 1.5;
+            cout << "Your Bench press target should be " << Bp << "KG" << endl;
+        case 4:
+            Bp = weight * 2;
+            cout << "Your Bench press target should be " << Bp << "KG" << endl;
+        default:
+            cout << "Invalid input";
         }
         return 0;
     }
-    static int Squat() {
+    static int Squat()
+    {
         int weight;
         int choose;
         int squat;
 
-        cout<<"Welcome to the squat calculator"<<endl;
-        cout<<"1. Beginner"<<endl;
-        cout<<"2. Intermediate"<<endl;
-        cout<<"3. Advance"<<endl;
-        cout<<"4. Elite"<<endl;
-        cout<<"Choose your type:- ";
-        cin>>choose;
+        cout << "Welcome to the squat calculator" << endl;
+        cout << "1. Beginner" << endl;
+        cout << "2. Intermediate" << endl;
+        cout << "3. Advance" << endl;
+        cout << "4. Elite" << endl;
+        cout << "Choose your type:- ";
+        cin >> choose;
 
-        cout<<"Enter your Weight"<<endl;
-        cin>>weight;
+        cout << "Enter your Weight" << endl;
+        cin >> weight;
 
-        switch (choose) {
-            case 1:
-                squat = weight*0.75;
-                cout<<"Your Ideal Squat target is "<<squat<<endl;
-            case 2:
-                squat = weight*1.25;
-                cout<<"Your ideal squat Target is "<<squat<<endl;
-            case 3:
-                squat = weight*1.75;
-                cout<<"Your ideal squat target is "<<squat<<endl;
-            case 4:
-                squat = weight*2.75;
-                cout<<"Your ideal squat target is "<<squat<<endl;
-            default:
-                cout<<"Invaild Input"<<endl;
+        switch (choose)
+        {
+        case 1:
+            squat = weight * 0.75;
+            cout << "Your Ideal Squat target is " << squat << endl;
+        case 2:
+            squat = weight * 1.25;
+            cout << "Your ideal squat Target is " << squat << endl;
+        case 3:
+            squat = weight * 1.75;
+            cout << "Your ideal squat target is " << squat << endl;
+        case 4:
+            squat = weight * 2.75;
+            cout << "Your ideal squat target is " << squat << endl;
+        default:
+            cout << "Invaild Input" << endl;
         }
         return 0;
     }
@@ -1887,22 +1908,22 @@ class Student_calculation
         int subject6;
         float result;
 
-        cout<<"Enter your first number:- ";
-        cin>>subject1;
-        cout<<"enter your second number:- ";
-        cin>>subject2;
-        cout<<"enter your third number:- ";
-        cin>>subject3;
-        cout<<"Enter your fourth number:- ";
-        cin>>subject4;
-        cout<<"enter your fifth number:- ";
-        cin>>subject5;
-        cout<<"Enter your sixth number:- ";
-        cin>>subject6;
+        cout << "Enter your first number:- ";
+        cin >> subject1;
+        cout << "enter your second number:- ";
+        cin >> subject2;
+        cout << "enter your third number:- ";
+        cin >> subject3;
+        cout << "Enter your fourth number:- ";
+        cin >> subject4;
+        cout << "enter your fifth number:- ";
+        cin >> subject5;
+        cout << "Enter your sixth number:- ";
+        cin >> subject6;
 
-        result = ((subject1+subject2+subject3+subject4+subject5+subject6)/600)*100;
+        result = ((subject1 + subject2 + subject3 + subject4 + subject5 + subject6) / 600) * 100;
 
-        cout<<"your Percentage is:- "<<result<<endl;
+        cout << "your Percentage is:- " << result << endl;
         return 0;
     }
 
@@ -1914,66 +1935,220 @@ class Student_calculation
         int subject4;
         int subject5;
         int subject6;
-        float result;
-        int subject1grade = 0;
+        int subject1grade, subject2grade, subject3grade, subject4grade, subject5grade, subject6grade;
 
-        cout<<"Enter your first number:- ";
-        cin>>subject1;
-        cout<<"enter your second number:- ";
-        cin>>subject2;
-        cout<<"enter your third number:- ";
-        cin>>subject3;
-        cout<<"Enter your fourth number:- ";
-        cin>>subject4;
-        cout<<"enter your fifth number:- ";
-        cin>>subject5;
-        cout<<"Enter your sixth number:- ";
-        cin>>subject6;
+        cout << "enter your marks of first subject:- ";
+        cin >> subject1;
+        cout << "Enter your marks of second subject:- ";
+        cin >> subject2;
+        cout << "Enter your marks of third subject:- ";
+        cin >> subject3;
+        cout << "Enter your Marks of fourth subject:- ";
+        cin >> subject4;
+        cout << "enter your marks of fifth subject";
+        cin >> subject5;
+        cout << "Enter the marks of sixth subject";
+        cin >> subject6;
 
-        result = ((subject1+subject2+subject3+subject4+subject5+subject6)/600)*100;
-        cout<<"Your percentage is:- "<<result<<endl;
-
-        if (subject1<= 100 && subject1 == 90)
+        if (subject1 == 100 && subject1 >= 90)
         {
             subject1grade = 9;
         }
-        else if (subject1<= 89 && subject1 == 80)
+        else if (subject1 == 89 && subject1 >= 80)
         {
             subject1grade = 8;
         }
-        else if (subject1<= 79 && subject1 == 70)
+        else if (subject1 == 79 && subject1 >= 70)
         {
             subject1grade = 7;
         }
-        else if (subject1<= 69 && subject1 == 60)
+        else if (subject1 == 69 && subject1 >= 60)
         {
             subject1grade = 6;
         }
-        else if (subject1<= 59 && subject1 == 50)
+        else if (subject1 == 59 && subject1 >= 50)
         {
             subject1grade = 5;
         }
-        else if (subject1<= 49 && subject1 == 40)
+        else if (subject1 == 49 && subject1 >= 40)
         {
             subject1grade = 4;
         }
-        else if (subject1<= 39 && subject1 == 30)
+        else if (subject1 == 39 && subject1 >= 30)
         {
             subject1grade = 3;
         }
-        else if (subject1<= 29 && subject1 == 20)
-        {
-            subject1grade = 2;
-        }
-        else if (subject1<= 19 && subject1 == 10)
-        {
-            subject1grade = 1;
-        }
-        else if (subject1 <= 9 && subject1 == 0)
+        else
         {
             subject1grade = 0;
         }
-        cout << "Subject 1 grade point: " << subject1grade << endl;
+
+        if (subject2 == 100 && subject2 >= 90)
+        {
+            subject2grade = 9;
+        }
+        else if (subject2 == 89 && subject2 >= 80)
+        {
+            subject2grade = 8;
+        }
+        else if (subject2 == 79 && subject2 >= 70)
+        {
+            subject2grade = 7;
+        }
+        else if (subject2 == 69 && subject2 >= 60)
+        {
+            subject2grade = 6;
+        }
+        else if (subject2 == 59 && subject2 >= 50)
+        {
+            subject2grade = 5;
+        }
+        else if (subject2 == 49 && subject2 >= 40)
+        {
+            subject2grade = 4;
+        }
+        else if (subject2 == 39 && subject2 >= 30)
+        {
+            subject2grade = 3;
+        }
+        else
+        {
+            subject2grade = 0;
+        }
+
+        if (subject3 == 100 && subject3 >= 90)
+        {
+            subject3grade = 9;
+        }
+        else if (subject3 == 89 && subject3 >= 80)
+        {
+            subject3grade = 8;
+        }
+        else if (subject3 == 79 && subject3 >= 70)
+        {
+            subject3grade = 7;
+        }
+        else if (subject3 == 69 && subject3 >= 60)
+        {
+            subject3grade = 6;
+        }
+        else if (subject3 == 59 && subject3 >= 50)
+        {
+            subject3grade = 5;
+        }
+        else if (subject3 == 49 && subject3 >= 40)
+        {
+            subject3grade = 4;
+        }
+        else if (subject3 == 39 && subject3 >= 30)
+        {
+            subject3grade = 3;
+        }
+        else
+        {
+            subject3grade = 0;
+        }
+
+        if (subject4 == 100 && subject4 >= 90)
+        {
+            subject4grade = 9;
+        }
+        else if (subject4 == 89 && subject4 >= 80)
+        {
+            subject4grade = 8;
+        }
+        else if (subject4 == 79 && subject4 >= 70)
+        {
+            subject4grade = 7;
+        }
+        else if (subject4 == 69 && subject4 >= 60)
+        {
+            subject4grade = 6;
+        }
+        else if (subject4 == 59 && subject4 >= 50)
+        {
+            subject4grade = 5;
+        }
+        else if (subject4 == 49 && subject4 >= 40)
+        {
+            subject4grade = 4;
+        }
+        else if (subject4 == 39 && subject4 >= 30)
+        {
+            subject4grade = 3;
+        }
+        else
+        {
+            subject4grade = 0;
+        }
+
+        if (5 == 100 && subject5 >= 90)
+        {
+            subject5grade = 9;
+        }
+        else if (subject5 == 89 && subject5 >= 80)
+        {
+            subject5grade = 8;
+        }
+        else if (subject5 == 79 && subject5 >= 70)
+        {
+            subject5grade = 7;
+        }
+        else if (subject5 == 69 && subject5 >= 60)
+        {
+            subject5grade = 6;
+        }
+        else if (subject5 == 59 && subject5 >= 50)
+        {
+            subject5grade = 5;
+        }
+        else if (subject5 == 49 && subject5 >= 40)
+        {
+            subject5grade = 4;
+        }
+        else if (subject5 == 39 && subject5 >= 30)
+        {
+            subject5grade = 3;
+        }
+        else
+        {
+            subject5grade = 0;
+        }
+
+        if (subject6 == 100 && subject6 >= 90)
+        {
+            subject6grade = 9;
+        }
+        else if (subject6 == 89 && subject6 >= 80)
+        {
+            subject6grade = 8;
+        }
+        else if (subject6 == 79 && subject6 >= 70)
+        {
+            subject6grade = 7;
+        }
+        else if (subject6 == 69 && subject6 >= 60)
+        {
+            subject6grade = 6;
+        }
+        else if (subject6 == 59 && subject6 >= 50)
+        {
+            subject6grade = 5;
+        }
+        else if (subject6 == 49 && subject6 >= 40)
+        {
+            subject6grade = 4;
+        }
+        else if (subject6 == 39 && subject6 >= 30)
+        {
+            subject6grade = 3;
+        }
+        else
+        {
+            subject6grade = 0;
+        }
+
+
         return 0;
     }
 };
