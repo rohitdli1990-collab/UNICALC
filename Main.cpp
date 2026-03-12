@@ -1936,6 +1936,7 @@ class Student_calculation
         int subject5;
         int subject6;
         int subject1grade, subject2grade, subject3grade, subject4grade, subject5grade, subject6grade;
+        float result;
 
         cout << "enter your marks of first subject:- ";
         cin >> subject1;
@@ -2148,8 +2149,288 @@ class Student_calculation
             subject6grade = 0;
         }
 
+        result = (subject1grade+subject2grade+subject3grade+subject4grade+subject5grade+subject6grade)/6;
+        cout<<"the CGPA of the 6 subject is "<<result<<endl;
+
+        return 0;
+    }
+
+    static float averageMarks()
+    {
+        float sub1marks,sub2marks,sub3marks,sub4marks,sub5marks,sub6marks;
+        float result;
+
+        cout<<"Enter your marks of subject1:- ";
+        cin>>sub1marks;
+        cout<<"Enter your marks of subject2:- ";
+        cin>>sub2marks;
+        cout<<"Enter your marks of subject3:- ";
+        cin>>sub3marks;
+        cout<<"Enter your marks of subject4:- ";
+        cin>>sub4marks;
+        cout<<"enter your marks of subject5:- ";
+        cin>>sub5marks;
+        cout<<"Enter your marks of subject6:- ";
+        cin>>sub6marks;
+
+        result = (sub1marks+sub2marks+sub3marks+sub4marks+sub5marks+sub6marks)/6;
+        cout<<"Your average marks of given marks is:-  "<<result<<endl;
 
 
+        return 0;
+    }
+
+    static float gradeCalculate()
+    {
+        float sub1marks,sub2marks,sub3marks,sub4marks,sub5marks,sub6marks;
+        float result;
+
+        cout<<"Enter your marks of subject1:- ";
+        cin>>sub1marks;
+        cout<<"Enter your marks of subject2:- ";
+        cin>>sub2marks;
+        cout<<"Enter your marks of subject3:- ";
+        cin>>sub3marks;
+        cout<<"Enter your marks of subject4:- ";
+        cin>>sub4marks;
+        cout<<"enter your marks of subject5:- ";
+        cin>>sub5marks;
+        cout<<"Enter your marks of subject6:- ";
+        cin>>sub6marks;
+
+        result = (sub1marks+sub2marks+sub3marks+sub4marks+sub5marks+sub6marks)/6;
+
+        if (result == 100 && result <= 91)
+        {
+            cout<<"You got A+"<<endl;
+        }
+        else if (result == 90 && result <= 81)
+        {
+            cout<<"You got A"<<endl;
+        }
+        else if (result == 80 && result <= 71)
+        {
+            cout<<"you got B"<<endl;
+        }
+        else if (result == 70 && result <= 61)
+        {
+            cout<<"You got C"<<endl;
+        }
+        else if (result == 60 && result <= 51)
+        {
+            cout<<"You got D"<<endl;
+        }
+        else if (result == 50 && result <= 40)
+        {
+            cout<<"you got E"<<endl;
+        }
+        else
+        {
+            cout << "you got F"<<endl;
+        }
+
+        return 0;
+    }
+
+    static float age_Calculator()
+    {
+        int bd, bm, by; // birth date
+        int cd, cm, cy; // current date
+
+        cout << "Enter Birth Date (DD MM YYYY): ";
+        cin >> bd >> bm >> by;
+
+        cout << "Enter Current Date (DD MM YYYY): ";
+        cin >> cd >> cm >> cy;
+
+        int days, months, years;
+
+        // Days in months
+        int monthDays[] = {31,28,31,30,31,30,31,31,30,31,30,31};
+
+        if (bd > cd) {
+            cd = cd + monthDays[bm - 1];
+            cm = cm - 1;
+        }
+
+        days = cd - bd;
+
+        if (bm > cm) {
+            cm = cm + 12;
+            cy = cy - 1;
+        }
+
+        months = cm - bm;
+        years = cy - by;
+
+        cout << "\nYour Age is: ";
+        cout << years << " Years " << months << " Months " << days << " Days";
+
+        return 0;
+    }
+
+    static float attendance_Calculator()
+    {
+        int attendance_percentage = 0;
+        int attendaned;
+        int total_Class;
+        int choose;
+        int Percentage;
+        int required_classes;
+        int Attended_classes;
+        int attendance_sub1,attendance_sub2,attendance_sub3,attendance_sub4,attendance_sub5,attendance_sub6;
+        int attendancePercen_sub1,attendancePercen_sub2,attendancePercen_sub3,attendancePercen_sub4,attendancePercen_sub5,attendancePercen_sub6;
+
+        cout<<"Welcome to Attendence calculator"<<endl;
+        cout<<"1. Calculate Attendance_percentage"<<endl;
+        cout<<"2. Check Eligibility for Exam"<<endl;
+        cout<<"3. Required class for 75%"<<endl;
+        cout<<"4. Bunk Calculator"<<endl;
+        cout<<"5. SubjectWise Attendance"<<endl;
+        cout<<"Enter your choose:-  "<<endl;
+        cin>>choose;
+
+        switch (choose)
+        {
+        case 1:
+            cout<<"Enter how many class you attendaned"<<endl;
+            cin>>attendaned;
+            cout<<"Enter how many class you have in total"<<endl;
+            cin>>total_Class;
+
+            attendance_percentage = (total_Class/attendaned)*100;
+            cout<<"the Attendance percentage is:- "<<attendance_percentage<<endl;
+            break;
+
+        case 2:
+            cout<<"enter your Attendance in percentage:- ";
+            cin>>Percentage;
+
+            if (Percentage >= 75)
+            {
+                cout<<"You are eligible for Exam"<<endl;
+            }
+            else
+            {
+                cout << "You are Not Eligible for Exam"<<endl;
+            }
+            break;
+
+        case 3:
+            cout<<"Enter your Attendance in Percentage:- ";
+            cin>>Percentage;
+
+            if (Percentage >= 75)
+            {
+                cout << "You are Good to GO for Exam" << endl;
+            }
+            else
+            {
+                cout << "You required a Extra Class for Exam " << endl;
+            }
+            break;
+
+        case 4:
+            cout<<"Enter how many classes you attended:- ";
+            cin>>Attended_classes;
+
+            cout<<"enter How many Classes you have to attend:- ";
+            cin>>required_classes;
+
+            if (Attended_classes >= required_classes)
+            {
+                cout << "you can go for Bunk " << endl;
+            }
+            else
+            {
+                cout << "You cannot go for Bunk" << endl;
+            }
+                break;
+
+        case 5:
+            cout << "Enter your attendance in Subject1:- "<<endl;
+            cin>>attendance_sub1;
+            cout << "Enter your attendance in Subject2:- "<<endl;
+            cin>>attendance_sub2;
+            cout<<"Enter Your attendance in Subject3;- "<<endl;
+            cin>>attendance_sub3;
+            cout<<"Enter your attendance in subject4:- "<<endl;
+            cin>>attendance_sub4;
+            cout<<"Enter your attendance in subject5:- "<<endl;
+            cin>>attendance_sub5;
+            cout<<"Enter your attendance in subject6:- "<<endl;
+            cin>>attendance_sub6;
+            cout<<"Enter Total attendance required for eligibility for Exam:- "<<endl;
+            cin>>total_Class;
+
+            attendancePercen_sub1 = (attendance_sub1/total_Class)*100;
+            attendancePercen_sub2 = (attendance_sub2/total_Class)*100;
+            attendancePercen_sub3 = (attendance_sub3/total_Class)*100;
+            attendancePercen_sub4 = (attendance_sub4/total_Class)*100;
+            attendancePercen_sub5 = (attendance_sub5/total_Class)*100;
+            attendancePercen_sub6 = (attendance_sub6/total_Class)*100;
+
+            cout<<"your percentage of attendance in subject1 is "<<attendance_sub1 << endl;
+            cout<<"your percentage of attendance in subject2 is "<<attendance_sub2 << endl;
+            cout<<"your percentage of attendance in subject3 is "<<attendance_sub3 << endl;
+            cout<<"your percentage of attendance in subject4 is "<<attendance_sub4 << endl;
+            cout<<"your percentage of attendance in subject5 is "<<attendance_sub5 << endl;
+            cout<<"your percentage of attendance in subject6 is "<<attendance_sub6 << endl;
+
+
+            if (attendancePercen_sub1 >= 75)
+            {
+                cout<<"You are eligible for Exam"<<endl;
+            }
+            else
+            {
+                cout<<"You are not eligible for Exam"<<endl;
+            }
+            if (attendancePercen_sub2 >= 75)
+            {
+                cout<<"You are eligible for Exam"<<endl;
+            }
+            else
+            {
+                cout<<"You are not eligible for Exam"<<endl;
+            }
+            if (attendancePercen_sub3 >= 75)
+            {
+                cout<<"You are eligible for Exam"<<endl;
+            }
+            else
+            {
+                cout<<"You are not eligible for Exam"<<endl;
+            }
+            if (attendancePercen_sub4 >= 75)
+            {
+                cout<<"You are eligible for Exam"<<endl;
+            }
+            else
+            {
+                cout<<"You are not eligible for Exam"<<endl;
+            }
+            if (attendancePercen_sub5 >= 75)
+            {
+                cout<<"You are eligible for Exam"<<endl;
+            }
+            else
+            {
+                cout<<"You are not eligible for Exam"<<endl;
+            }
+            if (attendancePercen_sub6 >= 75)
+            {
+                cout<<"You are eligible for Exam"<<endl;
+            }
+            else
+            {
+                cout<<"You are not eligible for Exam"<<endl;
+            }
+            break;
+        default:
+            cout<<"Invalid Input";
+            break;
+        }
         return 0;
     }
 };
