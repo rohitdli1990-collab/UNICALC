@@ -2636,6 +2636,8 @@ class Engineering_tool
         float length;
         float breath;
         float height;
+        float base;
+        float radius;
         float square,Rectangle,Triangle,Circle;
 
         cout<<"welcome to Area calculator \n";
@@ -2649,18 +2651,95 @@ class Engineering_tool
         switch (choose)
         {
         case 1:
-            cout<<"Enter the side of square:- ";
+            cout<<"Enter the side of square:- \n";
             cin>>length;
             square = length*length;
             cout<<"the area of square is "<<square<<endl;
             break;
 
         case 2 :
-            cout<<"Enter the length of rectangle:- ";
+            cout<<"Enter the length of rectangle:- \n";
             cin>>length;
+            cout<<"Enter the breath of rectangle:- \n";
+            cin>>breath;
+            Rectangle = length*breath;
+            cout<<"The area of Rectangle is:-  "<<Rectangle<<endl;
+            break;
+
+        case 3:
+            cout<<"Enter the value of base:- \n";
+            cin>>base;
+            cout<<"Enter the value of height:- \n";
+            cin>>height;
+            Triangle = 1/2*base*height;
+            cout<<"the area of triangle is:- "<<Triangle<<endl;
+            break;
+
+        case 4:
+            cout<<"Enter the radius of circle:- \n";
+            cin>>radius;
+            Circle = 22/7*(radius*radius);
+            cout<<"the area of circle is:- "<<Circle<<endl;
+            break;
+        default:
+            cout<<"Invalid input";
+            break;
+        }
+        return 0;
+    }
+
+    static float Volume_Calculators()
+    {
+        int choose;
+        float side;
+        float height;
+        float length;
+        float breath;
+        float radius;
+        float Cube,Cuboid,Cylinder,Sphere,Cone;
+
+        cout<<"Welcome to Volume Calculator\n";
+        cout<<"1. cube Volume\n";
+        cout<<"2. cuboid Volume\n";
+        cout<<"3. Cylinder Volume\n";
+        cout<<"4. Sphere volume\n";
+        cout<<"5. cone Volume\n";
+        cout<<"Enter your Choose:- ";
+        cin>>choose;
+
+        switch (choose)
+        {
+        case 1:
+            cout<<"Enter the side of cube:- \n";
+            cin>>side;
+            Cube = side*side*side;
+            cout<<"the Volume of cube is "<<Cube<<endl;
+            break;
+
+        case 2:
+            cout<<"Enter the length of cuboid:- \n";
+            cin>>length;
+            cout<<"Enter the height of cuboid:- \n";
+            cin>>height;
+            cout<<"Enter the breath of cuboid:- \n";
+            cin>>breath;
+            Cuboid = length*breath*height;
+            cout<<"the Volume of cuboid is "<<Cuboid<<endl;
+            break;
+
+        case 3:
+            cout<<"Enter the height of Cylinder:- \n";
+            cin>>height;
+            cout<<"Enter the radius of the cylinder:- \n";
+            cin>>radius;
+            Cylinder = 22/7*(radius*radius)*height;
+            cout<<"the Volume of Cylinder is:- "<<Cylinder<<endl;
+            break;
+
+        case 4:
+            cout<<"Enter the "
 
         }
-
 
         return 0;
     }
