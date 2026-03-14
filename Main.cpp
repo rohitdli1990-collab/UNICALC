@@ -2434,6 +2434,237 @@ class Student_calculation
         return 0;
     }
 };
+
+class Engineering_tool
+{
+    static int ohm_Law()
+    {
+        int voltage;
+        int current;
+        int Resistance;
+        int choose;
+
+        cout<<"1. Find Voltage"<<endl;
+        cout<<"2. Find Current"<<endl;
+        cout<<"3. Find Resistance"<<endl;
+        cout<<"Enter your Choose:- "<<endl;
+        cin>>choose;
+
+        switch (choose){
+        case 1:
+            cout<<"Enter the value of Current:- "<<endl;
+            cin>>current;
+            cout<<"Enter the value of Resistance:- "<<endl;
+            cin>>Resistance;
+
+            voltage = current*Resistance;
+            cout<<"the value of Voltage is "<<voltage<<endl;
+            break;
+
+        case 2:
+            cout<<"Enter the value of Voltage:- "<<endl;
+            cin>>voltage;
+            cout<<"Enter the value of Resistance"<<endl;
+            cin>>Resistance;
+
+            current = voltage + Resistance;
+            cout<<"the value of Current is "<<current<<endl;
+            break;
+
+        case 3:
+            cout<<"Enter the value of Voltage:- "<<endl;
+            cin>>voltage;
+            cout<<"Enter the value of current:- "<<endl;
+            cin>>current;
+
+            Resistance = voltage / current;
+            cout<<"the value of Resistance is "<<Resistance<<endl;
+            break;
+        }
+        return 0;
+    }
+
+    static int Electrical_Power()
+    {
+        int choose;
+        int volts;
+        int Amp;
+        int Power;
+        int resistance;
+        int current;
+
+        cout<<"1. find Power using Volts and Amp"<<endl;
+        cout<<"2. find Power using current and resistance"<<endl;
+        cout<<"3. find Power using Volts and resistance"<<endl;
+        cout<<"Enter your Choose:- ";
+        cin>>choose;
+
+        switch (choose)
+        {
+        case 1:
+            cout<<"enter the value of Volts:- \n";
+            cin>>volts;
+            cout<<"Enter the value of Amp:- \n";
+            cin>>Amp;
+
+            Power = volts * Amp;
+            cout<<"the value of power is:- "<<Power<<endl;
+            break;
+
+        case 2:
+            cout<<"enter the value of current:- \n";
+            cin>>current;
+            cout<<"Enter the value of resistance:- \n";
+            cin>>resistance;
+
+            Power = (current * current) * resistance;
+            cout<<"the value of Power is:- "<<Power<<endl;
+            break;
+
+        case 3:
+            cout<<"Enter the value of volts:- \n";
+            cin>>volts;
+            cout<<"enter the value of resistance:- \n";
+            cin>>resistance;
+
+            Power = (volts * volts)/resistance;
+            cout<<"The value of Power is:- "<<Power<<endl;
+            break;
+        default:
+            cout<<"Invalid input";
+        }
+        return 0;
+    }
+
+    static int Energy_Calculator()
+    {
+        int energy;
+        int Power;
+        int time;
+
+        cout<<"Enter the value of Power is:- \n";
+        cin>>Power;
+        cout<<"Enter the time:- \n";
+        cin>>time;
+
+        energy = Power * time;
+
+        cout<<"the value of energy is "<<energy<<endl;
+        return 0;
+    }
+
+    static float Series_resistance_calculator()
+    {
+        float resistance_value;
+        float num_resistance;
+        float series_add;
+
+        cout<<"enter the number of resistance:- \n";
+        cin>>num_resistance;
+
+        for (int i = 0;i <= num_resistance; i++)
+        {
+            cout<<"Enter the value of resistance:- "<<endl;
+            cin>>resistance_value;
+            series_add += resistance_value;
+        }
+
+        cout<<"the value of series of resistance is:- "<<series_add<<endl;
+        return 0;
+    }
+
+    static float Parallel_resistance_calculator()
+    {
+        float resistance_value;
+        float num_resistance;
+        float sum;
+        float parallel_resistance;
+
+        cout<<"enter the number of resistance:- \n";
+        cin>>num_resistance;
+
+        for (int i = 0;i <= num_resistance; i++)
+        {
+            cout<<"Enter the value of resistance:- "<<endl;
+            cin>>resistance_value;
+            sum = sum + (1/resistance_value);
+        }
+
+        parallel_resistance = 1 / sum;
+        cout<<"the value of Parallel_resistance is "<<parallel_resistance<<endl;
+        return 0;
+    }
+
+    static float current_calculator()
+    {
+        int voltage;
+        int Power;
+        int current;
+
+        cout<<"Enter the value of voltage:- \n";
+        cin>>voltage;
+        cout<<"Enter the value of Power:- \n";
+        cin>>Power;
+
+        current = voltage/Power;
+        cout<<"The value of current is "<<current<<endl;
+        return 0;
+    }
+
+    static int Voltage_Divide()
+    {
+        int input_voltage;
+        int resister1;
+        int resister2;
+        int out_voltage;
+
+        cout<<"Enter the value of input voltage:- \n";
+        cin>>input_voltage;
+        cout<<"Enter the value of resister1:- \n";
+        cin>>resister1;
+        cout<<"Enter the value of resister2:- \n";
+        cin>>resister2;
+
+        out_voltage = input_voltage * (resister2/(resister1 + resister2));
+        cout<<"the value of voltage out is "<<out_voltage<<endl;
+        return 0;
+    }
+
+    static float Area_calculators()
+    {
+        int choose;
+        float length;
+        float breath;
+        float height;
+        float square,Rectangle,Triangle,Circle;
+
+        cout<<"welcome to Area calculator \n";
+        cout<<"1. Square area\n";
+        cout<<"2. Rectangle area\n";
+        cout<<"3. triangle area\n";
+        cout<<"4. circle area\n";
+        cout<<"enter your Choose:- ";
+        cin>>choose;
+
+        switch (choose)
+        {
+        case 1:
+            cout<<"Enter the side of square:- ";
+            cin>>length;
+            square = length*length;
+            cout<<"the area of square is "<<square<<endl;
+            break;
+
+        case 2 :
+            cout<<"Enter the length of rectangle:- ";
+            cin>>length;
+
+        }
+
+
+        return 0;
+    }
+};
 int main()
 {
 
