@@ -2737,10 +2737,23 @@ class Engineering_tool
             break;
 
         case 4:
-            cout<<"Enter the "
+            cout<<"Enter the radius of sphere:- \n";
+            cin>>radius;
+            Sphere = (4/3)*(22/7)*(radius*radius*radius);
+            cout<<"the volume of Sphere is "<<Sphere<<endl;
+            break;
 
+        case 5:
+            cout<<"Enter the radius of cone:- \n";
+            cin>>radius;
+            cout<<"Enter the height of Cone:- \n";
+            cin>>height;
+            Cone = (1/3)*(22/7)*(radius*radius)*height;
+            cout<<"the volume of cone is:- "<<Cone<<endl;
+            break;
+        default:
+            cout<<"Invalid input";
         }
-
         return 0;
     }
 };
