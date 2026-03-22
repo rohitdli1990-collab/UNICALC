@@ -2757,6 +2757,103 @@ class Engineering_tool
         }
         return 0;
     }
+
+    static float Mechanical_calculator()
+    {
+        int choose;
+        float Speed;
+        float Distance;
+        float time;
+        float Force;
+        float Acceleration;
+        float Mass;
+        float Torque;
+        float Radius;
+        float Work;
+        float Power;
+        float Velocity;
+        float momentum;
+
+        cout<<"welcome to Mechanical calculator\n"<<endl;
+        cout<<"1. Speed calculator\n";
+        cout<<"2. Force calculator\n";
+        cout<<"3. torque Calculator\n";
+        cout<<"4. Work Calculator\n";
+        cout<<"5. Power Calculator\n";
+        cout<<"6. momentum calculator\n";
+        cout<<"7. Acceleration calculator\n";
+        cout<<"Enter your choose:- ";
+        cin>>choose;
+
+        switch (choose)
+        {
+        case 1:
+            cout<<"Enter your distance:- ";
+            cin>>Distance;
+            cout<<"Enter your time:- ";
+            cin>>time;
+            Speed = Distance/time;
+            cout<<"your speed is "<<Speed<<endl;
+            break;
+
+        case 2:
+            cout<<"enter your Mass:- ";
+            cin>>Mass;
+            cout<<"enter your acceleration:- ";
+            cin>>Acceleration;
+            Force = Mass*Acceleration;
+            cout<<"Your force is "<<Force<<endl;
+            break;
+
+        case 3:
+            cout<<"Enter your Force:-  ";
+            cin>>Force;
+            cout<<"Enter your Radius:- ";
+            cin>>Radius;
+            Torque = Force*Radius;
+            cout<<"Your torque is:-  "<<Torque<<endl;
+            break;
+
+        case 4:
+            cout<<"Enter your Force:- \n";
+            cin>>Force;
+            cout<<"Enter your distance:- \n";
+            cin>>Distance;
+            Work = Force*Distance;
+            cout<<"Your Work is "<<Work<<endl;
+            break;
+
+        case 5:
+            cout<<"Enter your work:- \n";
+            cin>>Work;
+            cout<<"Enter your time:- \n";
+            cin>>time;
+            Power = Work/time;
+            cout<<"Your Power is "<<Power<<endl;
+            break;
+
+        case 6:
+            cout<<"Enter your Mass:- ";
+            cin>>Mass;
+            cout<<"Enter your Velocity:- ";
+            cin>>Velocity;
+            momentum = Mass*Velocity;
+            cout<<"Your momentum is "<<momentum<<endl;
+            break;
+
+        case 7:
+            cout<<"Enter your velocity:- ";
+            cin>>Velocity;
+            cout<<"Enter your time:- ";
+            cin>>time;
+            Acceleration = Velocity/time;
+            cout<<"Your Acceleration is "<<Acceleration<<endl;
+            break;
+        default:
+            cout<<"Invaild Input";
+        }
+        return 0;
+    }
 };
 int main()
 {
