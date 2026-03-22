@@ -2149,84 +2149,83 @@ class Student_calculation
             subject6grade = 0;
         }
 
-        result = (subject1grade+subject2grade+subject3grade+subject4grade+subject5grade+subject6grade)/6;
-        cout<<"the CGPA of the 6 subject is "<<result<<endl;
+        result = (subject1grade + subject2grade + subject3grade + subject4grade + subject5grade + subject6grade) / 6;
+        cout << "the CGPA of the 6 subject is " << result << endl;
 
         return 0;
     }
 
     static float averageMarks()
     {
-        float sub1marks,sub2marks,sub3marks,sub4marks,sub5marks,sub6marks;
+        float sub1marks, sub2marks, sub3marks, sub4marks, sub5marks, sub6marks;
         float result;
 
-        cout<<"Enter your marks of subject1:- ";
-        cin>>sub1marks;
-        cout<<"Enter your marks of subject2:- ";
-        cin>>sub2marks;
-        cout<<"Enter your marks of subject3:- ";
-        cin>>sub3marks;
-        cout<<"Enter your marks of subject4:- ";
-        cin>>sub4marks;
-        cout<<"enter your marks of subject5:- ";
-        cin>>sub5marks;
-        cout<<"Enter your marks of subject6:- ";
-        cin>>sub6marks;
+        cout << "Enter your marks of subject1:- ";
+        cin >> sub1marks;
+        cout << "Enter your marks of subject2:- ";
+        cin >> sub2marks;
+        cout << "Enter your marks of subject3:- ";
+        cin >> sub3marks;
+        cout << "Enter your marks of subject4:- ";
+        cin >> sub4marks;
+        cout << "enter your marks of subject5:- ";
+        cin >> sub5marks;
+        cout << "Enter your marks of subject6:- ";
+        cin >> sub6marks;
 
-        result = (sub1marks+sub2marks+sub3marks+sub4marks+sub5marks+sub6marks)/6;
-        cout<<"Your average marks of given marks is:-  "<<result<<endl;
-
+        result = (sub1marks + sub2marks + sub3marks + sub4marks + sub5marks + sub6marks) / 6;
+        cout << "Your average marks of given marks is:-  " << result << endl;
 
         return 0;
     }
 
     static float gradeCalculate()
     {
-        float sub1marks,sub2marks,sub3marks,sub4marks,sub5marks,sub6marks;
+        float sub1marks, sub2marks, sub3marks, sub4marks, sub5marks, sub6marks;
         float result;
 
-        cout<<"Enter your marks of subject1:- ";
-        cin>>sub1marks;
-        cout<<"Enter your marks of subject2:- ";
-        cin>>sub2marks;
-        cout<<"Enter your marks of subject3:- ";
-        cin>>sub3marks;
-        cout<<"Enter your marks of subject4:- ";
-        cin>>sub4marks;
-        cout<<"enter your marks of subject5:- ";
-        cin>>sub5marks;
-        cout<<"Enter your marks of subject6:- ";
-        cin>>sub6marks;
+        cout << "Enter your marks of subject1:- ";
+        cin >> sub1marks;
+        cout << "Enter your marks of subject2:- ";
+        cin >> sub2marks;
+        cout << "Enter your marks of subject3:- ";
+        cin >> sub3marks;
+        cout << "Enter your marks of subject4:- ";
+        cin >> sub4marks;
+        cout << "enter your marks of subject5:- ";
+        cin >> sub5marks;
+        cout << "Enter your marks of subject6:- ";
+        cin >> sub6marks;
 
-        result = (sub1marks+sub2marks+sub3marks+sub4marks+sub5marks+sub6marks)/6;
+        result = (sub1marks + sub2marks + sub3marks + sub4marks + sub5marks + sub6marks) / 6;
 
         if (result == 100 && result <= 91)
         {
-            cout<<"You got A+"<<endl;
+            cout << "You got A+" << endl;
         }
         else if (result == 90 && result <= 81)
         {
-            cout<<"You got A"<<endl;
+            cout << "You got A" << endl;
         }
         else if (result == 80 && result <= 71)
         {
-            cout<<"you got B"<<endl;
+            cout << "you got B" << endl;
         }
         else if (result == 70 && result <= 61)
         {
-            cout<<"You got C"<<endl;
+            cout << "You got C" << endl;
         }
         else if (result == 60 && result <= 51)
         {
-            cout<<"You got D"<<endl;
+            cout << "You got D" << endl;
         }
         else if (result == 50 && result <= 40)
         {
-            cout<<"you got E"<<endl;
+            cout << "you got E" << endl;
         }
         else
         {
-            cout << "you got F"<<endl;
+            cout << "you got F" << endl;
         }
 
         return 0;
@@ -2246,16 +2245,18 @@ class Student_calculation
         int days, months, years;
 
         // Days in months
-        int monthDays[] = {31,28,31,30,31,30,31,31,30,31,30,31};
+        int monthDays[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
-        if (bd > cd) {
+        if (bd > cd)
+        {
             cd = cd + monthDays[bm - 1];
             cm = cm - 1;
         }
 
         days = cd - bd;
 
-        if (bm > cm) {
+        if (bm > cm)
+        {
             cm = cm + 12;
             cy = cy - 1;
         }
@@ -2278,47 +2279,47 @@ class Student_calculation
         int Percentage;
         int required_classes;
         int Attended_classes;
-        int attendance_sub1,attendance_sub2,attendance_sub3,attendance_sub4,attendance_sub5,attendance_sub6;
-        int attendancePercen_sub1,attendancePercen_sub2,attendancePercen_sub3,attendancePercen_sub4,attendancePercen_sub5,attendancePercen_sub6;
+        int attendance_sub1, attendance_sub2, attendance_sub3, attendance_sub4, attendance_sub5, attendance_sub6;
+        int attendancePercen_sub1, attendancePercen_sub2, attendancePercen_sub3, attendancePercen_sub4, attendancePercen_sub5, attendancePercen_sub6;
 
-        cout<<"Welcome to Attendence calculator"<<endl;
-        cout<<"1. Calculate Attendance_percentage"<<endl;
-        cout<<"2. Check Eligibility for Exam"<<endl;
-        cout<<"3. Required class for 75%"<<endl;
-        cout<<"4. Bunk Calculator"<<endl;
-        cout<<"5. SubjectWise Attendance"<<endl;
-        cout<<"Enter your choose:-  "<<endl;
-        cin>>choose;
+        cout << "Welcome to Attendence calculator" << endl;
+        cout << "1. Calculate Attendance_percentage" << endl;
+        cout << "2. Check Eligibility for Exam" << endl;
+        cout << "3. Required class for 75%" << endl;
+        cout << "4. Bunk Calculator" << endl;
+        cout << "5. SubjectWise Attendance" << endl;
+        cout << "Enter your choose:-  " << endl;
+        cin >> choose;
 
         switch (choose)
         {
         case 1:
-            cout<<"Enter how many class you attendaned"<<endl;
-            cin>>attendaned;
-            cout<<"Enter how many class you have in total"<<endl;
-            cin>>total_Class;
+            cout << "Enter how many class you attendaned" << endl;
+            cin >> attendaned;
+            cout << "Enter how many class you have in total" << endl;
+            cin >> total_Class;
 
-            attendance_percentage = (total_Class/attendaned)*100;
-            cout<<"the Attendance percentage is:- "<<attendance_percentage<<endl;
+            attendance_percentage = (total_Class / attendaned) * 100;
+            cout << "the Attendance percentage is:- " << attendance_percentage << endl;
             break;
 
         case 2:
-            cout<<"enter your Attendance in percentage:- ";
-            cin>>Percentage;
+            cout << "enter your Attendance in percentage:- ";
+            cin >> Percentage;
 
             if (Percentage >= 75)
             {
-                cout<<"You are eligible for Exam"<<endl;
+                cout << "You are eligible for Exam" << endl;
             }
             else
             {
-                cout << "You are Not Eligible for Exam"<<endl;
+                cout << "You are Not Eligible for Exam" << endl;
             }
             break;
 
         case 3:
-            cout<<"Enter your Attendance in Percentage:- ";
-            cin>>Percentage;
+            cout << "Enter your Attendance in Percentage:- ";
+            cin >> Percentage;
 
             if (Percentage >= 75)
             {
@@ -2331,11 +2332,11 @@ class Student_calculation
             break;
 
         case 4:
-            cout<<"Enter how many classes you attended:- ";
-            cin>>Attended_classes;
+            cout << "Enter how many classes you attended:- ";
+            cin >> Attended_classes;
 
-            cout<<"enter How many Classes you have to attend:- ";
-            cin>>required_classes;
+            cout << "enter How many Classes you have to attend:- ";
+            cin >> required_classes;
 
             if (Attended_classes >= required_classes)
             {
@@ -2345,90 +2346,89 @@ class Student_calculation
             {
                 cout << "You cannot go for Bunk" << endl;
             }
-                break;
+            break;
 
         case 5:
-            cout << "Enter your attendance in Subject1:- "<<endl;
-            cin>>attendance_sub1;
-            cout << "Enter your attendance in Subject2:- "<<endl;
-            cin>>attendance_sub2;
-            cout<<"Enter Your attendance in Subject3;- "<<endl;
-            cin>>attendance_sub3;
-            cout<<"Enter your attendance in subject4:- "<<endl;
-            cin>>attendance_sub4;
-            cout<<"Enter your attendance in subject5:- "<<endl;
-            cin>>attendance_sub5;
-            cout<<"Enter your attendance in subject6:- "<<endl;
-            cin>>attendance_sub6;
-            cout<<"Enter Total attendance required for eligibility for Exam:- "<<endl;
-            cin>>total_Class;
+            cout << "Enter your attendance in Subject1:- " << endl;
+            cin >> attendance_sub1;
+            cout << "Enter your attendance in Subject2:- " << endl;
+            cin >> attendance_sub2;
+            cout << "Enter Your attendance in Subject3;- " << endl;
+            cin >> attendance_sub3;
+            cout << "Enter your attendance in subject4:- " << endl;
+            cin >> attendance_sub4;
+            cout << "Enter your attendance in subject5:- " << endl;
+            cin >> attendance_sub5;
+            cout << "Enter your attendance in subject6:- " << endl;
+            cin >> attendance_sub6;
+            cout << "Enter Total attendance required for eligibility for Exam:- " << endl;
+            cin >> total_Class;
 
-            attendancePercen_sub1 = (attendance_sub1/total_Class)*100;
-            attendancePercen_sub2 = (attendance_sub2/total_Class)*100;
-            attendancePercen_sub3 = (attendance_sub3/total_Class)*100;
-            attendancePercen_sub4 = (attendance_sub4/total_Class)*100;
-            attendancePercen_sub5 = (attendance_sub5/total_Class)*100;
-            attendancePercen_sub6 = (attendance_sub6/total_Class)*100;
+            attendancePercen_sub1 = (attendance_sub1 / total_Class) * 100;
+            attendancePercen_sub2 = (attendance_sub2 / total_Class) * 100;
+            attendancePercen_sub3 = (attendance_sub3 / total_Class) * 100;
+            attendancePercen_sub4 = (attendance_sub4 / total_Class) * 100;
+            attendancePercen_sub5 = (attendance_sub5 / total_Class) * 100;
+            attendancePercen_sub6 = (attendance_sub6 / total_Class) * 100;
 
-            cout<<"your percentage of attendance in subject1 is "<<attendance_sub1 << endl;
-            cout<<"your percentage of attendance in subject2 is "<<attendance_sub2 << endl;
-            cout<<"your percentage of attendance in subject3 is "<<attendance_sub3 << endl;
-            cout<<"your percentage of attendance in subject4 is "<<attendance_sub4 << endl;
-            cout<<"your percentage of attendance in subject5 is "<<attendance_sub5 << endl;
-            cout<<"your percentage of attendance in subject6 is "<<attendance_sub6 << endl;
-
+            cout << "your percentage of attendance in subject1 is " << attendance_sub1 << endl;
+            cout << "your percentage of attendance in subject2 is " << attendance_sub2 << endl;
+            cout << "your percentage of attendance in subject3 is " << attendance_sub3 << endl;
+            cout << "your percentage of attendance in subject4 is " << attendance_sub4 << endl;
+            cout << "your percentage of attendance in subject5 is " << attendance_sub5 << endl;
+            cout << "your percentage of attendance in subject6 is " << attendance_sub6 << endl;
 
             if (attendancePercen_sub1 >= 75)
             {
-                cout<<"You are eligible for Exam"<<endl;
+                cout << "You are eligible for Exam" << endl;
             }
             else
             {
-                cout<<"You are not eligible for Exam"<<endl;
+                cout << "You are not eligible for Exam" << endl;
             }
             if (attendancePercen_sub2 >= 75)
             {
-                cout<<"You are eligible for Exam"<<endl;
+                cout << "You are eligible for Exam" << endl;
             }
             else
             {
-                cout<<"You are not eligible for Exam"<<endl;
+                cout << "You are not eligible for Exam" << endl;
             }
             if (attendancePercen_sub3 >= 75)
             {
-                cout<<"You are eligible for Exam"<<endl;
+                cout << "You are eligible for Exam" << endl;
             }
             else
             {
-                cout<<"You are not eligible for Exam"<<endl;
+                cout << "You are not eligible for Exam" << endl;
             }
             if (attendancePercen_sub4 >= 75)
             {
-                cout<<"You are eligible for Exam"<<endl;
+                cout << "You are eligible for Exam" << endl;
             }
             else
             {
-                cout<<"You are not eligible for Exam"<<endl;
+                cout << "You are not eligible for Exam" << endl;
             }
             if (attendancePercen_sub5 >= 75)
             {
-                cout<<"You are eligible for Exam"<<endl;
+                cout << "You are eligible for Exam" << endl;
             }
             else
             {
-                cout<<"You are not eligible for Exam"<<endl;
+                cout << "You are not eligible for Exam" << endl;
             }
             if (attendancePercen_sub6 >= 75)
             {
-                cout<<"You are eligible for Exam"<<endl;
+                cout << "You are eligible for Exam" << endl;
             }
             else
             {
-                cout<<"You are not eligible for Exam"<<endl;
+                cout << "You are not eligible for Exam" << endl;
             }
             break;
         default:
-            cout<<"Invalid Input";
+            cout << "Invalid Input";
             break;
         }
         return 0;
@@ -2444,41 +2444,42 @@ class Engineering_tool
         int Resistance;
         int choose;
 
-        cout<<"1. Find Voltage"<<endl;
-        cout<<"2. Find Current"<<endl;
-        cout<<"3. Find Resistance"<<endl;
-        cout<<"Enter your Choose:- "<<endl;
-        cin>>choose;
+        cout << "1. Find Voltage" << endl;
+        cout << "2. Find Current" << endl;
+        cout << "3. Find Resistance" << endl;
+        cout << "Enter your Choose:- " << endl;
+        cin >> choose;
 
-        switch (choose){
+        switch (choose)
+        {
         case 1:
-            cout<<"Enter the value of Current:- "<<endl;
-            cin>>current;
-            cout<<"Enter the value of Resistance:- "<<endl;
-            cin>>Resistance;
+            cout << "Enter the value of Current:- " << endl;
+            cin >> current;
+            cout << "Enter the value of Resistance:- " << endl;
+            cin >> Resistance;
 
-            voltage = current*Resistance;
-            cout<<"the value of Voltage is "<<voltage<<endl;
+            voltage = current * Resistance;
+            cout << "the value of Voltage is " << voltage << endl;
             break;
 
         case 2:
-            cout<<"Enter the value of Voltage:- "<<endl;
-            cin>>voltage;
-            cout<<"Enter the value of Resistance"<<endl;
-            cin>>Resistance;
+            cout << "Enter the value of Voltage:- " << endl;
+            cin >> voltage;
+            cout << "Enter the value of Resistance" << endl;
+            cin >> Resistance;
 
             current = voltage + Resistance;
-            cout<<"the value of Current is "<<current<<endl;
+            cout << "the value of Current is " << current << endl;
             break;
 
         case 3:
-            cout<<"Enter the value of Voltage:- "<<endl;
-            cin>>voltage;
-            cout<<"Enter the value of current:- "<<endl;
-            cin>>current;
+            cout << "Enter the value of Voltage:- " << endl;
+            cin >> voltage;
+            cout << "Enter the value of current:- " << endl;
+            cin >> current;
 
             Resistance = voltage / current;
-            cout<<"the value of Resistance is "<<Resistance<<endl;
+            cout << "the value of Resistance is " << Resistance << endl;
             break;
         }
         return 0;
@@ -2493,45 +2494,45 @@ class Engineering_tool
         int resistance;
         int current;
 
-        cout<<"1. find Power using Volts and Amp"<<endl;
-        cout<<"2. find Power using current and resistance"<<endl;
-        cout<<"3. find Power using Volts and resistance"<<endl;
-        cout<<"Enter your Choose:- ";
-        cin>>choose;
+        cout << "1. find Power using Volts and Amp" << endl;
+        cout << "2. find Power using current and resistance" << endl;
+        cout << "3. find Power using Volts and resistance" << endl;
+        cout << "Enter your Choose:- ";
+        cin >> choose;
 
         switch (choose)
         {
         case 1:
-            cout<<"enter the value of Volts:- \n";
-            cin>>volts;
-            cout<<"Enter the value of Amp:- \n";
-            cin>>Amp;
+            cout << "enter the value of Volts:- \n";
+            cin >> volts;
+            cout << "Enter the value of Amp:- \n";
+            cin >> Amp;
 
             Power = volts * Amp;
-            cout<<"the value of power is:- "<<Power<<endl;
+            cout << "the value of power is:- " << Power << endl;
             break;
 
         case 2:
-            cout<<"enter the value of current:- \n";
-            cin>>current;
-            cout<<"Enter the value of resistance:- \n";
-            cin>>resistance;
+            cout << "enter the value of current:- \n";
+            cin >> current;
+            cout << "Enter the value of resistance:- \n";
+            cin >> resistance;
 
             Power = (current * current) * resistance;
-            cout<<"the value of Power is:- "<<Power<<endl;
+            cout << "the value of Power is:- " << Power << endl;
             break;
 
         case 3:
-            cout<<"Enter the value of volts:- \n";
-            cin>>volts;
-            cout<<"enter the value of resistance:- \n";
-            cin>>resistance;
+            cout << "Enter the value of volts:- \n";
+            cin >> volts;
+            cout << "enter the value of resistance:- \n";
+            cin >> resistance;
 
-            Power = (volts * volts)/resistance;
-            cout<<"The value of Power is:- "<<Power<<endl;
+            Power = (volts * volts) / resistance;
+            cout << "The value of Power is:- " << Power << endl;
             break;
         default:
-            cout<<"Invalid input";
+            cout << "Invalid input";
         }
         return 0;
     }
@@ -2542,14 +2543,14 @@ class Engineering_tool
         int Power;
         int time;
 
-        cout<<"Enter the value of Power is:- \n";
-        cin>>Power;
-        cout<<"Enter the time:- \n";
-        cin>>time;
+        cout << "Enter the value of Power is:- \n";
+        cin >> Power;
+        cout << "Enter the time:- \n";
+        cin >> time;
 
         energy = Power * time;
 
-        cout<<"the value of energy is "<<energy<<endl;
+        cout << "the value of energy is " << energy << endl;
         return 0;
     }
 
@@ -2559,17 +2560,17 @@ class Engineering_tool
         float num_resistance;
         float series_add;
 
-        cout<<"enter the number of resistance:- \n";
-        cin>>num_resistance;
+        cout << "enter the number of resistance:- \n";
+        cin >> num_resistance;
 
-        for (int i = 0;i <= num_resistance; i++)
+        for (int i = 0; i <= num_resistance; i++)
         {
-            cout<<"Enter the value of resistance:- "<<endl;
-            cin>>resistance_value;
+            cout << "Enter the value of resistance:- " << endl;
+            cin >> resistance_value;
             series_add += resistance_value;
         }
 
-        cout<<"the value of series of resistance is:- "<<series_add<<endl;
+        cout << "the value of series of resistance is:- " << series_add << endl;
         return 0;
     }
 
@@ -2580,18 +2581,18 @@ class Engineering_tool
         float sum;
         float parallel_resistance;
 
-        cout<<"enter the number of resistance:- \n";
-        cin>>num_resistance;
+        cout << "enter the number of resistance:- \n";
+        cin >> num_resistance;
 
-        for (int i = 0;i <= num_resistance; i++)
+        for (int i = 0; i <= num_resistance; i++)
         {
-            cout<<"Enter the value of resistance:- "<<endl;
-            cin>>resistance_value;
-            sum = sum + (1/resistance_value);
+            cout << "Enter the value of resistance:- " << endl;
+            cin >> resistance_value;
+            sum = sum + (1 / resistance_value);
         }
 
         parallel_resistance = 1 / sum;
-        cout<<"the value of Parallel_resistance is "<<parallel_resistance<<endl;
+        cout << "the value of Parallel_resistance is " << parallel_resistance << endl;
         return 0;
     }
 
@@ -2601,13 +2602,13 @@ class Engineering_tool
         int Power;
         int current;
 
-        cout<<"Enter the value of voltage:- \n";
-        cin>>voltage;
-        cout<<"Enter the value of Power:- \n";
-        cin>>Power;
+        cout << "Enter the value of voltage:- \n";
+        cin >> voltage;
+        cout << "Enter the value of Power:- \n";
+        cin >> Power;
 
-        current = voltage/Power;
-        cout<<"The value of current is "<<current<<endl;
+        current = voltage / Power;
+        cout << "The value of current is " << current << endl;
         return 0;
     }
 
@@ -2618,15 +2619,15 @@ class Engineering_tool
         int resister2;
         int out_voltage;
 
-        cout<<"Enter the value of input voltage:- \n";
-        cin>>input_voltage;
-        cout<<"Enter the value of resister1:- \n";
-        cin>>resister1;
-        cout<<"Enter the value of resister2:- \n";
-        cin>>resister2;
+        cout << "Enter the value of input voltage:- \n";
+        cin >> input_voltage;
+        cout << "Enter the value of resister1:- \n";
+        cin >> resister1;
+        cout << "Enter the value of resister2:- \n";
+        cin >> resister2;
 
-        out_voltage = input_voltage * (resister2/(resister1 + resister2));
-        cout<<"the value of voltage out is "<<out_voltage<<endl;
+        out_voltage = input_voltage * (resister2 / (resister1 + resister2));
+        cout << "the value of voltage out is " << out_voltage << endl;
         return 0;
     }
 
@@ -2638,51 +2639,51 @@ class Engineering_tool
         float height;
         float base;
         float radius;
-        float square,Rectangle,Triangle,Circle;
+        float square, Rectangle, Triangle, Circle;
 
-        cout<<"welcome to Area calculator \n";
-        cout<<"1. Square area\n";
-        cout<<"2. Rectangle area\n";
-        cout<<"3. triangle area\n";
-        cout<<"4. circle area\n";
-        cout<<"enter your Choose:- ";
-        cin>>choose;
+        cout << "welcome to Area calculator \n";
+        cout << "1. Square area\n";
+        cout << "2. Rectangle area\n";
+        cout << "3. triangle area\n";
+        cout << "4. circle area\n";
+        cout << "enter your Choose:- ";
+        cin >> choose;
 
         switch (choose)
         {
         case 1:
-            cout<<"Enter the side of square:- \n";
-            cin>>length;
-            square = length*length;
-            cout<<"the area of square is "<<square<<endl;
+            cout << "Enter the side of square:- \n";
+            cin >> length;
+            square = length * length;
+            cout << "the area of square is " << square << endl;
             break;
 
-        case 2 :
-            cout<<"Enter the length of rectangle:- \n";
-            cin>>length;
-            cout<<"Enter the breath of rectangle:- \n";
-            cin>>breath;
-            Rectangle = length*breath;
-            cout<<"The area of Rectangle is:-  "<<Rectangle<<endl;
+        case 2:
+            cout << "Enter the length of rectangle:- \n";
+            cin >> length;
+            cout << "Enter the breath of rectangle:- \n";
+            cin >> breath;
+            Rectangle = length * breath;
+            cout << "The area of Rectangle is:-  " << Rectangle << endl;
             break;
 
         case 3:
-            cout<<"Enter the value of base:- \n";
-            cin>>base;
-            cout<<"Enter the value of height:- \n";
-            cin>>height;
-            Triangle = 1/2*base*height;
-            cout<<"the area of triangle is:- "<<Triangle<<endl;
+            cout << "Enter the value of base:- \n";
+            cin >> base;
+            cout << "Enter the value of height:- \n";
+            cin >> height;
+            Triangle = 1 / 2 * base * height;
+            cout << "the area of triangle is:- " << Triangle << endl;
             break;
 
         case 4:
-            cout<<"Enter the radius of circle:- \n";
-            cin>>radius;
-            Circle = 22/7*(radius*radius);
-            cout<<"the area of circle is:- "<<Circle<<endl;
+            cout << "Enter the radius of circle:- \n";
+            cin >> radius;
+            Circle = 22 / 7 * (radius * radius);
+            cout << "the area of circle is:- " << Circle << endl;
             break;
         default:
-            cout<<"Invalid input";
+            cout << "Invalid input";
             break;
         }
         return 0;
@@ -2696,64 +2697,64 @@ class Engineering_tool
         float length;
         float breath;
         float radius;
-        float Cube,Cuboid,Cylinder,Sphere,Cone;
+        float Cube, Cuboid, Cylinder, Sphere, Cone;
 
-        cout<<"Welcome to Volume Calculator\n";
-        cout<<"1. cube Volume\n";
-        cout<<"2. cuboid Volume\n";
-        cout<<"3. Cylinder Volume\n";
-        cout<<"4. Sphere volume\n";
-        cout<<"5. cone Volume\n";
-        cout<<"Enter your Choose:- ";
-        cin>>choose;
+        cout << "Welcome to Volume Calculator\n";
+        cout << "1. cube Volume\n";
+        cout << "2. cuboid Volume\n";
+        cout << "3. Cylinder Volume\n";
+        cout << "4. Sphere volume\n";
+        cout << "5. cone Volume\n";
+        cout << "Enter your Choose:- ";
+        cin >> choose;
 
         switch (choose)
         {
         case 1:
-            cout<<"Enter the side of cube:- \n";
-            cin>>side;
-            Cube = side*side*side;
-            cout<<"the Volume of cube is "<<Cube<<endl;
+            cout << "Enter the side of cube:- \n";
+            cin >> side;
+            Cube = side * side * side;
+            cout << "the Volume of cube is " << Cube << endl;
             break;
 
         case 2:
-            cout<<"Enter the length of cuboid:- \n";
-            cin>>length;
-            cout<<"Enter the height of cuboid:- \n";
-            cin>>height;
-            cout<<"Enter the breath of cuboid:- \n";
-            cin>>breath;
-            Cuboid = length*breath*height;
-            cout<<"the Volume of cuboid is "<<Cuboid<<endl;
+            cout << "Enter the length of cuboid:- \n";
+            cin >> length;
+            cout << "Enter the height of cuboid:- \n";
+            cin >> height;
+            cout << "Enter the breath of cuboid:- \n";
+            cin >> breath;
+            Cuboid = length * breath * height;
+            cout << "the Volume of cuboid is " << Cuboid << endl;
             break;
 
         case 3:
-            cout<<"Enter the height of Cylinder:- \n";
-            cin>>height;
-            cout<<"Enter the radius of the cylinder:- \n";
-            cin>>radius;
-            Cylinder = 22/7*(radius*radius)*height;
-            cout<<"the Volume of Cylinder is:- "<<Cylinder<<endl;
+            cout << "Enter the height of Cylinder:- \n";
+            cin >> height;
+            cout << "Enter the radius of the cylinder:- \n";
+            cin >> radius;
+            Cylinder = 22 / 7 * (radius * radius) * height;
+            cout << "the Volume of Cylinder is:- " << Cylinder << endl;
             break;
 
         case 4:
-            cout<<"Enter the radius of sphere:- \n";
-            cin>>radius;
-            Sphere = (4/3)*(22/7)*(radius*radius*radius);
-            cout<<"the volume of Sphere is "<<Sphere<<endl;
+            cout << "Enter the radius of sphere:- \n";
+            cin >> radius;
+            Sphere = (4 / 3) * (22 / 7) * (radius * radius * radius);
+            cout << "the volume of Sphere is " << Sphere << endl;
             break;
 
         case 5:
-            cout<<"Enter the radius of cone:- \n";
-            cin>>radius;
-            cout<<"Enter the height of Cone:- \n";
-            cin>>height;
-            Cone = (1/3)*(22/7)*(radius*radius)*height;
-            cout<<"the volume of cone is:- "<<Cone<<endl;
+            cout << "Enter the radius of cone:- \n";
+            cin >> radius;
+            cout << "Enter the height of Cone:- \n";
+            cin >> height;
+            Cone = (1 / 3) * (22 / 7) * (radius * radius) * height;
+            cout << "the volume of cone is:- " << Cone << endl;
             break;
 
         default:
-            cout<<"Invalid input";
+            cout << "Invalid input";
         }
         return 0;
     }
@@ -2774,84 +2775,233 @@ class Engineering_tool
         float Velocity;
         float momentum;
 
-        cout<<"welcome to Mechanical calculator\n"<<endl;
-        cout<<"1. Speed calculator\n";
-        cout<<"2. Force calculator\n";
-        cout<<"3. torque Calculator\n";
-        cout<<"4. Work Calculator\n";
-        cout<<"5. Power Calculator\n";
-        cout<<"6. momentum calculator\n";
-        cout<<"7. Acceleration calculator\n";
-        cout<<"Enter your choose:- ";
-        cin>>choose;
+        cout << "welcome to Mechanical calculator\n"
+             << endl;
+        cout << "1. Speed calculator\n";
+        cout << "2. Force calculator\n";
+        cout << "3. torque Calculator\n";
+        cout << "4. Work Calculator\n";
+        cout << "5. Power Calculator\n";
+        cout << "6. momentum calculator\n";
+        cout << "7. Acceleration calculator\n";
+        cout << "Enter your choose:- ";
+        cin >> choose;
 
         switch (choose)
         {
         case 1:
-            cout<<"Enter your distance:- ";
-            cin>>Distance;
-            cout<<"Enter your time:- ";
-            cin>>time;
-            Speed = Distance/time;
-            cout<<"your speed is "<<Speed<<endl;
+            cout << "Enter your distance:- ";
+            cin >> Distance;
+            cout << "Enter your time:- ";
+            cin >> time;
+            Speed = Distance / time;
+            cout << "your speed is " << Speed << endl;
             break;
 
         case 2:
-            cout<<"enter your Mass:- ";
-            cin>>Mass;
-            cout<<"enter your acceleration:- ";
-            cin>>Acceleration;
-            Force = Mass*Acceleration;
-            cout<<"Your force is "<<Force<<endl;
+            cout << "enter your Mass:- ";
+            cin >> Mass;
+            cout << "enter your acceleration:- ";
+            cin >> Acceleration;
+            Force = Mass * Acceleration;
+            cout << "Your force is " << Force << endl;
             break;
 
         case 3:
-            cout<<"Enter your Force:-  ";
-            cin>>Force;
-            cout<<"Enter your Radius:- ";
-            cin>>Radius;
-            Torque = Force*Radius;
-            cout<<"Your torque is:-  "<<Torque<<endl;
+            cout << "Enter your Force:-  ";
+            cin >> Force;
+            cout << "Enter your Radius:- ";
+            cin >> Radius;
+            Torque = Force * Radius;
+            cout << "Your torque is:-  " << Torque << endl;
             break;
 
         case 4:
-            cout<<"Enter your Force:- \n";
-            cin>>Force;
-            cout<<"Enter your distance:- \n";
-            cin>>Distance;
-            Work = Force*Distance;
-            cout<<"Your Work is "<<Work<<endl;
+            cout << "Enter your Force:- \n";
+            cin >> Force;
+            cout << "Enter your distance:- \n";
+            cin >> Distance;
+            Work = Force * Distance;
+            cout << "Your Work is " << Work << endl;
             break;
 
         case 5:
-            cout<<"Enter your work:- \n";
-            cin>>Work;
-            cout<<"Enter your time:- \n";
-            cin>>time;
-            Power = Work/time;
-            cout<<"Your Power is "<<Power<<endl;
+            cout << "Enter your work:- \n";
+            cin >> Work;
+            cout << "Enter your time:- \n";
+            cin >> time;
+            Power = Work / time;
+            cout << "Your Power is " << Power << endl;
             break;
 
         case 6:
-            cout<<"Enter your Mass:- ";
-            cin>>Mass;
-            cout<<"Enter your Velocity:- ";
-            cin>>Velocity;
-            momentum = Mass*Velocity;
-            cout<<"Your momentum is "<<momentum<<endl;
+            cout << "Enter your Mass:- ";
+            cin >> Mass;
+            cout << "Enter your Velocity:- ";
+            cin >> Velocity;
+            momentum = Mass * Velocity;
+            cout << "Your momentum is " << momentum << endl;
             break;
 
         case 7:
-            cout<<"Enter your velocity:- ";
-            cin>>Velocity;
-            cout<<"Enter your time:- ";
-            cin>>time;
-            Acceleration = Velocity/time;
-            cout<<"Your Acceleration is "<<Acceleration<<endl;
+            cout << "Enter your velocity:- ";
+            cin >> Velocity;
+            cout << "Enter your time:- ";
+            cin >> time;
+            Acceleration = Velocity / time;
+            cout << "Your Acceleration is " << Acceleration << endl;
             break;
         default:
-            cout<<"Invaild Input";
+            cout << "Invaild Input";
         }
+        return 0;
+    }
+
+    static float Electrial()
+    {
+        int choice;
+        do
+        {
+            cout << "\nElectronics Calculator\n";
+            cout << "1. 4-Band Resistor Calculator\n";
+            cout << "2. 5-Band Resistor Calculator\n";
+            cout << "3. Color Code Table\n";
+            cout << "4. Exit\n";
+            cout << "Enter your choice: ";
+            cin >> choice;
+
+            if (choice == 1)
+            {
+                string c1, c2, c3, c4;
+                int d1, d2;
+                double multiplier, resistance;
+
+                cout << "Enter 4 colors (lowercase):\n";
+                cin >> c1 >> c2 >> c3 >> c4;
+
+                // Digit conversion
+                string colors[] = {"black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white"};
+                d1 = d2 = -1;
+                for (int i = 0; i < 10; i++)
+                {
+                    if (c1 == colors[i])
+                        d1 = i;
+                    if (c2 == colors[i])
+                        d2 = i;
+                }
+
+                // Multiplier
+                string mcolors[] = {"black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white", "gold", "silver"};
+                double mvalues[] = {1, 10, 100, 1000, 10000, 100000, 1000000, 10000000, 100000000, 1000000000, 0.1, 0.01};
+                multiplier = 1;
+                for (int i = 0; i < 12; i++)
+                {
+                    if (c3 == mcolors[i])
+                        multiplier = mvalues[i];
+                }
+
+                resistance = ((d1 * 10) + d2) * multiplier;
+
+                cout << "Resistance = " << resistance << " Ohms ";
+
+                // Tolerance
+                if (c4 == "brown")
+                    cout << "±1%";
+                else if (c4 == "red")
+                    cout << "±2%";
+                else if (c4 == "green")
+                    cout << "±0.5%";
+                else if (c4 == "blue")
+                    cout << "±0.25%";
+                else if (c4 == "violet")
+                    cout << "±0.1%";
+                else if (c4 == "grey")
+                    cout << "±0.05%";
+                else if (c4 == "gold")
+                    cout << "±5%";
+                else if (c4 == "silver")
+                    cout << "±10%";
+                else
+                    cout << "±20%";
+
+                cout << endl;
+            }
+
+            else if (choice == 2)
+            {
+                string c1, c2, c3, c4, c5;
+                int d1 = -1, d2 = -1, d3 = -1;
+                double multiplier, resistance;
+
+                cout << "Enter 5 colors (lowercase):\n";
+                cin >> c1 >> c2 >> c3 >> c4 >> c5;
+
+                string colors[] = {"black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white"};
+                for (int i = 0; i < 10; i++)
+                {
+                    if (c1 == colors[i])
+                        d1 = i;
+                    if (c2 == colors[i])
+                        d2 = i;
+                    if (c3 == colors[i])
+                        d3 = i;
+                }
+
+                string mcolors[] = {"black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white", "gold", "silver"};
+                double mvalues[] = {1, 10, 100, 1000, 10000, 100000, 1000000, 10000000, 100000000, 1000000000, 0.1, 0.01};
+                multiplier = 1;
+                for (int i = 0; i < 12; i++)
+                {
+                    if (c4 == mcolors[i])
+                        multiplier = mvalues[i];
+                }
+
+                resistance = ((d1 * 100) + (d2 * 10) + d3) * multiplier;
+
+                cout << "Resistance = " << resistance << " Ohms ";
+
+                if (c5 == "brown")
+                    cout << "±1%";
+                else if (c5 == "red")
+                    cout << "±2%";
+                else if (c5 == "green")
+                    cout << "±0.5%";
+                else if (c5 == "blue")
+                    cout << "±0.25%";
+                else if (c5 == "violet")
+                    cout << "±0.1%";
+                else if (c5 == "grey")
+                    cout << "±0.05%";
+                else if (c5 == "gold")
+                    cout << "±5%";
+                else if (c5 == "silver")
+                    cout << "±10%";
+                else
+                    cout << "±20%";
+
+                cout << endl;
+            }
+
+            else if (choice == 3)
+            {
+                cout << "\nColor Code Table:\n";
+                cout << "Black=0 Brown=1 Red=2 Orange=3 Yellow=4\n";
+                cout << "Green=5 Blue=6 Violet=7 Grey=8 White=9\n";
+                cout << "Gold=0.1 Silver=0.01\n";
+            }
+
+            else if (choice == 4)
+            {
+                cout << "Exiting...\n";
+            }
+
+            else
+            {
+                cout << "Invalid choice!\n";
+            }
+
+        } while (choice != 4);
+
         return 0;
     }
 };
