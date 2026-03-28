@@ -1,4 +1,5 @@
 #include <cmath>
+#include <algorithm>
 #include <iostream>
 using namespace std;
 
@@ -3004,6 +3005,507 @@ class Engineering_tool
 
         return 0;
     }
+};
+
+class Statices
+{
+    static float Mean()
+    {
+        float count;
+        float num;
+        float mean;
+        float total;
+
+        cout<<"Enter the count of number:- ";
+        cin>>count;
+
+        for (int i = 0;i <= count;i++)
+        {
+            cout<<"Enter the number:- ";
+            cin>>num;
+            num += total;
+        }
+
+        mean = total / count;
+        cout<<"your Mean is:- "<<mean<<endl;
+
+        return 0;
+    }
+
+    static float Median()
+    {
+        int n;
+        cout << "Enter number of elements: ";
+        cin >> n;
+
+        float arr[n];
+
+        cout << "Enter " << n << " numbers:\n";
+        for(int i = 0; i < n; i++) {
+            cin >> arr[i];
+        }
+
+        // Sort the array
+        sort(arr, arr + n);
+
+        float median;
+
+        if(n % 2 == 0) {
+            // Even case
+            median = (arr[n/2 - 1] + arr[n/2]) / 2;
+        } else {
+            // Odd case
+            median = arr[n/2];
+        }
+
+        cout << "Median = " << median;
+        return 0;
+    }
+
+    static float Mode()
+    {
+        int n;
+
+        cout << "Enter number of elements: ";
+        cin >> n;
+
+        int arr[n];
+
+        cout << "Enter " << n << " numbers:\n";
+        for(int i = 0; i < n; i++) {
+            cin >> arr[i];
+        }
+
+        int maxCount = 0;
+
+        // Find frequency of each element
+        for(int i = 0; i < n; i++) {
+            int count = 1;
+
+            for(int j = i + 1; j < n; j++) {
+                if(arr[i] == arr[j]) {
+                    count++;
+                }
+            }
+
+            if(count > maxCount) {
+                maxCount = count;
+            }
+        }
+
+        // Check if mode exists
+        if(maxCount == 1) {
+            cout << "No mode (all elements are unique)";
+            return 0;
+        }
+
+        cout << "Mode value(s): ";
+
+        // Print all modes
+        for(int i = 0; i < n; i++) {
+            int count = 1;
+
+            // Avoid duplicates
+            bool alreadyPrinted = false;
+            for(int k = 0; k < i; k++) {
+                if(arr[i] == arr[k]) {
+                    alreadyPrinted = true;
+                    break;
+                }
+            }
+
+            if(alreadyPrinted) continue;
+
+            for(int j = i + 1; j < n; j++) {
+                if(arr[i] == arr[j]) {
+                    count++;
+                }
+            }
+
+            if(count == maxCount) {
+                cout << arr[i] << " ";
+            }
+        }
+
+        cout << "\nFrequency = " << maxCount;
+
+        return 0;
+    }
+
+    static float Range()
+    {
+        int n;
+
+        cout << "Enter number of elements: ";
+        cin >> n;
+
+        int arr[n];
+
+        cout << "Enter " << n << " numbers:\n";
+        for(int i = 0; i < n; i++) {
+            cin >> arr[i];
+        }
+
+        int max = arr[0];
+        int min = arr[0];
+
+        // Find max and min
+        for(int i = 1; i < n; i++) {
+            if(arr[i] > max) {
+                max = arr[i];
+            }
+            if(arr[i] < min) {
+                min = arr[i];
+            }
+        }
+
+        int range = max - min;
+
+        cout << "Maximum = " << max << endl;
+        cout << "Minimum = " << min << endl;
+        cout << "Range = " << range << endl;
+
+        return 0;
+    }
+
+    static float count_number()
+    {
+        int n;
+
+        cout << "Enter number of elements: ";
+        cin >> n;
+
+        int arr[n];
+
+        cout << "Enter " << n << " numbers:\n";
+        for(int i = 0; i < n; i++) {
+            cin >> arr[i];
+        }
+
+        cout << "Total count of numbers = " << n;
+
+        return 0;
+    }
+
+    static float Standard_Deviation()
+    {
+        int choice, n;
+
+        do {
+            cout << "\nStandard Deviation Calculator\n";
+            cout << "1. Population Standard Deviation\n";
+            cout << "2. Sample Standard Deviation\n";
+            cout << "3. Variance\n";
+            cout << "4. Exit\n";
+            cout << "Enter your choice: ";
+            cin >> choice;
+
+            if(choice >= 1 && choice <= 3) {
+                cout << "Enter number of elements: ";
+                cin >> n;
+
+                float arr[n], sum = 0, mean, variance = 0, stddev;
+
+                cout << "Enter " << n << " numbers:\n";
+                for(int i = 0; i < n; i++) {
+                    cin >> arr[i];
+                    sum += arr[i];
+                }
+
+                mean = sum / n;
+
+                // Calculate variance
+                for(int i = 0; i < n; i++) {
+                    variance += pow(arr[i] - mean, 2);
+                }
+
+                if(choice == 1) {
+                    // Population
+                    variance = variance / n;
+                    stddev = sqrt(variance);
+
+                    cout << "Mean = " << mean << endl;
+                    cout << "Population Variance = " << variance << endl;
+                    cout << "Population Standard Deviation = " << stddev << endl;
+                }
+
+                else if(choice == 2) {
+                    // Sample
+                    variance = variance / (n - 1);
+                    stddev = sqrt(variance);
+
+                    cout << "Mean = " << mean << endl;
+                    cout << "Sample Variance = " << variance << endl;
+                    cout << "Sample Standard Deviation = " << stddev << endl;
+                }
+
+                else if(choice == 3) {
+                    // Variance only (population)
+                    variance = variance / n;
+
+                    cout << "Mean = " << mean << endl;
+                    cout << "Variance = " << variance << endl;
+                }
+            }
+
+            else if(choice == 4) {
+                cout << "Exiting...\n";
+            }
+
+            else {
+                cout << "Invalid choice!\n";
+            }
+
+        } while(choice != 4);
+
+        return 0;
+    }
+
+    static float Variance()
+    {
+        int choice, n;
+
+        do {
+            cout << "\nVariance Calculator\n";
+            cout << "1. Population Variance\n";
+            cout << "2. Sample Variance\n";
+            cout << "3. Exit\n";
+            cout << "Enter your choice: ";
+            cin >> choice;
+
+            if(choice == 1 || choice == 2) {
+                cout << "Enter number of elements: ";
+                cin >> n;
+
+                float arr[n], sum = 0, mean, variance = 0;
+
+                cout << "Enter " << n << " numbers:\n";
+                for(int i = 0; i < n; i++) {
+                    cin >> arr[i];
+                    sum += arr[i];
+                }
+
+                mean = sum / n;
+
+                // Calculate squared differences
+                for(int i = 0; i < n; i++) {
+                    variance += (arr[i] - mean) * (arr[i] - mean);
+                }
+
+                if(choice == 1) {
+                    variance = variance / n;   // Population
+                    cout << "Mean = " << mean << endl;
+                    cout << "Population Variance = " << variance << endl;
+                }
+
+                else {
+                    variance = variance / (n - 1);   // Sample
+                    cout << "Mean = " << mean << endl;
+                    cout << "Sample Variance = " << variance << endl;
+                }
+            }
+
+            else if(choice == 3) {
+                cout << "Exiting...\n";
+            }
+
+            else {
+                cout << "Invalid choice!\n";
+            }
+
+        } while(choice != 3);
+
+        return 0;
+    }
+
+    static float Probability()
+    {
+        int choice;
+
+    do {
+        cout << "\nProbability Calculator\n";
+        cout << "1. Basic Probability\n";
+        cout << "2. Complementary Probability\n";
+        cout << "3. Addition Rule\n";
+        cout << "4. Multiplication Rule\n";
+        cout << "5. Conditional Probability\n";
+        cout << "6. Permutation (nPr)\n";
+        cout << "7. Combination (nCr)\n";
+        cout << "8. Exit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        if(choice == 1) {
+            float fav, total;
+            cout << "Enter favourable outcomes: ";
+            cin >> fav;
+            cout << "Enter total outcomes: ";
+            cin >> total;
+
+            cout << "Probability = " << (fav / total) << endl;
+        }
+
+        else if(choice == 2) {
+            float p;
+            cout << "Enter P(A): ";
+            cin >> p;
+
+            cout << "Complementary Probability = " << (1 - p) << endl;
+        }
+
+        else if(choice == 3) {
+            float pa, pb, pab;
+            cout << "Enter P(A): ";
+            cin >> pa;
+            cout << "Enter P(B): ";
+            cin >> pb;
+            cout << "Enter P(A ∩ B): ";
+            cin >> pab;
+
+            cout << "P(A U B) = " << (pa + pb - pab) << endl;
+        }
+
+        else if(choice == 4) {
+            float pa, pb;
+            cout << "Enter P(A): ";
+            cin >> pa;
+            cout << "Enter P(B): ";
+            cin >> pb;
+
+            cout << "P(A ∩ B) = " << (pa * pb) << endl;
+        }
+
+        else if(choice == 5) {
+            float pab, pb;
+            cout << "Enter P(A ∩ B): ";
+            cin >> pab;
+            cout << "Enter P(B): ";
+            cin >> pb;
+
+            cout << "P(A | B) = " << (pab / pb) << endl;
+        }
+
+        else if(choice == 6) {
+            int n, r;
+            long long factN = 1, factNR = 1;
+
+            cout << "Enter n and r: ";
+            cin >> n >> r;
+
+            for(int i = 1; i <= n; i++)
+                factN *= i;
+
+            for(int i = 1; i <= (n - r); i++)
+                factNR *= i;
+
+            cout << "nPr = " << (factN / factNR) << endl;
+        }
+
+        else if(choice == 7) {
+            int n, r;
+            long long factN = 1, factR = 1, factNR = 1;
+
+            cout << "Enter n and r: ";
+            cin >> n >> r;
+
+            for(int i = 1; i <= n; i++)
+                factN *= i;
+
+            for(int i = 1; i <= r; i++)
+                factR *= i;
+
+            for(int i = 1; i <= (n - r); i++)
+                factNR *= i;
+
+            cout << "nCr = " << (factN / (factR * factNR)) << endl;
+        }
+
+        else if(choice == 8) {
+            cout << "Exiting...\n";
+        }
+
+        else {
+            cout << "Invalid choice!\n";
+        }
+
+    } while(choice != 8);
+
+        return 0;
+    }
+
+    static float Regression()
+    {
+        int choice, n;
+
+        do {
+            cout << "\nRegression Calculator\n";
+            cout << "1. Calculate Regression Line (a, b)\n";
+            cout << "2. Predict Y for given X\n";
+            cout << "3. Correlation Coefficient (r)\n";
+            cout << "4. Exit\n";
+            cout << "Enter your choice: ";
+            cin >> choice;
+
+            if(choice >= 1 && choice <= 3) {
+                cout << "Enter number of data points: ";
+                cin >> n;
+
+                float x[n], y[n];
+                float sumX = 0, sumY = 0, sumXY = 0, sumX2 = 0, sumY2 = 0;
+
+                cout << "Enter values of X:\n";
+                for(int i = 0; i < n; i++) {
+                    cin >> x[i];
+                    sumX += x[i];
+                    sumX2 += x[i] * x[i];
+                }
+
+                cout << "Enter values of Y:\n";
+                for(int i = 0; i < n; i++) {
+                    cin >> y[i];
+                    sumY += y[i];
+                    sumXY += x[i] * y[i];
+                    sumY2 += y[i] * y[i];
+                }
+
+                float b = (n * sumXY - sumX * sumY) / (n * sumX2 - sumX * sumX);
+                float a = (sumY - b * sumX) / n;
+
+                if(choice == 1) {
+                    cout << "Regression Equation: Y = " << a << " + " << b << "X\n";
+                }
+
+                else if(choice == 2) {
+                    float Xval;
+                    cout << "Enter value of X: ";
+                    cin >> Xval;
+
+                    float Ypred = a + b * Xval;
+                    cout << "Predicted Y = " << Ypred << endl;
+                }
+
+                else if(choice == 3) {
+                    float r = (n * sumXY - sumX * sumY) /
+                              sqrt((n * sumX2 - sumX * sumX) *
+                                   (n * sumY2 - sumY * sumY));
+
+                    cout << "Correlation Coefficient (r) = " << r << endl;
+                }
+            }
+
+            else if(choice == 4) {
+                cout << "Exiting...\n";
+            }
+
+            else {
+                cout << "Invalid choice!\n";
+            }
+
+        } while(choice != 4);
+
+        return 0;
+    }
+
 };
 int main()
 {
