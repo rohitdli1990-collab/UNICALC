@@ -3505,6 +3505,722 @@ class Statices
 
         return 0;
     }
+};
+
+class Programming
+{
+    static float Number_System_Convertors()
+    {
+        int choice;
+
+    do {
+        cout << "\nNumber System Converter\n";
+        cout << "1. Decimal to Binary\n";
+        cout << "2. Decimal to Octal\n";
+        cout << "3. Decimal to Hexadecimal\n";
+        cout << "4. Binary to Decimal\n";
+        cout << "5. Octal to Decimal\n";
+        cout << "6. Hexadecimal to Decimal\n";
+        cout << "7. Binary Addition\n";
+        cout << "8. Binary to Hexadecimal\n";
+        cout << "9. Hexadecimal to Binary\n";
+        cout << "10. Octal to Hexadecimal\n";
+        cout << "11. Hexadecimal to Octal\n";
+        cout << "12. Exit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        // Decimal → Binary
+        if(choice == 1) {
+            int n, bin[32], i = 0;
+            cout << "Enter decimal: ";
+            cin >> n;
+            while(n > 0) {
+                bin[i++] = n % 2;
+                n /= 2;
+            }
+            cout << "Binary = ";
+            for(int j = i - 1; j >= 0; j--) cout << bin[j];
+            cout << endl;
+        }
+
+        // Decimal → Octal
+        else if(choice == 2) {
+            int n, oct[32], i = 0;
+            cout << "Enter decimal: ";
+            cin >> n;
+            while(n > 0) {
+                oct[i++] = n % 8;
+                n /= 8;
+            }
+            cout << "Octal = ";
+            for(int j = i - 1; j >= 0; j--) cout << oct[j];
+            cout << endl;
+        }
+
+        // Decimal → Hex
+        else if(choice == 3) {
+            int n; char hex[32]; int i = 0;
+            cout << "Enter decimal: ";
+            cin >> n;
+            while(n > 0) {
+                int r = n % 16;
+                hex[i++] = (r < 10) ? r + '0' : r - 10 + 'A';
+                n /= 16;
+            }
+            cout << "Hex = ";
+            for(int j = i - 1; j >= 0; j--) cout << hex[j];
+            cout << endl;
+        }
+
+        // Binary → Decimal
+        else if(choice == 4) {
+            int b, dec = 0, base = 1;
+            cout << "Enter binary: ";
+            cin >> b;
+            while(b > 0) {
+                int r = b % 10;
+                if(r != 0 && r != 1) {
+                    cout << "Invalid binary!\n"; break;
+                }
+                dec += r * base;
+                base *= 2;
+                b /= 10;
+            }
+            cout << "Decimal = " << dec << endl;
+        }
+
+        // Octal → Decimal
+        else if(choice == 5) {
+            int o, dec = 0, base = 1;
+            cout << "Enter octal: ";
+            cin >> o;
+            while(o > 0) {
+                int r = o % 10;
+                if(r > 7) {
+                    cout << "Invalid octal!\n"; break;
+                }
+                dec += r * base;
+                base *= 8;
+                o /= 10;
+            }
+            cout << "Decimal = " << dec << endl;
+        }
+
+        // Hex → Decimal
+        else if(choice == 6) {
+            string h; int dec = 0, base = 1;
+            cout << "Enter hex: ";
+            cin >> h;
+            for(int i = h.length() - 1; i >= 0; i--) {
+                if(h[i] >= '0' && h[i] <= '9')
+                    dec += (h[i] - '0') * base;
+                else if(h[i] >= 'A' && h[i] <= 'F')
+                    dec += (h[i] - 'A' + 10) * base;
+                else if(h[i] >= 'a' && h[i] <= 'f')
+                    dec += (h[i] - 'a' + 10) * base;
+                else {
+                    cout << "Invalid hex!\n"; break;
+                }
+                base *= 16;
+            }
+            cout << "Decimal = " << dec << endl;
+        }
+
+        // Binary Addition
+        else if(choice == 7) {
+            int b1, b2, res = 0, carry = 0, base = 1;
+            cout << "Enter two binary numbers: ";
+            cin >> b1 >> b2;
+            while(b1 > 0 || b2 > 0 || carry) {
+                int s = (b1 % 10) + (b2 % 10) + carry;
+                res += (s % 2) * base;
+                carry = s / 2;
+                b1 /= 10; b2 /= 10; base *= 10;
+            }
+            cout << "Result = " << res << endl;
+        }
+
+        // Binary → Hex
+        else if(choice == 8) {
+            int b, dec = 0, base = 1;
+            cout << "Enter binary: ";
+            cin >> b;
+            while(b > 0) {
+                dec += (b % 10) * base;
+                base *= 2;
+                b /= 10;
+            }
+            char hex[32]; int i = 0;
+            while(dec > 0) {
+                int r = dec % 16;
+                hex[i++] = (r < 10) ? r + '0' : r - 10 + 'A';
+                dec /= 16;
+            }
+            cout << "Hex = ";
+            for(int j = i - 1; j >= 0; j--) cout << hex[j];
+            cout << endl;
+        }
+
+        // Hex → Binary
+        else if(choice == 9) {
+            string h;
+            cout << "Enter hex: ";
+            cin >> h;
+            cout << "Binary = ";
+            for(int i = 0; i < h.length(); i++) {
+                switch(toupper(h[i])) {
+                    case '0': cout<<"0000"; break;
+                    case '1': cout<<"0001"; break;
+                    case '2': cout<<"0010"; break;
+                    case '3': cout<<"0011"; break;
+                    case '4': cout<<"0100"; break;
+                    case '5': cout<<"0101"; break;
+                    case '6': cout<<"0110"; break;
+                    case '7': cout<<"0111"; break;
+                    case '8': cout<<"1000"; break;
+                    case '9': cout<<"1001"; break;
+                    case 'A': cout<<"1010"; break;
+                    case 'B': cout<<"1011"; break;
+                    case 'C': cout<<"1100"; break;
+                    case 'D': cout<<"1101"; break;
+                    case 'E': cout<<"1110"; break;
+                    case 'F': cout<<"1111"; break;
+                    default: cout<<"Invalid"; break;
+                }
+            }
+            cout << endl;
+        }
+
+        // Octal → Hex
+        else if(choice == 10) {
+            int o, dec = 0, base = 1;
+            cout << "Enter octal: ";
+            cin >> o;
+            while(o > 0) {
+                int r = o % 10;
+                if(r > 7) { cout<<"Invalid!\n"; break; }
+                dec += r * base;
+                base *= 8;
+                o /= 10;
+            }
+            char hex[32]; int i = 0;
+            while(dec > 0) {
+                int r = dec % 16;
+                hex[i++] = (r < 10) ? r + '0' : r - 10 + 'A';
+                dec /= 16;
+            }
+            cout << "Hex = ";
+            for(int j = i - 1; j >= 0; j--) cout << hex[j];
+            cout << endl;
+        }
+
+        // Hex → Octal
+        else if(choice == 11) {
+            string h; int dec = 0, base = 1;
+            cout << "Enter hex: ";
+            cin >> h;
+            for(int i = h.length() - 1; i >= 0; i--) {
+                if(h[i] >= '0' && h[i] <= '9')
+                    dec += (h[i] - '0') * base;
+                else
+                    dec += (toupper(h[i]) - 'A' + 10) * base;
+                base *= 16;
+            }
+            int oct[32], i = 0;
+            while(dec > 0) {
+                oct[i++] = dec % 8;
+                dec /= 8;
+            }
+            cout << "Octal = ";
+            for(int j = i - 1; j >= 0; j--) cout << oct[j];
+            cout << endl;
+        }
+
+        else if(choice == 12) {
+            cout << "Exiting...\n";
+        }
+
+        else {
+            cout << "Invalid choice!\n";
+        }
+
+    } while(choice != 12);
+
+        return 0;
+    }
+
+    static float BitWise_Operations()
+    {
+        int choice;
+
+    do {
+        cout << "\nBitwise Calculator\n";
+        cout << "1. AND (&)\n";
+        cout << "2. OR (|)\n";
+        cout << "3. XOR (^)\n";
+        cout << "4. NOT (~)\n";
+        cout << "5. Left Shift (<<)\n";
+        cout << "6. Right Shift (>>)\n";
+        cout << "7. Check Bit (ON/OFF)\n";
+        cout << "8. Toggle Bit\n";
+        cout << "9. Exit\n";
+        cout << "Enter your choice: ";
+
+        if(!(cin >> choice)) {
+            cout << "Invalid input!\n";
+            cin.clear();
+            cin.ignore(1000, '\n');
+            continue;
+        }
+
+        // Function-like block for binary display
+        auto printBinary = [](int num) {
+            for(int i = 7; i >= 0; i--) {
+                cout << ((num >> i) & 1);
+            }
+        };
+
+        if(choice >= 1 && choice <= 3) {
+            int a, b;
+            cout << "Enter two integers: ";
+
+            if(!(cin >> a >> b)) {
+                cout << "Invalid input!\n";
+                cin.clear();
+                cin.ignore(1000, '\n');
+                continue;
+            }
+
+            cout << "A in binary: "; printBinary(a); cout << endl;
+            cout << "B in binary: "; printBinary(b); cout << endl;
+
+            int result;
+            if(choice == 1) result = a & b;
+            else if(choice == 2) result = a | b;
+            else result = a ^ b;
+
+            cout << "Result = " << result << endl;
+            cout << "Result in binary: "; printBinary(result); cout << endl;
+        }
+
+        else if(choice == 4) {
+            int a;
+            cout << "Enter integer: ";
+
+            if(!(cin >> a)) {
+                cout << "Invalid input!\n";
+                cin.clear();
+                cin.ignore(1000, '\n');
+                continue;
+            }
+
+            cout << "Binary: "; printBinary(a); cout << endl;
+            int result = ~a;
+
+            cout << "Result = " << result << endl;
+            cout << "Result in binary: "; printBinary(result); cout << endl;
+        }
+
+        else if(choice == 5 || choice == 6) {
+            int a, shift;
+            cout << "Enter number: ";
+
+            if(!(cin >> a)) {
+                cout << "Invalid input!\n";
+                cin.clear();
+                cin.ignore(1000, '\n');
+                continue;
+            }
+
+            cout << "Enter shift value: ";
+
+            if(!(cin >> shift) || shift < 0) {
+                cout << "Invalid shift!\n";
+                cin.clear();
+                cin.ignore(1000, '\n');
+                continue;
+            }
+
+            cout << "Binary before: "; printBinary(a); cout << endl;
+
+            int result = (choice == 5) ? (a << shift) : (a >> shift);
+
+            cout << "Result = " << result << endl;
+            cout << "Binary after: "; printBinary(result); cout << endl;
+        }
+
+        else if(choice == 7) {
+            int num, pos;
+            cout << "Enter number: ";
+            cin >> num;
+
+            cout << "Enter bit position (0-7): ";
+            cin >> pos;
+
+            if(pos < 0 || pos > 7) {
+                cout << "Invalid position!\n";
+                continue;
+            }
+
+            if(num & (1 << pos))
+                cout << "Bit is ON\n";
+            else
+                cout << "Bit is OFF\n";
+        }
+
+        else if(choice == 8) {
+            int num, pos;
+            cout << "Enter number: ";
+            cin >> num;
+
+            cout << "Enter bit position (0-7): ";
+            cin >> pos;
+
+            if(pos < 0 || pos > 7) {
+                cout << "Invalid position!\n";
+                continue;
+            }
+
+            cout << "Before: "; printBinary(num); cout << endl;
+
+            num = num ^ (1 << pos);
+
+            cout << "After: "; printBinary(num); cout << endl;
+            cout << "Result = " << num << endl;
+        }
+
+        else if(choice == 9) {
+            cout << "Exiting...\n";
+        }
+
+        else {
+            cout << "Invalid choice!\n";
+        }
+
+    } while(choice != 9);
+        return 0;
+    }
+
+    static float ASCII_Convertor()
+    {
+        int choice;
+
+    do {
+        cout << "\nASCII Converter\n";
+        cout << "1. Character to ASCII\n";
+        cout << "2. ASCII to Character\n";
+        cout << "3. String to ASCII\n";
+        cout << "4. ASCII to String\n";
+        cout << "5. Case Conversion\n";
+        cout << "6. Show ASCII Table\n";
+        cout << "7. Exit\n";
+        cout << "Enter your choice: ";
+
+        if(!(cin >> choice)) {
+            cout << "Invalid input!\n";
+            cin.clear();
+            cin.ignore(1000, '\n');
+            continue;
+        }
+
+        // 1. Character → ASCII
+        if(choice == 1) {
+            char ch;
+            cout << "Enter a character: ";
+            cin >> ch;
+
+            cout << "ASCII value = " << (int)ch << endl;
+        }
+
+        // 2. ASCII → Character
+        else if(choice == 2) {
+            int num;
+            cout << "Enter ASCII value (0-127): ";
+            cin >> num;
+
+            if(num < 0 || num > 127) {
+                cout << "Invalid ASCII range!\n";
+            } else {
+                cout << "Character = " << (char)num << endl;
+            }
+        }
+
+        // 3. String → ASCII
+        else if(choice == 3) {
+            cin.ignore();
+            string str;
+
+            cout << "Enter a string: ";
+            getline(cin, str);
+
+            cout << "ASCII values: ";
+            for(int i = 0; i < str.length(); i++) {
+                cout << (int)str[i] << " ";
+            }
+            cout << endl;
+        }
+
+        // 4. ASCII → String
+        else if(choice == 4) {
+            int n;
+            cout << "How many ASCII values? ";
+            cin >> n;
+
+            if(n <= 0) {
+                cout << "Invalid count!\n";
+                continue;
+            }
+
+            cout << "Enter ASCII values:\n";
+            for(int i = 0; i < n; i++) {
+                int val;
+                cin >> val;
+
+                if(val < 0 || val > 127) {
+                    cout << "Invalid ASCII!\n";
+                } else {
+                    cout << (char)val;
+                }
+            }
+            cout << endl;
+        }
+
+        // 5. Case Conversion
+        else if(choice == 5) {
+            char ch;
+            cout << "Enter a character: ";
+            cin >> ch;
+
+            if(ch >= 'A' && ch <= 'Z') {
+                cout << "Lowercase = " << (char)(ch + 32) << endl;
+            }
+            else if(ch >= 'a' && ch <= 'z') {
+                cout << "Uppercase = " << (char)(ch - 32) << endl;
+            }
+            else {
+                cout << "Not an alphabet!\n";
+            }
+        }
+
+        // 6. ASCII Table
+        else if(choice == 6) {
+            cout << "\nASCII Table (A-Z, a-z, 0-9)\n";
+
+            cout << "\nA-Z:\n";
+            for(char c = 'A'; c <= 'Z'; c++) {
+                cout << c << " = " << (int)c << endl;
+            }
+
+            cout << "\na-z:\n";
+            for(char c = 'a'; c <= 'z'; c++) {
+                cout << c << " = " << (int)c << endl;
+            }
+
+            cout << "\n0-9:\n";
+            for(char c = '0'; c <= '9'; c++) {
+                cout << c << " = " << (int)c << endl;
+            }
+        }
+
+        else if(choice == 7) {
+            cout << "Exiting...\n";
+        }
+
+        else {
+            cout << "Invalid choice!\n";
+        }
+
+    } while(choice != 7);
+
+        return 0;
+    }
+
+    static float base_conversion()
+    {
+        int choice;
+
+    do {
+        cout << "\nBase Conversion Calculator\n";
+        cout << "1. Any Base to Decimal\n";
+        cout << "2. Decimal to Any Base\n";
+        cout << "3. Any Base to Any Base (with steps)\n";
+        cout << "4. Exit\n";
+        cout << "Enter your choice: ";
+
+        if(!(cin >> choice)) {
+            cout << "Invalid input!\n";
+            cin.clear();
+            cin.ignore(1000, '\n');
+            continue;
+        }
+
+        // char → value
+        auto charToVal = [](char c) {
+            if(c >= '0' && c <= '9') return c - '0';
+            if(c >= 'A' && c <= 'Z') return c - 'A' + 10;
+            if(c >= 'a' && c <= 'z') return c - 'a' + 10;
+            return -1;
+        };
+
+        // value → char
+        auto valToChar = [](int v) {
+            if(v < 10) return char(v + '0');
+            return char(v - 10 + 'A');
+        };
+
+        // 1. Any Base → Decimal
+        if(choice == 1) {
+            string num;
+            int base;
+            cout << "Enter number: ";
+            cin >> num;
+            cout << "Enter base (2-36): ";
+            cin >> base;
+
+            if(base < 2 || base > 36) {
+                cout << "Invalid base!\n";
+                continue;
+            }
+
+            bool negative = false;
+            if(num[0] == '-') {
+                negative = true;
+                num = num.substr(1);
+            }
+
+            long long decimal = 0;
+            bool valid = true;
+
+            for(int i = 0; i < num.length(); i++) {
+                int val = charToVal(num[i]);
+
+                if(val < 0 || val >= base) {
+                    cout << "Invalid digit '" << num[i] << "' for base " << base << endl;
+                    valid = false;
+                    break;
+                }
+
+                decimal = decimal * base + val;
+            }
+
+            if(valid) {
+                if(negative) decimal = -decimal;
+                cout << "Decimal = " << decimal << endl;
+            }
+        }
+
+        // 2. Decimal → Any Base
+        else if(choice == 2) {
+            long long num;
+            int base;
+
+            cout << "Enter decimal number: ";
+            cin >> num;
+            cout << "Enter base (2-36): ";
+            cin >> base;
+
+            if(base < 2 || base > 36) {
+                cout << "Invalid base!\n";
+                continue;
+            }
+
+            bool negative = false;
+            if(num < 0) {
+                negative = true;
+                num = -num;
+            }
+
+            string result = "";
+
+            while(num > 0) {
+                int rem = num % base;
+                result = valToChar(rem) + result;
+                num /= base;
+            }
+
+            if(result == "") result = "0";
+            if(negative) result = "-" + result;
+
+            cout << "Converted = " << result << endl;
+        }
+
+        // 3. Any Base → Any Base (with steps)
+        else if(choice == 3) {
+            string num;
+            int base1, base2;
+
+            cout << "Enter number: ";
+            cin >> num;
+            cout << "Enter source base: ";
+            cin >> base1;
+            cout << "Enter target base: ";
+            cin >> base2;
+
+            if(base1 < 2 || base1 > 36 || base2 < 2 || base2 > 36) {
+                cout << "Invalid base!\n";
+                continue;
+            }
+
+            bool negative = false;
+            if(num[0] == '-') {
+                negative = true;
+                num = num.substr(1);
+            }
+
+            // Step 1: Base → Decimal
+            long long decimal = 0;
+            bool valid = true;
+
+            for(int i = 0; i < num.length(); i++) {
+                int val = charToVal(num[i]);
+
+                if(val < 0 || val >= base1) {
+                    cout << "Invalid digit '" << num[i] << "' for base " << base1 << endl;
+                    valid = false;
+                    break;
+                }
+
+                decimal = decimal * base1 + val;
+            }
+
+            if(!valid) continue;
+
+            cout << "Step 1: Base " << base1 << " → Decimal = " << decimal << endl;
+
+            // Step 2: Decimal → Target Base
+            long long temp = decimal;
+            string result = "";
+
+            while(temp > 0) {
+                int rem = temp % base2;
+                result = valToChar(rem) + result;
+                temp /= base2;
+            }
+
+            if(result == "") result = "0";
+            if(negative) result = "-" + result;
+
+            cout << "Step 2: Decimal → Base " << base2 << " = " << result << endl;
+            cout << "Final Answer = " << result << endl;
+        }
+
+        else if(choice == 4) {
+            cout << "Exiting...\n";
+        }
+
+        else {
+            cout << "Invalid choice!\n";
+        }
+
+    } while(choice != 4);
+
+        return 0;
+    }
+};
+
+class DATE_TIME
+{
 
 };
 int main()
