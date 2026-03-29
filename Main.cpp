@@ -3018,18 +3018,18 @@ class Statices
         float mean;
         float total;
 
-        cout<<"Enter the count of number:- ";
-        cin>>count;
+        cout << "Enter the count of number:- ";
+        cin >> count;
 
-        for (int i = 0;i <= count;i++)
+        for (int i = 0; i <= count; i++)
         {
-            cout<<"Enter the number:- ";
-            cin>>num;
+            cout << "Enter the number:- ";
+            cin >> num;
             num += total;
         }
 
         mean = total / count;
-        cout<<"your Mean is:- "<<mean<<endl;
+        cout << "your Mean is:- " << mean << endl;
 
         return 0;
     }
@@ -3043,7 +3043,8 @@ class Statices
         float arr[n];
 
         cout << "Enter " << n << " numbers:\n";
-        for(int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++)
+        {
             cin >> arr[i];
         }
 
@@ -3052,12 +3053,15 @@ class Statices
 
         float median;
 
-        if(n % 2 == 0) {
+        if (n % 2 == 0)
+        {
             // Even case
-            median = (arr[n/2 - 1] + arr[n/2]) / 2;
-        } else {
+            median = (arr[n / 2 - 1] + arr[n / 2]) / 2;
+        }
+        else
+        {
             // Odd case
-            median = arr[n/2];
+            median = arr[n / 2];
         }
 
         cout << "Median = " << median;
@@ -3074,29 +3078,35 @@ class Statices
         int arr[n];
 
         cout << "Enter " << n << " numbers:\n";
-        for(int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++)
+        {
             cin >> arr[i];
         }
 
         int maxCount = 0;
 
         // Find frequency of each element
-        for(int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++)
+        {
             int count = 1;
 
-            for(int j = i + 1; j < n; j++) {
-                if(arr[i] == arr[j]) {
+            for (int j = i + 1; j < n; j++)
+            {
+                if (arr[i] == arr[j])
+                {
                     count++;
                 }
             }
 
-            if(count > maxCount) {
+            if (count > maxCount)
+            {
                 maxCount = count;
             }
         }
 
         // Check if mode exists
-        if(maxCount == 1) {
+        if (maxCount == 1)
+        {
             cout << "No mode (all elements are unique)";
             return 0;
         }
@@ -3104,27 +3114,34 @@ class Statices
         cout << "Mode value(s): ";
 
         // Print all modes
-        for(int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++)
+        {
             int count = 1;
 
             // Avoid duplicates
             bool alreadyPrinted = false;
-            for(int k = 0; k < i; k++) {
-                if(arr[i] == arr[k]) {
+            for (int k = 0; k < i; k++)
+            {
+                if (arr[i] == arr[k])
+                {
                     alreadyPrinted = true;
                     break;
                 }
             }
 
-            if(alreadyPrinted) continue;
+            if (alreadyPrinted)
+                continue;
 
-            for(int j = i + 1; j < n; j++) {
-                if(arr[i] == arr[j]) {
+            for (int j = i + 1; j < n; j++)
+            {
+                if (arr[i] == arr[j])
+                {
                     count++;
                 }
             }
 
-            if(count == maxCount) {
+            if (count == maxCount)
+            {
                 cout << arr[i] << " ";
             }
         }
@@ -3144,7 +3161,8 @@ class Statices
         int arr[n];
 
         cout << "Enter " << n << " numbers:\n";
-        for(int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++)
+        {
             cin >> arr[i];
         }
 
@@ -3152,11 +3170,14 @@ class Statices
         int min = arr[0];
 
         // Find max and min
-        for(int i = 1; i < n; i++) {
-            if(arr[i] > max) {
+        for (int i = 1; i < n; i++)
+        {
+            if (arr[i] > max)
+            {
                 max = arr[i];
             }
-            if(arr[i] < min) {
+            if (arr[i] < min)
+            {
                 min = arr[i];
             }
         }
@@ -3180,7 +3201,8 @@ class Statices
         int arr[n];
 
         cout << "Enter " << n << " numbers:\n";
-        for(int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++)
+        {
             cin >> arr[i];
         }
 
@@ -3193,7 +3215,8 @@ class Statices
     {
         int choice, n;
 
-        do {
+        do
+        {
             cout << "\nStandard Deviation Calculator\n";
             cout << "1. Population Standard Deviation\n";
             cout << "2. Sample Standard Deviation\n";
@@ -3202,14 +3225,16 @@ class Statices
             cout << "Enter your choice: ";
             cin >> choice;
 
-            if(choice >= 1 && choice <= 3) {
+            if (choice >= 1 && choice <= 3)
+            {
                 cout << "Enter number of elements: ";
                 cin >> n;
 
                 float arr[n], sum = 0, mean, variance = 0, stddev;
 
                 cout << "Enter " << n << " numbers:\n";
-                for(int i = 0; i < n; i++) {
+                for (int i = 0; i < n; i++)
+                {
                     cin >> arr[i];
                     sum += arr[i];
                 }
@@ -3217,11 +3242,13 @@ class Statices
                 mean = sum / n;
 
                 // Calculate variance
-                for(int i = 0; i < n; i++) {
+                for (int i = 0; i < n; i++)
+                {
                     variance += pow(arr[i] - mean, 2);
                 }
 
-                if(choice == 1) {
+                if (choice == 1)
+                {
                     // Population
                     variance = variance / n;
                     stddev = sqrt(variance);
@@ -3231,7 +3258,8 @@ class Statices
                     cout << "Population Standard Deviation = " << stddev << endl;
                 }
 
-                else if(choice == 2) {
+                else if (choice == 2)
+                {
                     // Sample
                     variance = variance / (n - 1);
                     stddev = sqrt(variance);
@@ -3241,7 +3269,8 @@ class Statices
                     cout << "Sample Standard Deviation = " << stddev << endl;
                 }
 
-                else if(choice == 3) {
+                else if (choice == 3)
+                {
                     // Variance only (population)
                     variance = variance / n;
 
@@ -3250,15 +3279,17 @@ class Statices
                 }
             }
 
-            else if(choice == 4) {
+            else if (choice == 4)
+            {
                 cout << "Exiting...\n";
             }
 
-            else {
+            else
+            {
                 cout << "Invalid choice!\n";
             }
 
-        } while(choice != 4);
+        } while (choice != 4);
 
         return 0;
     }
@@ -3267,7 +3298,8 @@ class Statices
     {
         int choice, n;
 
-        do {
+        do
+        {
             cout << "\nVariance Calculator\n";
             cout << "1. Population Variance\n";
             cout << "2. Sample Variance\n";
@@ -3275,14 +3307,16 @@ class Statices
             cout << "Enter your choice: ";
             cin >> choice;
 
-            if(choice == 1 || choice == 2) {
+            if (choice == 1 || choice == 2)
+            {
                 cout << "Enter number of elements: ";
                 cin >> n;
 
                 float arr[n], sum = 0, mean, variance = 0;
 
                 cout << "Enter " << n << " numbers:\n";
-                for(int i = 0; i < n; i++) {
+                for (int i = 0; i < n; i++)
+                {
                     cin >> arr[i];
                     sum += arr[i];
                 }
@@ -3290,32 +3324,37 @@ class Statices
                 mean = sum / n;
 
                 // Calculate squared differences
-                for(int i = 0; i < n; i++) {
+                for (int i = 0; i < n; i++)
+                {
                     variance += (arr[i] - mean) * (arr[i] - mean);
                 }
 
-                if(choice == 1) {
-                    variance = variance / n;   // Population
+                if (choice == 1)
+                {
+                    variance = variance / n; // Population
                     cout << "Mean = " << mean << endl;
                     cout << "Population Variance = " << variance << endl;
                 }
 
-                else {
-                    variance = variance / (n - 1);   // Sample
+                else
+                {
+                    variance = variance / (n - 1); // Sample
                     cout << "Mean = " << mean << endl;
                     cout << "Sample Variance = " << variance << endl;
                 }
             }
 
-            else if(choice == 3) {
+            else if (choice == 3)
+            {
                 cout << "Exiting...\n";
             }
 
-            else {
+            else
+            {
                 cout << "Invalid choice!\n";
             }
 
-        } while(choice != 3);
+        } while (choice != 3);
 
         return 0;
     }
@@ -3324,113 +3363,123 @@ class Statices
     {
         int choice;
 
-    do {
-        cout << "\nProbability Calculator\n";
-        cout << "1. Basic Probability\n";
-        cout << "2. Complementary Probability\n";
-        cout << "3. Addition Rule\n";
-        cout << "4. Multiplication Rule\n";
-        cout << "5. Conditional Probability\n";
-        cout << "6. Permutation (nPr)\n";
-        cout << "7. Combination (nCr)\n";
-        cout << "8. Exit\n";
-        cout << "Enter your choice: ";
-        cin >> choice;
+        do
+        {
+            cout << "\nProbability Calculator\n";
+            cout << "1. Basic Probability\n";
+            cout << "2. Complementary Probability\n";
+            cout << "3. Addition Rule\n";
+            cout << "4. Multiplication Rule\n";
+            cout << "5. Conditional Probability\n";
+            cout << "6. Permutation (nPr)\n";
+            cout << "7. Combination (nCr)\n";
+            cout << "8. Exit\n";
+            cout << "Enter your choice: ";
+            cin >> choice;
 
-        if(choice == 1) {
-            float fav, total;
-            cout << "Enter favourable outcomes: ";
-            cin >> fav;
-            cout << "Enter total outcomes: ";
-            cin >> total;
+            if (choice == 1)
+            {
+                float fav, total;
+                cout << "Enter favourable outcomes: ";
+                cin >> fav;
+                cout << "Enter total outcomes: ";
+                cin >> total;
 
-            cout << "Probability = " << (fav / total) << endl;
-        }
+                cout << "Probability = " << (fav / total) << endl;
+            }
 
-        else if(choice == 2) {
-            float p;
-            cout << "Enter P(A): ";
-            cin >> p;
+            else if (choice == 2)
+            {
+                float p;
+                cout << "Enter P(A): ";
+                cin >> p;
 
-            cout << "Complementary Probability = " << (1 - p) << endl;
-        }
+                cout << "Complementary Probability = " << (1 - p) << endl;
+            }
 
-        else if(choice == 3) {
-            float pa, pb, pab;
-            cout << "Enter P(A): ";
-            cin >> pa;
-            cout << "Enter P(B): ";
-            cin >> pb;
-            cout << "Enter P(A ∩ B): ";
-            cin >> pab;
+            else if (choice == 3)
+            {
+                float pa, pb, pab;
+                cout << "Enter P(A): ";
+                cin >> pa;
+                cout << "Enter P(B): ";
+                cin >> pb;
+                cout << "Enter P(A ∩ B): ";
+                cin >> pab;
 
-            cout << "P(A U B) = " << (pa + pb - pab) << endl;
-        }
+                cout << "P(A U B) = " << (pa + pb - pab) << endl;
+            }
 
-        else if(choice == 4) {
-            float pa, pb;
-            cout << "Enter P(A): ";
-            cin >> pa;
-            cout << "Enter P(B): ";
-            cin >> pb;
+            else if (choice == 4)
+            {
+                float pa, pb;
+                cout << "Enter P(A): ";
+                cin >> pa;
+                cout << "Enter P(B): ";
+                cin >> pb;
 
-            cout << "P(A ∩ B) = " << (pa * pb) << endl;
-        }
+                cout << "P(A ∩ B) = " << (pa * pb) << endl;
+            }
 
-        else if(choice == 5) {
-            float pab, pb;
-            cout << "Enter P(A ∩ B): ";
-            cin >> pab;
-            cout << "Enter P(B): ";
-            cin >> pb;
+            else if (choice == 5)
+            {
+                float pab, pb;
+                cout << "Enter P(A ∩ B): ";
+                cin >> pab;
+                cout << "Enter P(B): ";
+                cin >> pb;
 
-            cout << "P(A | B) = " << (pab / pb) << endl;
-        }
+                cout << "P(A | B) = " << (pab / pb) << endl;
+            }
 
-        else if(choice == 6) {
-            int n, r;
-            long long factN = 1, factNR = 1;
+            else if (choice == 6)
+            {
+                int n, r;
+                long long factN = 1, factNR = 1;
 
-            cout << "Enter n and r: ";
-            cin >> n >> r;
+                cout << "Enter n and r: ";
+                cin >> n >> r;
 
-            for(int i = 1; i <= n; i++)
-                factN *= i;
+                for (int i = 1; i <= n; i++)
+                    factN *= i;
 
-            for(int i = 1; i <= (n - r); i++)
-                factNR *= i;
+                for (int i = 1; i <= (n - r); i++)
+                    factNR *= i;
 
-            cout << "nPr = " << (factN / factNR) << endl;
-        }
+                cout << "nPr = " << (factN / factNR) << endl;
+            }
 
-        else if(choice == 7) {
-            int n, r;
-            long long factN = 1, factR = 1, factNR = 1;
+            else if (choice == 7)
+            {
+                int n, r;
+                long long factN = 1, factR = 1, factNR = 1;
 
-            cout << "Enter n and r: ";
-            cin >> n >> r;
+                cout << "Enter n and r: ";
+                cin >> n >> r;
 
-            for(int i = 1; i <= n; i++)
-                factN *= i;
+                for (int i = 1; i <= n; i++)
+                    factN *= i;
 
-            for(int i = 1; i <= r; i++)
-                factR *= i;
+                for (int i = 1; i <= r; i++)
+                    factR *= i;
 
-            for(int i = 1; i <= (n - r); i++)
-                factNR *= i;
+                for (int i = 1; i <= (n - r); i++)
+                    factNR *= i;
 
-            cout << "nCr = " << (factN / (factR * factNR)) << endl;
-        }
+                cout << "nCr = " << (factN / (factR * factNR)) << endl;
+            }
 
-        else if(choice == 8) {
-            cout << "Exiting...\n";
-        }
+            else if (choice == 8)
+            {
+                cout << "Exiting...\n";
+            }
 
-        else {
-            cout << "Invalid choice!\n";
-        }
+            else
+            {
+                cout << "Invalid choice!\n";
+            }
 
-    } while(choice != 8);
+        } while (choice != 8);
 
         return 0;
     }
@@ -3439,7 +3488,8 @@ class Statices
     {
         int choice, n;
 
-        do {
+        do
+        {
             cout << "\nRegression Calculator\n";
             cout << "1. Calculate Regression Line (a, b)\n";
             cout << "2. Predict Y for given X\n";
@@ -3448,7 +3498,8 @@ class Statices
             cout << "Enter your choice: ";
             cin >> choice;
 
-            if(choice >= 1 && choice <= 3) {
+            if (choice >= 1 && choice <= 3)
+            {
                 cout << "Enter number of data points: ";
                 cin >> n;
 
@@ -3456,14 +3507,16 @@ class Statices
                 float sumX = 0, sumY = 0, sumXY = 0, sumX2 = 0, sumY2 = 0;
 
                 cout << "Enter values of X:\n";
-                for(int i = 0; i < n; i++) {
+                for (int i = 0; i < n; i++)
+                {
                     cin >> x[i];
                     sumX += x[i];
                     sumX2 += x[i] * x[i];
                 }
 
                 cout << "Enter values of Y:\n";
-                for(int i = 0; i < n; i++) {
+                for (int i = 0; i < n; i++)
+                {
                     cin >> y[i];
                     sumY += y[i];
                     sumXY += x[i] * y[i];
@@ -3473,11 +3526,13 @@ class Statices
                 float b = (n * sumXY - sumX * sumY) / (n * sumX2 - sumX * sumX);
                 float a = (sumY - b * sumX) / n;
 
-                if(choice == 1) {
+                if (choice == 1)
+                {
                     cout << "Regression Equation: Y = " << a << " + " << b << "X\n";
                 }
 
-                else if(choice == 2) {
+                else if (choice == 2)
+                {
                     float Xval;
                     cout << "Enter value of X: ";
                     cin >> Xval;
@@ -3486,7 +3541,8 @@ class Statices
                     cout << "Predicted Y = " << Ypred << endl;
                 }
 
-                else if(choice == 3) {
+                else if (choice == 3)
+                {
                     float r = (n * sumXY - sumX * sumY) /
                               sqrt((n * sumX2 - sumX * sumX) *
                                    (n * sumY2 - sumY * sumY));
@@ -3495,15 +3551,17 @@ class Statices
                 }
             }
 
-            else if(choice == 4) {
+            else if (choice == 4)
+            {
                 cout << "Exiting...\n";
             }
 
-            else {
+            else
+            {
                 cout << "Invalid choice!\n";
             }
 
-        } while(choice != 4);
+        } while (choice != 4);
 
         return 0;
     }
@@ -3515,239 +3573,326 @@ class Programming
     {
         int choice;
 
-    do {
-        cout << "\nNumber System Converter\n";
-        cout << "1. Decimal to Binary\n";
-        cout << "2. Decimal to Octal\n";
-        cout << "3. Decimal to Hexadecimal\n";
-        cout << "4. Binary to Decimal\n";
-        cout << "5. Octal to Decimal\n";
-        cout << "6. Hexadecimal to Decimal\n";
-        cout << "7. Binary Addition\n";
-        cout << "8. Binary to Hexadecimal\n";
-        cout << "9. Hexadecimal to Binary\n";
-        cout << "10. Octal to Hexadecimal\n";
-        cout << "11. Hexadecimal to Octal\n";
-        cout << "12. Exit\n";
-        cout << "Enter your choice: ";
-        cin >> choice;
+        do
+        {
+            cout << "\nNumber System Converter\n";
+            cout << "1. Decimal to Binary\n";
+            cout << "2. Decimal to Octal\n";
+            cout << "3. Decimal to Hexadecimal\n";
+            cout << "4. Binary to Decimal\n";
+            cout << "5. Octal to Decimal\n";
+            cout << "6. Hexadecimal to Decimal\n";
+            cout << "7. Binary Addition\n";
+            cout << "8. Binary to Hexadecimal\n";
+            cout << "9. Hexadecimal to Binary\n";
+            cout << "10. Octal to Hexadecimal\n";
+            cout << "11. Hexadecimal to Octal\n";
+            cout << "12. Exit\n";
+            cout << "Enter your choice: ";
+            cin >> choice;
 
-        // Decimal → Binary
-        if(choice == 1) {
-            int n, bin[32], i = 0;
-            cout << "Enter decimal: ";
-            cin >> n;
-            while(n > 0) {
-                bin[i++] = n % 2;
-                n /= 2;
-            }
-            cout << "Binary = ";
-            for(int j = i - 1; j >= 0; j--) cout << bin[j];
-            cout << endl;
-        }
-
-        // Decimal → Octal
-        else if(choice == 2) {
-            int n, oct[32], i = 0;
-            cout << "Enter decimal: ";
-            cin >> n;
-            while(n > 0) {
-                oct[i++] = n % 8;
-                n /= 8;
-            }
-            cout << "Octal = ";
-            for(int j = i - 1; j >= 0; j--) cout << oct[j];
-            cout << endl;
-        }
-
-        // Decimal → Hex
-        else if(choice == 3) {
-            int n; char hex[32]; int i = 0;
-            cout << "Enter decimal: ";
-            cin >> n;
-            while(n > 0) {
-                int r = n % 16;
-                hex[i++] = (r < 10) ? r + '0' : r - 10 + 'A';
-                n /= 16;
-            }
-            cout << "Hex = ";
-            for(int j = i - 1; j >= 0; j--) cout << hex[j];
-            cout << endl;
-        }
-
-        // Binary → Decimal
-        else if(choice == 4) {
-            int b, dec = 0, base = 1;
-            cout << "Enter binary: ";
-            cin >> b;
-            while(b > 0) {
-                int r = b % 10;
-                if(r != 0 && r != 1) {
-                    cout << "Invalid binary!\n"; break;
+            // Decimal → Binary
+            if (choice == 1)
+            {
+                int n, bin[32], i = 0;
+                cout << "Enter decimal: ";
+                cin >> n;
+                while (n > 0)
+                {
+                    bin[i++] = n % 2;
+                    n /= 2;
                 }
-                dec += r * base;
-                base *= 2;
-                b /= 10;
+                cout << "Binary = ";
+                for (int j = i - 1; j >= 0; j--)
+                    cout << bin[j];
+                cout << endl;
             }
-            cout << "Decimal = " << dec << endl;
-        }
 
-        // Octal → Decimal
-        else if(choice == 5) {
-            int o, dec = 0, base = 1;
-            cout << "Enter octal: ";
-            cin >> o;
-            while(o > 0) {
-                int r = o % 10;
-                if(r > 7) {
-                    cout << "Invalid octal!\n"; break;
+            // Decimal → Octal
+            else if (choice == 2)
+            {
+                int n, oct[32], i = 0;
+                cout << "Enter decimal: ";
+                cin >> n;
+                while (n > 0)
+                {
+                    oct[i++] = n % 8;
+                    n /= 8;
                 }
-                dec += r * base;
-                base *= 8;
-                o /= 10;
+                cout << "Octal = ";
+                for (int j = i - 1; j >= 0; j--)
+                    cout << oct[j];
+                cout << endl;
             }
-            cout << "Decimal = " << dec << endl;
-        }
 
-        // Hex → Decimal
-        else if(choice == 6) {
-            string h; int dec = 0, base = 1;
-            cout << "Enter hex: ";
-            cin >> h;
-            for(int i = h.length() - 1; i >= 0; i--) {
-                if(h[i] >= '0' && h[i] <= '9')
-                    dec += (h[i] - '0') * base;
-                else if(h[i] >= 'A' && h[i] <= 'F')
-                    dec += (h[i] - 'A' + 10) * base;
-                else if(h[i] >= 'a' && h[i] <= 'f')
-                    dec += (h[i] - 'a' + 10) * base;
-                else {
-                    cout << "Invalid hex!\n"; break;
+            // Decimal → Hex
+            else if (choice == 3)
+            {
+                int n;
+                char hex[32];
+                int i = 0;
+                cout << "Enter decimal: ";
+                cin >> n;
+                while (n > 0)
+                {
+                    int r = n % 16;
+                    hex[i++] = (r < 10) ? r + '0' : r - 10 + 'A';
+                    n /= 16;
                 }
-                base *= 16;
+                cout << "Hex = ";
+                for (int j = i - 1; j >= 0; j--)
+                    cout << hex[j];
+                cout << endl;
             }
-            cout << "Decimal = " << dec << endl;
-        }
 
-        // Binary Addition
-        else if(choice == 7) {
-            int b1, b2, res = 0, carry = 0, base = 1;
-            cout << "Enter two binary numbers: ";
-            cin >> b1 >> b2;
-            while(b1 > 0 || b2 > 0 || carry) {
-                int s = (b1 % 10) + (b2 % 10) + carry;
-                res += (s % 2) * base;
-                carry = s / 2;
-                b1 /= 10; b2 /= 10; base *= 10;
-            }
-            cout << "Result = " << res << endl;
-        }
-
-        // Binary → Hex
-        else if(choice == 8) {
-            int b, dec = 0, base = 1;
-            cout << "Enter binary: ";
-            cin >> b;
-            while(b > 0) {
-                dec += (b % 10) * base;
-                base *= 2;
-                b /= 10;
-            }
-            char hex[32]; int i = 0;
-            while(dec > 0) {
-                int r = dec % 16;
-                hex[i++] = (r < 10) ? r + '0' : r - 10 + 'A';
-                dec /= 16;
-            }
-            cout << "Hex = ";
-            for(int j = i - 1; j >= 0; j--) cout << hex[j];
-            cout << endl;
-        }
-
-        // Hex → Binary
-        else if(choice == 9) {
-            string h;
-            cout << "Enter hex: ";
-            cin >> h;
-            cout << "Binary = ";
-            for(int i = 0; i < h.length(); i++) {
-                switch(toupper(h[i])) {
-                    case '0': cout<<"0000"; break;
-                    case '1': cout<<"0001"; break;
-                    case '2': cout<<"0010"; break;
-                    case '3': cout<<"0011"; break;
-                    case '4': cout<<"0100"; break;
-                    case '5': cout<<"0101"; break;
-                    case '6': cout<<"0110"; break;
-                    case '7': cout<<"0111"; break;
-                    case '8': cout<<"1000"; break;
-                    case '9': cout<<"1001"; break;
-                    case 'A': cout<<"1010"; break;
-                    case 'B': cout<<"1011"; break;
-                    case 'C': cout<<"1100"; break;
-                    case 'D': cout<<"1101"; break;
-                    case 'E': cout<<"1110"; break;
-                    case 'F': cout<<"1111"; break;
-                    default: cout<<"Invalid"; break;
+            // Binary → Decimal
+            else if (choice == 4)
+            {
+                int b, dec = 0, base = 1;
+                cout << "Enter binary: ";
+                cin >> b;
+                while (b > 0)
+                {
+                    int r = b % 10;
+                    if (r != 0 && r != 1)
+                    {
+                        cout << "Invalid binary!\n";
+                        break;
+                    }
+                    dec += r * base;
+                    base *= 2;
+                    b /= 10;
                 }
+                cout << "Decimal = " << dec << endl;
             }
-            cout << endl;
-        }
 
-        // Octal → Hex
-        else if(choice == 10) {
-            int o, dec = 0, base = 1;
-            cout << "Enter octal: ";
-            cin >> o;
-            while(o > 0) {
-                int r = o % 10;
-                if(r > 7) { cout<<"Invalid!\n"; break; }
-                dec += r * base;
-                base *= 8;
-                o /= 10;
+            // Octal → Decimal
+            else if (choice == 5)
+            {
+                int o, dec = 0, base = 1;
+                cout << "Enter octal: ";
+                cin >> o;
+                while (o > 0)
+                {
+                    int r = o % 10;
+                    if (r > 7)
+                    {
+                        cout << "Invalid octal!\n";
+                        break;
+                    }
+                    dec += r * base;
+                    base *= 8;
+                    o /= 10;
+                }
+                cout << "Decimal = " << dec << endl;
             }
-            char hex[32]; int i = 0;
-            while(dec > 0) {
-                int r = dec % 16;
-                hex[i++] = (r < 10) ? r + '0' : r - 10 + 'A';
-                dec /= 16;
+
+            // Hex → Decimal
+            else if (choice == 6)
+            {
+                string h;
+                int dec = 0, base = 1;
+                cout << "Enter hex: ";
+                cin >> h;
+                for (int i = h.length() - 1; i >= 0; i--)
+                {
+                    if (h[i] >= '0' && h[i] <= '9')
+                        dec += (h[i] - '0') * base;
+                    else if (h[i] >= 'A' && h[i] <= 'F')
+                        dec += (h[i] - 'A' + 10) * base;
+                    else if (h[i] >= 'a' && h[i] <= 'f')
+                        dec += (h[i] - 'a' + 10) * base;
+                    else
+                    {
+                        cout << "Invalid hex!\n";
+                        break;
+                    }
+                    base *= 16;
+                }
+                cout << "Decimal = " << dec << endl;
             }
-            cout << "Hex = ";
-            for(int j = i - 1; j >= 0; j--) cout << hex[j];
-            cout << endl;
-        }
 
-        // Hex → Octal
-        else if(choice == 11) {
-            string h; int dec = 0, base = 1;
-            cout << "Enter hex: ";
-            cin >> h;
-            for(int i = h.length() - 1; i >= 0; i--) {
-                if(h[i] >= '0' && h[i] <= '9')
-                    dec += (h[i] - '0') * base;
-                else
-                    dec += (toupper(h[i]) - 'A' + 10) * base;
-                base *= 16;
+            // Binary Addition
+            else if (choice == 7)
+            {
+                int b1, b2, res = 0, carry = 0, base = 1;
+                cout << "Enter two binary numbers: ";
+                cin >> b1 >> b2;
+                while (b1 > 0 || b2 > 0 || carry)
+                {
+                    int s = (b1 % 10) + (b2 % 10) + carry;
+                    res += (s % 2) * base;
+                    carry = s / 2;
+                    b1 /= 10;
+                    b2 /= 10;
+                    base *= 10;
+                }
+                cout << "Result = " << res << endl;
             }
-            int oct[32], i = 0;
-            while(dec > 0) {
-                oct[i++] = dec % 8;
-                dec /= 8;
+
+            // Binary → Hex
+            else if (choice == 8)
+            {
+                int b, dec = 0, base = 1;
+                cout << "Enter binary: ";
+                cin >> b;
+                while (b > 0)
+                {
+                    dec += (b % 10) * base;
+                    base *= 2;
+                    b /= 10;
+                }
+                char hex[32];
+                int i = 0;
+                while (dec > 0)
+                {
+                    int r = dec % 16;
+                    hex[i++] = (r < 10) ? r + '0' : r - 10 + 'A';
+                    dec /= 16;
+                }
+                cout << "Hex = ";
+                for (int j = i - 1; j >= 0; j--)
+                    cout << hex[j];
+                cout << endl;
             }
-            cout << "Octal = ";
-            for(int j = i - 1; j >= 0; j--) cout << oct[j];
-            cout << endl;
-        }
 
-        else if(choice == 12) {
-            cout << "Exiting...\n";
-        }
+            // Hex → Binary
+            else if (choice == 9)
+            {
+                string h;
+                cout << "Enter hex: ";
+                cin >> h;
+                cout << "Binary = ";
+                for (int i = 0; i < h.length(); i++)
+                {
+                    switch (toupper(h[i]))
+                    {
+                    case '0':
+                        cout << "0000";
+                        break;
+                    case '1':
+                        cout << "0001";
+                        break;
+                    case '2':
+                        cout << "0010";
+                        break;
+                    case '3':
+                        cout << "0011";
+                        break;
+                    case '4':
+                        cout << "0100";
+                        break;
+                    case '5':
+                        cout << "0101";
+                        break;
+                    case '6':
+                        cout << "0110";
+                        break;
+                    case '7':
+                        cout << "0111";
+                        break;
+                    case '8':
+                        cout << "1000";
+                        break;
+                    case '9':
+                        cout << "1001";
+                        break;
+                    case 'A':
+                        cout << "1010";
+                        break;
+                    case 'B':
+                        cout << "1011";
+                        break;
+                    case 'C':
+                        cout << "1100";
+                        break;
+                    case 'D':
+                        cout << "1101";
+                        break;
+                    case 'E':
+                        cout << "1110";
+                        break;
+                    case 'F':
+                        cout << "1111";
+                        break;
+                    default:
+                        cout << "Invalid";
+                        break;
+                    }
+                }
+                cout << endl;
+            }
 
-        else {
-            cout << "Invalid choice!\n";
-        }
+            // Octal → Hex
+            else if (choice == 10)
+            {
+                int o, dec = 0, base = 1;
+                cout << "Enter octal: ";
+                cin >> o;
+                while (o > 0)
+                {
+                    int r = o % 10;
+                    if (r > 7)
+                    {
+                        cout << "Invalid!\n";
+                        break;
+                    }
+                    dec += r * base;
+                    base *= 8;
+                    o /= 10;
+                }
+                char hex[32];
+                int i = 0;
+                while (dec > 0)
+                {
+                    int r = dec % 16;
+                    hex[i++] = (r < 10) ? r + '0' : r - 10 + 'A';
+                    dec /= 16;
+                }
+                cout << "Hex = ";
+                for (int j = i - 1; j >= 0; j--)
+                    cout << hex[j];
+                cout << endl;
+            }
 
-    } while(choice != 12);
+            // Hex → Octal
+            else if (choice == 11)
+            {
+                string h;
+                int dec = 0, base = 1;
+                cout << "Enter hex: ";
+                cin >> h;
+                for (int i = h.length() - 1; i >= 0; i--)
+                {
+                    if (h[i] >= '0' && h[i] <= '9')
+                        dec += (h[i] - '0') * base;
+                    else
+                        dec += (toupper(h[i]) - 'A' + 10) * base;
+                    base *= 16;
+                }
+                int oct[32], i = 0;
+                while (dec > 0)
+                {
+                    oct[i++] = dec % 8;
+                    dec /= 8;
+                }
+                cout << "Octal = ";
+                for (int j = i - 1; j >= 0; j--)
+                    cout << oct[j];
+                cout << endl;
+            }
+
+            else if (choice == 12)
+            {
+                cout << "Exiting...\n";
+            }
+
+            else
+            {
+                cout << "Invalid choice!\n";
+            }
+
+        } while (choice != 12);
 
         return 0;
     }
@@ -3756,151 +3901,189 @@ class Programming
     {
         int choice;
 
-    do {
-        cout << "\nBitwise Calculator\n";
-        cout << "1. AND (&)\n";
-        cout << "2. OR (|)\n";
-        cout << "3. XOR (^)\n";
-        cout << "4. NOT (~)\n";
-        cout << "5. Left Shift (<<)\n";
-        cout << "6. Right Shift (>>)\n";
-        cout << "7. Check Bit (ON/OFF)\n";
-        cout << "8. Toggle Bit\n";
-        cout << "9. Exit\n";
-        cout << "Enter your choice: ";
+        do
+        {
+            cout << "\nBitwise Calculator\n";
+            cout << "1. AND (&)\n";
+            cout << "2. OR (|)\n";
+            cout << "3. XOR (^)\n";
+            cout << "4. NOT (~)\n";
+            cout << "5. Left Shift (<<)\n";
+            cout << "6. Right Shift (>>)\n";
+            cout << "7. Check Bit (ON/OFF)\n";
+            cout << "8. Toggle Bit\n";
+            cout << "9. Exit\n";
+            cout << "Enter your choice: ";
 
-        if(!(cin >> choice)) {
-            cout << "Invalid input!\n";
-            cin.clear();
-            cin.ignore(1000, '\n');
-            continue;
-        }
-
-        // Function-like block for binary display
-        auto printBinary = [](int num) {
-            for(int i = 7; i >= 0; i--) {
-                cout << ((num >> i) & 1);
-            }
-        };
-
-        if(choice >= 1 && choice <= 3) {
-            int a, b;
-            cout << "Enter two integers: ";
-
-            if(!(cin >> a >> b)) {
+            if (!(cin >> choice))
+            {
                 cout << "Invalid input!\n";
                 cin.clear();
                 cin.ignore(1000, '\n');
                 continue;
             }
 
-            cout << "A in binary: "; printBinary(a); cout << endl;
-            cout << "B in binary: "; printBinary(b); cout << endl;
+            // Function-like block for binary display
+            auto printBinary = [](int num)
+            {
+                for (int i = 7; i >= 0; i--)
+                {
+                    cout << ((num >> i) & 1);
+                }
+            };
 
-            int result;
-            if(choice == 1) result = a & b;
-            else if(choice == 2) result = a | b;
-            else result = a ^ b;
+            if (choice >= 1 && choice <= 3)
+            {
+                int a, b;
+                cout << "Enter two integers: ";
 
-            cout << "Result = " << result << endl;
-            cout << "Result in binary: "; printBinary(result); cout << endl;
-        }
+                if (!(cin >> a >> b))
+                {
+                    cout << "Invalid input!\n";
+                    cin.clear();
+                    cin.ignore(1000, '\n');
+                    continue;
+                }
 
-        else if(choice == 4) {
-            int a;
-            cout << "Enter integer: ";
+                cout << "A in binary: ";
+                printBinary(a);
+                cout << endl;
+                cout << "B in binary: ";
+                printBinary(b);
+                cout << endl;
 
-            if(!(cin >> a)) {
-                cout << "Invalid input!\n";
-                cin.clear();
-                cin.ignore(1000, '\n');
-                continue;
+                int result;
+                if (choice == 1)
+                    result = a & b;
+                else if (choice == 2)
+                    result = a | b;
+                else
+                    result = a ^ b;
+
+                cout << "Result = " << result << endl;
+                cout << "Result in binary: ";
+                printBinary(result);
+                cout << endl;
             }
 
-            cout << "Binary: "; printBinary(a); cout << endl;
-            int result = ~a;
+            else if (choice == 4)
+            {
+                int a;
+                cout << "Enter integer: ";
 
-            cout << "Result = " << result << endl;
-            cout << "Result in binary: "; printBinary(result); cout << endl;
-        }
+                if (!(cin >> a))
+                {
+                    cout << "Invalid input!\n";
+                    cin.clear();
+                    cin.ignore(1000, '\n');
+                    continue;
+                }
 
-        else if(choice == 5 || choice == 6) {
-            int a, shift;
-            cout << "Enter number: ";
+                cout << "Binary: ";
+                printBinary(a);
+                cout << endl;
+                int result = ~a;
 
-            if(!(cin >> a)) {
-                cout << "Invalid input!\n";
-                cin.clear();
-                cin.ignore(1000, '\n');
-                continue;
+                cout << "Result = " << result << endl;
+                cout << "Result in binary: ";
+                printBinary(result);
+                cout << endl;
             }
 
-            cout << "Enter shift value: ";
+            else if (choice == 5 || choice == 6)
+            {
+                int a, shift;
+                cout << "Enter number: ";
 
-            if(!(cin >> shift) || shift < 0) {
-                cout << "Invalid shift!\n";
-                cin.clear();
-                cin.ignore(1000, '\n');
-                continue;
+                if (!(cin >> a))
+                {
+                    cout << "Invalid input!\n";
+                    cin.clear();
+                    cin.ignore(1000, '\n');
+                    continue;
+                }
+
+                cout << "Enter shift value: ";
+
+                if (!(cin >> shift) || shift < 0)
+                {
+                    cout << "Invalid shift!\n";
+                    cin.clear();
+                    cin.ignore(1000, '\n');
+                    continue;
+                }
+
+                cout << "Binary before: ";
+                printBinary(a);
+                cout << endl;
+
+                int result = (choice == 5) ? (a << shift) : (a >> shift);
+
+                cout << "Result = " << result << endl;
+                cout << "Binary after: ";
+                printBinary(result);
+                cout << endl;
             }
 
-            cout << "Binary before: "; printBinary(a); cout << endl;
+            else if (choice == 7)
+            {
+                int num, pos;
+                cout << "Enter number: ";
+                cin >> num;
 
-            int result = (choice == 5) ? (a << shift) : (a >> shift);
+                cout << "Enter bit position (0-7): ";
+                cin >> pos;
 
-            cout << "Result = " << result << endl;
-            cout << "Binary after: "; printBinary(result); cout << endl;
-        }
+                if (pos < 0 || pos > 7)
+                {
+                    cout << "Invalid position!\n";
+                    continue;
+                }
 
-        else if(choice == 7) {
-            int num, pos;
-            cout << "Enter number: ";
-            cin >> num;
-
-            cout << "Enter bit position (0-7): ";
-            cin >> pos;
-
-            if(pos < 0 || pos > 7) {
-                cout << "Invalid position!\n";
-                continue;
+                if (num & (1 << pos))
+                    cout << "Bit is ON\n";
+                else
+                    cout << "Bit is OFF\n";
             }
 
-            if(num & (1 << pos))
-                cout << "Bit is ON\n";
+            else if (choice == 8)
+            {
+                int num, pos;
+                cout << "Enter number: ";
+                cin >> num;
+
+                cout << "Enter bit position (0-7): ";
+                cin >> pos;
+
+                if (pos < 0 || pos > 7)
+                {
+                    cout << "Invalid position!\n";
+                    continue;
+                }
+
+                cout << "Before: ";
+                printBinary(num);
+                cout << endl;
+
+                num = num ^ (1 << pos);
+
+                cout << "After: ";
+                printBinary(num);
+                cout << endl;
+                cout << "Result = " << num << endl;
+            }
+
+            else if (choice == 9)
+            {
+                cout << "Exiting...\n";
+            }
+
             else
-                cout << "Bit is OFF\n";
-        }
-
-        else if(choice == 8) {
-            int num, pos;
-            cout << "Enter number: ";
-            cin >> num;
-
-            cout << "Enter bit position (0-7): ";
-            cin >> pos;
-
-            if(pos < 0 || pos > 7) {
-                cout << "Invalid position!\n";
-                continue;
+            {
+                cout << "Invalid choice!\n";
             }
 
-            cout << "Before: "; printBinary(num); cout << endl;
-
-            num = num ^ (1 << pos);
-
-            cout << "After: "; printBinary(num); cout << endl;
-            cout << "Result = " << num << endl;
-        }
-
-        else if(choice == 9) {
-            cout << "Exiting...\n";
-        }
-
-        else {
-            cout << "Invalid choice!\n";
-        }
-
-    } while(choice != 9);
+        } while (choice != 9);
         return 0;
     }
 
@@ -3908,132 +4091,157 @@ class Programming
     {
         int choice;
 
-    do {
-        cout << "\nASCII Converter\n";
-        cout << "1. Character to ASCII\n";
-        cout << "2. ASCII to Character\n";
-        cout << "3. String to ASCII\n";
-        cout << "4. ASCII to String\n";
-        cout << "5. Case Conversion\n";
-        cout << "6. Show ASCII Table\n";
-        cout << "7. Exit\n";
-        cout << "Enter your choice: ";
+        do
+        {
+            cout << "\nASCII Converter\n";
+            cout << "1. Character to ASCII\n";
+            cout << "2. ASCII to Character\n";
+            cout << "3. String to ASCII\n";
+            cout << "4. ASCII to String\n";
+            cout << "5. Case Conversion\n";
+            cout << "6. Show ASCII Table\n";
+            cout << "7. Exit\n";
+            cout << "Enter your choice: ";
 
-        if(!(cin >> choice)) {
-            cout << "Invalid input!\n";
-            cin.clear();
-            cin.ignore(1000, '\n');
-            continue;
-        }
-
-        // 1. Character → ASCII
-        if(choice == 1) {
-            char ch;
-            cout << "Enter a character: ";
-            cin >> ch;
-
-            cout << "ASCII value = " << (int)ch << endl;
-        }
-
-        // 2. ASCII → Character
-        else if(choice == 2) {
-            int num;
-            cout << "Enter ASCII value (0-127): ";
-            cin >> num;
-
-            if(num < 0 || num > 127) {
-                cout << "Invalid ASCII range!\n";
-            } else {
-                cout << "Character = " << (char)num << endl;
-            }
-        }
-
-        // 3. String → ASCII
-        else if(choice == 3) {
-            cin.ignore();
-            string str;
-
-            cout << "Enter a string: ";
-            getline(cin, str);
-
-            cout << "ASCII values: ";
-            for(int i = 0; i < str.length(); i++) {
-                cout << (int)str[i] << " ";
-            }
-            cout << endl;
-        }
-
-        // 4. ASCII → String
-        else if(choice == 4) {
-            int n;
-            cout << "How many ASCII values? ";
-            cin >> n;
-
-            if(n <= 0) {
-                cout << "Invalid count!\n";
+            if (!(cin >> choice))
+            {
+                cout << "Invalid input!\n";
+                cin.clear();
+                cin.ignore(1000, '\n');
                 continue;
             }
 
-            cout << "Enter ASCII values:\n";
-            for(int i = 0; i < n; i++) {
-                int val;
-                cin >> val;
+            // 1. Character → ASCII
+            if (choice == 1)
+            {
+                char ch;
+                cout << "Enter a character: ";
+                cin >> ch;
 
-                if(val < 0 || val > 127) {
-                    cout << "Invalid ASCII!\n";
-                } else {
-                    cout << (char)val;
+                cout << "ASCII value = " << (int)ch << endl;
+            }
+
+            // 2. ASCII → Character
+            else if (choice == 2)
+            {
+                int num;
+                cout << "Enter ASCII value (0-127): ";
+                cin >> num;
+
+                if (num < 0 || num > 127)
+                {
+                    cout << "Invalid ASCII range!\n";
+                }
+                else
+                {
+                    cout << "Character = " << (char)num << endl;
                 }
             }
-            cout << endl;
-        }
 
-        // 5. Case Conversion
-        else if(choice == 5) {
-            char ch;
-            cout << "Enter a character: ";
-            cin >> ch;
+            // 3. String → ASCII
+            else if (choice == 3)
+            {
+                cin.ignore();
+                string str;
 
-            if(ch >= 'A' && ch <= 'Z') {
-                cout << "Lowercase = " << (char)(ch + 32) << endl;
-            }
-            else if(ch >= 'a' && ch <= 'z') {
-                cout << "Uppercase = " << (char)(ch - 32) << endl;
-            }
-            else {
-                cout << "Not an alphabet!\n";
-            }
-        }
+                cout << "Enter a string: ";
+                getline(cin, str);
 
-        // 6. ASCII Table
-        else if(choice == 6) {
-            cout << "\nASCII Table (A-Z, a-z, 0-9)\n";
-
-            cout << "\nA-Z:\n";
-            for(char c = 'A'; c <= 'Z'; c++) {
-                cout << c << " = " << (int)c << endl;
+                cout << "ASCII values: ";
+                for (int i = 0; i < str.length(); i++)
+                {
+                    cout << (int)str[i] << " ";
+                }
+                cout << endl;
             }
 
-            cout << "\na-z:\n";
-            for(char c = 'a'; c <= 'z'; c++) {
-                cout << c << " = " << (int)c << endl;
+            // 4. ASCII → String
+            else if (choice == 4)
+            {
+                int n;
+                cout << "How many ASCII values? ";
+                cin >> n;
+
+                if (n <= 0)
+                {
+                    cout << "Invalid count!\n";
+                    continue;
+                }
+
+                cout << "Enter ASCII values:\n";
+                for (int i = 0; i < n; i++)
+                {
+                    int val;
+                    cin >> val;
+
+                    if (val < 0 || val > 127)
+                    {
+                        cout << "Invalid ASCII!\n";
+                    }
+                    else
+                    {
+                        cout << (char)val;
+                    }
+                }
+                cout << endl;
             }
 
-            cout << "\n0-9:\n";
-            for(char c = '0'; c <= '9'; c++) {
-                cout << c << " = " << (int)c << endl;
+            // 5. Case Conversion
+            else if (choice == 5)
+            {
+                char ch;
+                cout << "Enter a character: ";
+                cin >> ch;
+
+                if (ch >= 'A' && ch <= 'Z')
+                {
+                    cout << "Lowercase = " << (char)(ch + 32) << endl;
+                }
+                else if (ch >= 'a' && ch <= 'z')
+                {
+                    cout << "Uppercase = " << (char)(ch - 32) << endl;
+                }
+                else
+                {
+                    cout << "Not an alphabet!\n";
+                }
             }
-        }
 
-        else if(choice == 7) {
-            cout << "Exiting...\n";
-        }
+            // 6. ASCII Table
+            else if (choice == 6)
+            {
+                cout << "\nASCII Table (A-Z, a-z, 0-9)\n";
 
-        else {
-            cout << "Invalid choice!\n";
-        }
+                cout << "\nA-Z:\n";
+                for (char c = 'A'; c <= 'Z'; c++)
+                {
+                    cout << c << " = " << (int)c << endl;
+                }
 
-    } while(choice != 7);
+                cout << "\na-z:\n";
+                for (char c = 'a'; c <= 'z'; c++)
+                {
+                    cout << c << " = " << (int)c << endl;
+                }
+
+                cout << "\n0-9:\n";
+                for (char c = '0'; c <= '9'; c++)
+                {
+                    cout << c << " = " << (int)c << endl;
+                }
+            }
+
+            else if (choice == 7)
+            {
+                cout << "Exiting...\n";
+            }
+
+            else
+            {
+                cout << "Invalid choice!\n";
+            }
+
+        } while (choice != 7);
 
         return 0;
     }
@@ -4042,180 +4250,212 @@ class Programming
     {
         int choice;
 
-    do {
-        cout << "\nBase Conversion Calculator\n";
-        cout << "1. Any Base to Decimal\n";
-        cout << "2. Decimal to Any Base\n";
-        cout << "3. Any Base to Any Base (with steps)\n";
-        cout << "4. Exit\n";
-        cout << "Enter your choice: ";
+        do
+        {
+            cout << "\nBase Conversion Calculator\n";
+            cout << "1. Any Base to Decimal\n";
+            cout << "2. Decimal to Any Base\n";
+            cout << "3. Any Base to Any Base (with steps)\n";
+            cout << "4. Exit\n";
+            cout << "Enter your choice: ";
 
-        if(!(cin >> choice)) {
-            cout << "Invalid input!\n";
-            cin.clear();
-            cin.ignore(1000, '\n');
-            continue;
-        }
-
-        // char → value
-        auto charToVal = [](char c) {
-            if(c >= '0' && c <= '9') return c - '0';
-            if(c >= 'A' && c <= 'Z') return c - 'A' + 10;
-            if(c >= 'a' && c <= 'z') return c - 'a' + 10;
-            return -1;
-        };
-
-        // value → char
-        auto valToChar = [](int v) {
-            if(v < 10) return char(v + '0');
-            return char(v - 10 + 'A');
-        };
-
-        // 1. Any Base → Decimal
-        if(choice == 1) {
-            string num;
-            int base;
-            cout << "Enter number: ";
-            cin >> num;
-            cout << "Enter base (2-36): ";
-            cin >> base;
-
-            if(base < 2 || base > 36) {
-                cout << "Invalid base!\n";
+            if (!(cin >> choice))
+            {
+                cout << "Invalid input!\n";
+                cin.clear();
+                cin.ignore(1000, '\n');
                 continue;
             }
 
-            bool negative = false;
-            if(num[0] == '-') {
-                negative = true;
-                num = num.substr(1);
-            }
+            // char → value
+            auto charToVal = [](char c)
+            {
+                if (c >= '0' && c <= '9')
+                    return c - '0';
+                if (c >= 'A' && c <= 'Z')
+                    return c - 'A' + 10;
+                if (c >= 'a' && c <= 'z')
+                    return c - 'a' + 10;
+                return -1;
+            };
 
-            long long decimal = 0;
-            bool valid = true;
+            // value → char
+            auto valToChar = [](int v)
+            {
+                if (v < 10)
+                    return char(v + '0');
+                return char(v - 10 + 'A');
+            };
 
-            for(int i = 0; i < num.length(); i++) {
-                int val = charToVal(num[i]);
+            // 1. Any Base → Decimal
+            if (choice == 1)
+            {
+                string num;
+                int base;
+                cout << "Enter number: ";
+                cin >> num;
+                cout << "Enter base (2-36): ";
+                cin >> base;
 
-                if(val < 0 || val >= base) {
-                    cout << "Invalid digit '" << num[i] << "' for base " << base << endl;
-                    valid = false;
-                    break;
+                if (base < 2 || base > 36)
+                {
+                    cout << "Invalid base!\n";
+                    continue;
                 }
 
-                decimal = decimal * base + val;
-            }
-
-            if(valid) {
-                if(negative) decimal = -decimal;
-                cout << "Decimal = " << decimal << endl;
-            }
-        }
-
-        // 2. Decimal → Any Base
-        else if(choice == 2) {
-            long long num;
-            int base;
-
-            cout << "Enter decimal number: ";
-            cin >> num;
-            cout << "Enter base (2-36): ";
-            cin >> base;
-
-            if(base < 2 || base > 36) {
-                cout << "Invalid base!\n";
-                continue;
-            }
-
-            bool negative = false;
-            if(num < 0) {
-                negative = true;
-                num = -num;
-            }
-
-            string result = "";
-
-            while(num > 0) {
-                int rem = num % base;
-                result = valToChar(rem) + result;
-                num /= base;
-            }
-
-            if(result == "") result = "0";
-            if(negative) result = "-" + result;
-
-            cout << "Converted = " << result << endl;
-        }
-
-        // 3. Any Base → Any Base (with steps)
-        else if(choice == 3) {
-            string num;
-            int base1, base2;
-
-            cout << "Enter number: ";
-            cin >> num;
-            cout << "Enter source base: ";
-            cin >> base1;
-            cout << "Enter target base: ";
-            cin >> base2;
-
-            if(base1 < 2 || base1 > 36 || base2 < 2 || base2 > 36) {
-                cout << "Invalid base!\n";
-                continue;
-            }
-
-            bool negative = false;
-            if(num[0] == '-') {
-                negative = true;
-                num = num.substr(1);
-            }
-
-            // Step 1: Base → Decimal
-            long long decimal = 0;
-            bool valid = true;
-
-            for(int i = 0; i < num.length(); i++) {
-                int val = charToVal(num[i]);
-
-                if(val < 0 || val >= base1) {
-                    cout << "Invalid digit '" << num[i] << "' for base " << base1 << endl;
-                    valid = false;
-                    break;
+                bool negative = false;
+                if (num[0] == '-')
+                {
+                    negative = true;
+                    num = num.substr(1);
                 }
 
-                decimal = decimal * base1 + val;
+                long long decimal = 0;
+                bool valid = true;
+
+                for (int i = 0; i < num.length(); i++)
+                {
+                    int val = charToVal(num[i]);
+
+                    if (val < 0 || val >= base)
+                    {
+                        cout << "Invalid digit '" << num[i] << "' for base " << base << endl;
+                        valid = false;
+                        break;
+                    }
+
+                    decimal = decimal * base + val;
+                }
+
+                if (valid)
+                {
+                    if (negative)
+                        decimal = -decimal;
+                    cout << "Decimal = " << decimal << endl;
+                }
             }
 
-            if(!valid) continue;
+            // 2. Decimal → Any Base
+            else if (choice == 2)
+            {
+                long long num;
+                int base;
 
-            cout << "Step 1: Base " << base1 << " → Decimal = " << decimal << endl;
+                cout << "Enter decimal number: ";
+                cin >> num;
+                cout << "Enter base (2-36): ";
+                cin >> base;
 
-            // Step 2: Decimal → Target Base
-            long long temp = decimal;
-            string result = "";
+                if (base < 2 || base > 36)
+                {
+                    cout << "Invalid base!\n";
+                    continue;
+                }
 
-            while(temp > 0) {
-                int rem = temp % base2;
-                result = valToChar(rem) + result;
-                temp /= base2;
+                bool negative = false;
+                if (num < 0)
+                {
+                    negative = true;
+                    num = -num;
+                }
+
+                string result = "";
+
+                while (num > 0)
+                {
+                    int rem = num % base;
+                    result = valToChar(rem) + result;
+                    num /= base;
+                }
+
+                if (result == "")
+                    result = "0";
+                if (negative)
+                    result = "-" + result;
+
+                cout << "Converted = " << result << endl;
             }
 
-            if(result == "") result = "0";
-            if(negative) result = "-" + result;
+            // 3. Any Base → Any Base (with steps)
+            else if (choice == 3)
+            {
+                string num;
+                int base1, base2;
 
-            cout << "Step 2: Decimal → Base " << base2 << " = " << result << endl;
-            cout << "Final Answer = " << result << endl;
-        }
+                cout << "Enter number: ";
+                cin >> num;
+                cout << "Enter source base: ";
+                cin >> base1;
+                cout << "Enter target base: ";
+                cin >> base2;
 
-        else if(choice == 4) {
-            cout << "Exiting...\n";
-        }
+                if (base1 < 2 || base1 > 36 || base2 < 2 || base2 > 36)
+                {
+                    cout << "Invalid base!\n";
+                    continue;
+                }
 
-        else {
-            cout << "Invalid choice!\n";
-        }
+                bool negative = false;
+                if (num[0] == '-')
+                {
+                    negative = true;
+                    num = num.substr(1);
+                }
 
-    } while(choice != 4);
+                // Step 1: Base → Decimal
+                long long decimal = 0;
+                bool valid = true;
+
+                for (int i = 0; i < num.length(); i++)
+                {
+                    int val = charToVal(num[i]);
+
+                    if (val < 0 || val >= base1)
+                    {
+                        cout << "Invalid digit '" << num[i] << "' for base " << base1 << endl;
+                        valid = false;
+                        break;
+                    }
+
+                    decimal = decimal * base1 + val;
+                }
+
+                if (!valid)
+                    continue;
+
+                cout << "Step 1: Base " << base1 << " → Decimal = " << decimal << endl;
+
+                // Step 2: Decimal → Target Base
+                long long temp = decimal;
+                string result = "";
+
+                while (temp > 0)
+                {
+                    int rem = temp % base2;
+                    result = valToChar(rem) + result;
+                    temp /= base2;
+                }
+
+                if (result == "")
+                    result = "0";
+                if (negative)
+                    result = "-" + result;
+
+                cout << "Step 2: Decimal → Base " << base2 << " = " << result << endl;
+                cout << "Final Answer = " << result << endl;
+            }
+
+            else if (choice == 4)
+            {
+                cout << "Exiting...\n";
+            }
+
+            else
+            {
+                cout << "Invalid choice!\n";
+            }
+
+        } while (choice != 4);
 
         return 0;
     }
@@ -4225,295 +4465,321 @@ class DATE_TIME
 {
     static int Age_calculator()
     {
-    int choice;
+        int choice;
 
-    do {
-        cout << "\nAge Calculator\n";
-        cout << "1. Calculate Age (till today)\n";
-        cout << "2. Calculate Age (custom date)\n";
-        cout << "3. Total Days Lived\n";
-        cout << "4. Next Birthday\n";
-        cout << "5. Exit\n";
-        cout << "Enter choice: ";
-        cin >> choice;
+        do
+        {
+            cout << "\nAge Calculator\n";
+            cout << "1. Calculate Age (till today)\n";
+            cout << "2. Calculate Age (custom date)\n";
+            cout << "3. Total Days Lived\n";
+            cout << "4. Next Birthday\n";
+            cout << "5. Exit\n";
+            cout << "Enter choice: ";
+            cin >> choice;
 
-        int d1, m1, y1;
-        cout << "Enter DOB (dd mm yyyy): ";
-        cin >> d1 >> m1 >> y1;
+            int d1, m1, y1;
+            cout << "Enter DOB (dd mm yyyy): ";
+            cin >> d1 >> m1 >> y1;
 
-        // Validate DOB
-        int dim;
-        if(m1 == 2)
-            dim = ((y1 % 4 == 0 && y1 % 100 != 0) || (y1 % 400 == 0)) ? 29 : 28;
-        else if(m1==4||m1==6||m1==9||m1==11)
-            dim = 30;
-        else
-            dim = 31;
-
-        if(m1 < 1 || m1 > 12 || d1 < 1 || d1 > dim) {
-            cout << "Invalid DOB!\n";
-            continue;
-        }
-
-        // -------- AGE CALCULATION --------
-        if(choice == 1 || choice == 2) {
-            int d2, m2, y2;
-
-            cout << "Enter date (dd mm yyyy): ";
-            cin >> d2 >> m2 >> y2;
-
-            // Validate date
-            if(m2 == 2)
-                dim = ((y2 % 4 == 0 && y2 % 100 != 0) || (y2 % 400 == 0)) ? 29 : 28;
-            else if(m2==4||m2==6||m2==9||m2==11)
+            // Validate DOB
+            int dim;
+            if (m1 == 2)
+                dim = ((y1 % 4 == 0 && y1 % 100 != 0) || (y1 % 400 == 0)) ? 29 : 28;
+            else if (m1 == 4 || m1 == 6 || m1 == 9 || m1 == 11)
                 dim = 30;
             else
                 dim = 31;
 
-            if(m2 < 1 || m2 > 12 || d2 < 1 || d2 > dim) {
-                cout << "Invalid date!\n";
+            if (m1 < 1 || m1 > 12 || d1 < 1 || d1 > dim)
+            {
+                cout << "Invalid DOB!\n";
                 continue;
             }
 
-            if(d2 < d1) {
-                m2--;
-                int prevMonth = (m2 == 0) ? 12 : m2;
-                int prevYear = (m2 == 0) ? y2 - 1 : y2;
+            // -------- AGE CALCULATION --------
+            if (choice == 1 || choice == 2)
+            {
+                int d2, m2, y2;
 
-                if(prevMonth == 2)
-                    dim = ((prevYear % 4 == 0 && prevYear % 100 != 0) || (prevYear % 400 == 0)) ? 29 : 28;
-                else if(prevMonth==4||prevMonth==6||prevMonth==9||prevMonth==11)
+                cout << "Enter date (dd mm yyyy): ";
+                cin >> d2 >> m2 >> y2;
+
+                // Validate date
+                if (m2 == 2)
+                    dim = ((y2 % 4 == 0 && y2 % 100 != 0) || (y2 % 400 == 0)) ? 29 : 28;
+                else if (m2 == 4 || m2 == 6 || m2 == 9 || m2 == 11)
                     dim = 30;
                 else
                     dim = 31;
 
-                d2 += dim;
-            }
-
-            if(m2 < m1) {
-                y2--;
-                m2 += 12;
-            }
-
-            cout << "Age = "
-                 << (y2 - y1) << " Years, "
-                 << (m2 - m1) << " Months, "
-                 << (d2 - d1) << " Days\n";
-        }
-
-        // -------- TOTAL DAYS --------
-        else if(choice == 3) {
-            int d2, m2, y2;
-            cout << "Enter current date (dd mm yyyy): ";
-            cin >> d2 >> m2 >> y2;
-
-            int total = 0;
-
-            for(int y = y1; y < y2; y++)
-                total += ((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0)) ? 366 : 365;
-
-            for(int m = 1; m < m2; m++) {
-                if(m == 2)
-                    total += ((y2 % 4 == 0 && y2 % 100 != 0) || (y2 % 400 == 0)) ? 29 : 28;
-                else if(m==4||m==6||m==9||m==11)
-                    total += 30;
-                else
-                    total += 31;
-            }
-
-            total += d2;
-
-            for(int m = 1; m < m1; m++) {
-                if(m == 2)
-                    total -= ((y1 % 4 == 0 && y1 % 100 != 0) || (y1 % 400 == 0)) ? 29 : 28;
-                else if(m==4||m==6||m==9||m==11)
-                    total -= 30;
-                else
-                    total -= 31;
-            }
-
-            total -= d1;
-
-            cout << "Total Days Lived = " << total << endl;
-        }
-
-        // -------- NEXT BIRTHDAY --------
-        else if(choice == 4) {
-            int cd, cm, cy;
-            cout << "Enter current date (dd mm yyyy): ";
-            cin >> cd >> cm >> cy;
-
-            int nextY = cy;
-            if(cm > m1 || (cm == m1 && cd > d1))
-                nextY++;
-
-            int td = cd, tm = cm, ty = cy, days = 0;
-
-            while(td != d1 || tm != m1 || ty != nextY) {
-                td++;
-
-                int dim2;
-                if(tm == 2)
-                    dim2 = ((ty % 4 == 0 && ty % 100 != 0) || (ty % 400 == 0)) ? 29 : 28;
-                else if(tm==4||tm==6||tm==9||tm==11)
-                    dim2 = 30;
-                else
-                    dim2 = 31;
-
-                if(td > dim2) {
-                    td = 1;
-                    tm++;
+                if (m2 < 1 || m2 > 12 || d2 < 1 || d2 > dim)
+                {
+                    cout << "Invalid date!\n";
+                    continue;
                 }
 
-                if(tm > 12) {
-                    tm = 1;
-                    ty++;
+                if (d2 < d1)
+                {
+                    m2--;
+                    int prevMonth = (m2 == 0) ? 12 : m2;
+                    int prevYear = (m2 == 0) ? y2 - 1 : y2;
+
+                    if (prevMonth == 2)
+                        dim = ((prevYear % 4 == 0 && prevYear % 100 != 0) || (prevYear % 400 == 0)) ? 29 : 28;
+                    else if (prevMonth == 4 || prevMonth == 6 || prevMonth == 9 || prevMonth == 11)
+                        dim = 30;
+                    else
+                        dim = 31;
+
+                    d2 += dim;
                 }
 
-                days++;
+                if (m2 < m1)
+                {
+                    y2--;
+                    m2 += 12;
+                }
+
+                cout << "Age = "
+                     << (y2 - y1) << " Years, "
+                     << (m2 - m1) << " Months, "
+                     << (d2 - d1) << " Days\n";
             }
 
-            cout << "Days until next birthday = " << days << endl;
-        }
+            // -------- TOTAL DAYS --------
+            else if (choice == 3)
+            {
+                int d2, m2, y2;
+                cout << "Enter current date (dd mm yyyy): ";
+                cin >> d2 >> m2 >> y2;
 
-        else if(choice == 5) {
-            cout << "Exiting...\n";
-        }
+                int total = 0;
 
-        else {
-            cout << "Invalid choice!\n";
-        }
+                for (int y = y1; y < y2; y++)
+                    total += ((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0)) ? 366 : 365;
 
-    } while(choice != 5);
+                for (int m = 1; m < m2; m++)
+                {
+                    if (m == 2)
+                        total += ((y2 % 4 == 0 && y2 % 100 != 0) || (y2 % 400 == 0)) ? 29 : 28;
+                    else if (m == 4 || m == 6 || m == 9 || m == 11)
+                        total += 30;
+                    else
+                        total += 31;
+                }
 
-    return 0;
+                total += d2;
+
+                for (int m = 1; m < m1; m++)
+                {
+                    if (m == 2)
+                        total -= ((y1 % 4 == 0 && y1 % 100 != 0) || (y1 % 400 == 0)) ? 29 : 28;
+                    else if (m == 4 || m == 6 || m == 9 || m == 11)
+                        total -= 30;
+                    else
+                        total -= 31;
+                }
+
+                total -= d1;
+
+                cout << "Total Days Lived = " << total << endl;
+            }
+
+            // -------- NEXT BIRTHDAY --------
+            else if (choice == 4)
+            {
+                int cd, cm, cy;
+                cout << "Enter current date (dd mm yyyy): ";
+                cin >> cd >> cm >> cy;
+
+                int nextY = cy;
+                if (cm > m1 || (cm == m1 && cd > d1))
+                    nextY++;
+
+                int td = cd, tm = cm, ty = cy, days = 0;
+
+                while (td != d1 || tm != m1 || ty != nextY)
+                {
+                    td++;
+
+                    int dim2;
+                    if (tm == 2)
+                        dim2 = ((ty % 4 == 0 && ty % 100 != 0) || (ty % 400 == 0)) ? 29 : 28;
+                    else if (tm == 4 || tm == 6 || tm == 9 || tm == 11)
+                        dim2 = 30;
+                    else
+                        dim2 = 31;
+
+                    if (td > dim2)
+                    {
+                        td = 1;
+                        tm++;
+                    }
+
+                    if (tm > 12)
+                    {
+                        tm = 1;
+                        ty++;
+                    }
+
+                    days++;
+                }
+
+                cout << "Days until next birthday = " << days << endl;
+            }
+
+            else if (choice == 5)
+            {
+                cout << "Exiting...\n";
+            }
+
+            else
+            {
+                cout << "Invalid choice!\n";
+            }
+
+        } while (choice != 5);
+
+        return 0;
     }
 
     static int Date_Difference_calculator()
     {
         int choice;
 
-    do {
-        cout << "\nDate Difference Calculator\n";
-        cout << "1. Difference (Years, Months, Days)\n";
-        cout << "2. Total Days Difference\n";
-        cout << "3. Weeks and Days\n";
-        cout << "4. Exit\n";
-        cout << "Enter choice: ";
-        cin >> choice;
+        do
+        {
+            cout << "\nDate Difference Calculator\n";
+            cout << "1. Difference (Years, Months, Days)\n";
+            cout << "2. Total Days Difference\n";
+            cout << "3. Weeks and Days\n";
+            cout << "4. Exit\n";
+            cout << "Enter choice: ";
+            cin >> choice;
 
-        int d1, m1, y1, d2, m2, y2;
+            int d1, m1, y1, d2, m2, y2;
 
-        cout << "Enter First Date (dd mm yyyy): ";
-        cin >> d1 >> m1 >> y1;
+            cout << "Enter First Date (dd mm yyyy): ";
+            cin >> d1 >> m1 >> y1;
 
-        cout << "Enter Second Date (dd mm yyyy): ";
-        cin >> d2 >> m2 >> y2;
+            cout << "Enter Second Date (dd mm yyyy): ";
+            cin >> d2 >> m2 >> y2;
 
-        // Function-like logic: days in month
-        auto daysInMonth = [](int m, int y) {
-            if(m == 2)
-                return ((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0)) ? 29 : 28;
-            if(m==4||m==6||m==9||m==11)
-                return 30;
-            return 31;
-        };
+            // Function-like logic: days in month
+            auto daysInMonth = [](int m, int y)
+            {
+                if (m == 2)
+                    return ((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0)) ? 29 : 28;
+                if (m == 4 || m == 6 || m == 9 || m == 11)
+                    return 30;
+                return 31;
+            };
 
-        // Validate dates
-        if(m1 < 1 || m1 > 12 || d1 < 1 || d1 > daysInMonth(m1, y1) ||
-           m2 < 1 || m2 > 12 || d2 < 1 || d2 > daysInMonth(m2, y2)) {
-            cout << "Invalid date!\n";
-            continue;
-        }
-
-        // Swap if date1 > date2
-        if(y1 > y2 || (y1 == y2 && m1 > m2) || (y1 == y2 && m1 == m2 && d1 > d2)) {
-            swap(d1, d2);
-            swap(m1, m2);
-            swap(y1, y2);
-        }
-
-        // -------- OPTION 1 --------
-        if(choice == 1) {
-            int dd = d2, mm = m2, yy = y2;
-
-            if(dd < d1) {
-                mm--;
-                int prevMonth = (mm == 0) ? 12 : mm;
-                int prevYear = (mm == 0) ? yy - 1 : yy;
-                dd += daysInMonth(prevMonth, prevYear);
+            // Validate dates
+            if (m1 < 1 || m1 > 12 || d1 < 1 || d1 > daysInMonth(m1, y1) ||
+                m2 < 1 || m2 > 12 || d2 < 1 || d2 > daysInMonth(m2, y2))
+            {
+                cout << "Invalid date!\n";
+                continue;
             }
 
-            if(mm < m1) {
-                yy--;
-                mm += 12;
+            // Swap if date1 > date2
+            if (y1 > y2 || (y1 == y2 && m1 > m2) || (y1 == y2 && m1 == m2 && d1 > d2))
+            {
+                swap(d1, d2);
+                swap(m1, m2);
+                swap(y1, y2);
             }
 
-            cout << "Difference = "
-                 << (yy - y1) << " Years, "
-                 << (mm - m1) << " Months, "
-                 << (dd - d1) << " Days\n";
-        }
+            // -------- OPTION 1 --------
+            if (choice == 1)
+            {
+                int dd = d2, mm = m2, yy = y2;
 
-        // -------- OPTION 2 --------
-        else if(choice == 2) {
-            int total1 = 0, total2 = 0;
+                if (dd < d1)
+                {
+                    mm--;
+                    int prevMonth = (mm == 0) ? 12 : mm;
+                    int prevYear = (mm == 0) ? yy - 1 : yy;
+                    dd += daysInMonth(prevMonth, prevYear);
+                }
 
-            // Convert first date to total days
-            for(int y = 0; y < y1; y++)
-                total1 += ((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0)) ? 366 : 365;
+                if (mm < m1)
+                {
+                    yy--;
+                    mm += 12;
+                }
 
-            for(int m = 1; m < m1; m++)
-                total1 += daysInMonth(m, y1);
+                cout << "Difference = "
+                     << (yy - y1) << " Years, "
+                     << (mm - m1) << " Months, "
+                     << (dd - d1) << " Days\n";
+            }
 
-            total1 += d1;
+            // -------- OPTION 2 --------
+            else if (choice == 2)
+            {
+                int total1 = 0, total2 = 0;
 
-            // Convert second date to total days
-            for(int y = 0; y < y2; y++)
-                total2 += ((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0)) ? 366 : 365;
+                // Convert first date to total days
+                for (int y = 0; y < y1; y++)
+                    total1 += ((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0)) ? 366 : 365;
 
-            for(int m = 1; m < m2; m++)
-                total2 += daysInMonth(m, y2);
+                for (int m = 1; m < m1; m++)
+                    total1 += daysInMonth(m, y1);
 
-            total2 += d2;
+                total1 += d1;
 
-            cout << "Total Days Difference = " << (total2 - total1) << endl;
-        }
+                // Convert second date to total days
+                for (int y = 0; y < y2; y++)
+                    total2 += ((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0)) ? 366 : 365;
 
-        // -------- OPTION 3 --------
-        else if(choice == 3) {
-            int total1 = 0, total2 = 0;
+                for (int m = 1; m < m2; m++)
+                    total2 += daysInMonth(m, y2);
 
-            for(int y = 0; y < y1; y++)
-                total1 += ((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0)) ? 366 : 365;
+                total2 += d2;
 
-            for(int m = 1; m < m1; m++)
-                total1 += daysInMonth(m, y1);
+                cout << "Total Days Difference = " << (total2 - total1) << endl;
+            }
 
-            total1 += d1;
+            // -------- OPTION 3 --------
+            else if (choice == 3)
+            {
+                int total1 = 0, total2 = 0;
 
-            for(int y = 0; y < y2; y++)
-                total2 += ((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0)) ? 366 : 365;
+                for (int y = 0; y < y1; y++)
+                    total1 += ((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0)) ? 366 : 365;
 
-            for(int m = 1; m < m2; m++)
-                total2 += daysInMonth(m, y2);
+                for (int m = 1; m < m1; m++)
+                    total1 += daysInMonth(m, y1);
 
-            total2 += d2;
+                total1 += d1;
 
-            int diff = total2 - total1;
+                for (int y = 0; y < y2; y++)
+                    total2 += ((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0)) ? 366 : 365;
 
-            cout << "Weeks = " << diff / 7 << ", Days = " << diff % 7 << endl;
-        }
+                for (int m = 1; m < m2; m++)
+                    total2 += daysInMonth(m, y2);
 
-        else if(choice == 4) {
-            cout << "Exiting...\n";
-        }
+                total2 += d2;
 
-        else {
-            cout << "Invalid choice!\n";
-        }
+                int diff = total2 - total1;
 
-    } while(choice != 4);
+                cout << "Weeks = " << diff / 7 << ", Days = " << diff % 7 << endl;
+            }
+
+            else if (choice == 4)
+            {
+                cout << "Exiting...\n";
+            }
+
+            else
+            {
+                cout << "Invalid choice!\n";
+            }
+
+        } while (choice != 4);
 
         return 0;
     }
@@ -4522,130 +4788,163 @@ class DATE_TIME
     {
         int choice;
 
-    do {
-        cout << "\nWorking Days Calculator\n";
-        cout << "1. Working Days (Mon–Fri)\n";
-        cout << "2. Working Days with Holidays\n";
-        cout << "3. Total Days + Working Days\n";
-        cout << "4. Exit\n";
-        cout << "Enter choice: ";
-        cin >> choice;
+        do
+        {
+            cout << "\nWorking Days Calculator\n";
+            cout << "1. Working Days (Mon–Fri)\n";
+            cout << "2. Working Days with Holidays\n";
+            cout << "3. Total Days + Working Days\n";
+            cout << "4. Exit\n";
+            cout << "Enter choice: ";
+            cin >> choice;
 
-        int d1, m1, y1, d2, m2, y2;
+            int d1, m1, y1, d2, m2, y2;
 
-        cout << "Enter Start Date (dd mm yyyy): ";
-        cin >> d1 >> m1 >> y1;
+            cout << "Enter Start Date (dd mm yyyy): ";
+            cin >> d1 >> m1 >> y1;
 
-        cout << "Enter End Date (dd mm yyyy): ";
-        cin >> d2 >> m2 >> y2;
+            cout << "Enter End Date (dd mm yyyy): ";
+            cin >> d2 >> m2 >> y2;
 
-        // Days in month
-        auto dim = [](int m, int y) {
-            if(m == 2)
-                return ((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0)) ? 29 : 28;
-            if(m==4||m==6||m==9||m==11)
-                return 30;
-            return 31;
-        };
+            // Days in month
+            auto dim = [](int m, int y)
+            {
+                if (m == 2)
+                    return ((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0)) ? 29 : 28;
+                if (m == 4 || m == 6 || m == 9 || m == 11)
+                    return 30;
+                return 31;
+            };
 
-        // Day name array
-        string dayName[] = {"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
+            // Day name array
+            string dayName[] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
 
-        // Validate
-        if(m1 < 1 || m1 > 12 || d1 < 1 || d1 > dim(m1,y1) ||
-           m2 < 1 || m2 > 12 || d2 < 1 || d2 > dim(m2,y2)) {
-            cout << "Invalid date!\n";
-            continue;
-        }
-
-        // Swap if needed
-        if(y1 > y2 || (y1==y2 && m1>m2) || (y1==y2 && m1==m2 && d1>d2)) {
-            swap(d1,d2); swap(m1,m2); swap(y1,y2);
-        }
-
-        // Weekend customization
-        bool isWeekend[7] = {false};
-
-        cout << "\nChoose weekend system:\n";
-        cout << "1. Saturday & Sunday\n";
-        cout << "2. Sunday only\n";
-        cout << "3. Friday & Saturday\n";
-        cout << "Enter option: ";
-
-        int wopt;
-        cin >> wopt;
-
-        if(wopt == 1) { isWeekend[0]=true; isWeekend[6]=true; }
-        else if(wopt == 2) { isWeekend[0]=true; }
-        else if(wopt == 3) { isWeekend[5]=true; isWeekend[6]=true; }
-        else {
-            cout << "Invalid weekend option!\n";
-            continue;
-        }
-
-        int totalDays = 0, workingDays = 0;
-
-        int d=d1, m=m1, y=y1;
-
-        while(true) {
-            // Zeller’s Formula
-            int mm = (m < 3) ? m + 12 : m;
-            int yy = (m < 3) ? y - 1 : y;
-
-            int K = yy % 100;
-            int J = yy / 100;
-
-            int h = (d + (13*(mm+1))/5 + K + K/4 + J/4 + 5*J) % 7;
-            int day = (h + 6) % 7; // 0=Sunday
-
-            cout << d << "-" << m << "-" << y << " : " << dayName[day] << endl;
-
-            totalDays++;
-
-            if(!isWeekend[day])
-                workingDays++;
-
-            if(d==d2 && m==m2 && y==y2)
-                break;
-
-            d++;
-            if(d > dim(m,y)) { d=1; m++; }
-            if(m > 12) { m=1; y++; }
-        }
-
-        // OPTIONS
-        if(choice == 1) {
-            cout << "Working Days = " << workingDays << endl;
-        }
-
-        else if(choice == 2) {
-            int holidays;
-            cout << "Enter number of holidays: ";
-            cin >> holidays;
-
-            if(holidays < 0 || holidays > workingDays) {
-                cout << "Invalid holidays!\n";
+            // Validate
+            if (m1 < 1 || m1 > 12 || d1 < 1 || d1 > dim(m1, y1) ||
+                m2 < 1 || m2 > 12 || d2 < 1 || d2 > dim(m2, y2))
+            {
+                cout << "Invalid date!\n";
                 continue;
             }
 
-            cout << "Working Days (excluding holidays) = "
-                 << (workingDays - holidays) << endl;
-        }
+            // Swap if needed
+            if (y1 > y2 || (y1 == y2 && m1 > m2) || (y1 == y2 && m1 == m2 && d1 > d2))
+            {
+                swap(d1, d2);
+                swap(m1, m2);
+                swap(y1, y2);
+            }
 
-        else if(choice == 3) {
-            cout << "Total Days = " << totalDays << endl;
-            cout << "Working Days = " << workingDays << endl;
-        }
+            // Weekend customization
+            bool isWeekend[7] = {false};
 
-        else if(choice == 4) {
-            cout << "Exiting...\n";
-        }
+            cout << "\nChoose weekend system:\n";
+            cout << "1. Saturday & Sunday\n";
+            cout << "2. Sunday only\n";
+            cout << "3. Friday & Saturday\n";
+            cout << "Enter option: ";
 
-        else {
-            cout << "Invalid choice!\n";
-        }
+            int wopt;
+            cin >> wopt;
 
-    } while(choice != 4);
+            if (wopt == 1)
+            {
+                isWeekend[0] = true;
+                isWeekend[6] = true;
+            }
+            else if (wopt == 2)
+            {
+                isWeekend[0] = true;
+            }
+            else if (wopt == 3)
+            {
+                isWeekend[5] = true;
+                isWeekend[6] = true;
+            }
+            else
+            {
+                cout << "Invalid weekend option!\n";
+                continue;
+            }
+
+            int totalDays = 0, workingDays = 0;
+
+            int d = d1, m = m1, y = y1;
+
+            while (true)
+            {
+                // Zeller’s Formula
+                int mm = (m < 3) ? m + 12 : m;
+                int yy = (m < 3) ? y - 1 : y;
+
+                int K = yy % 100;
+                int J = yy / 100;
+
+                int h = (d + (13 * (mm + 1)) / 5 + K + K / 4 + J / 4 + 5 * J) % 7;
+                int day = (h + 6) % 7; // 0=Sunday
+
+                cout << d << "-" << m << "-" << y << " : " << dayName[day] << endl;
+
+                totalDays++;
+
+                if (!isWeekend[day])
+                    workingDays++;
+
+                if (d == d2 && m == m2 && y == y2)
+                    break;
+
+                d++;
+                if (d > dim(m, y))
+                {
+                    d = 1;
+                    m++;
+                }
+                if (m > 12)
+                {
+                    m = 1;
+                    y++;
+                }
+            }
+
+            // OPTIONS
+            if (choice == 1)
+            {
+                cout << "Working Days = " << workingDays << endl;
+            }
+
+            else if (choice == 2)
+            {
+                int holidays;
+                cout << "Enter number of holidays: ";
+                cin >> holidays;
+
+                if (holidays < 0 || holidays > workingDays)
+                {
+                    cout << "Invalid holidays!\n";
+                    continue;
+                }
+
+                cout << "Working Days (excluding holidays) = "
+                     << (workingDays - holidays) << endl;
+            }
+
+            else if (choice == 3)
+            {
+                cout << "Total Days = " << totalDays << endl;
+                cout << "Working Days = " << workingDays << endl;
+            }
+
+            else if (choice == 4)
+            {
+                cout << "Exiting...\n";
+            }
+
+            else
+            {
+                cout << "Invalid choice!\n";
+            }
+
+        } while (choice != 4);
         return 0;
     }
 
@@ -4653,160 +4952,224 @@ class DATE_TIME
     {
         int choice;
 
-    string zoneNames[] = {"UTC","IST","EST","PST","CET"};
-    double offsets[]   = {0, 5.5, -5, -8, 1};
+        string zoneNames[] = {"UTC", "IST", "EST", "PST", "CET"};
+        double offsets[] = {0, 5.5, -5, -8, 1};
 
-    string days[] = {"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
+        string days[] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
 
-    do {
-        cout << "\nTime Zone Converter\n";
-        cout << "1. Convert Time (Standard Zones)\n";
-        cout << "2. Convert with Custom Offset\n";
-        cout << "3. 12-hour ↔ 24-hour Format\n";
-        cout << "4. Multi Time Zone Display\n";
-        cout << "5. Exit\n";
-        cout << "Enter choice: ";
-        cin >> choice;
+        do
+        {
+            cout << "\nTime Zone Converter\n";
+            cout << "1. Convert Time (Standard Zones)\n";
+            cout << "2. Convert with Custom Offset\n";
+            cout << "3. 12-hour ↔ 24-hour Format\n";
+            cout << "4. Multi Time Zone Display\n";
+            cout << "5. Exit\n";
+            cout << "Enter choice: ";
+            cin >> choice;
 
-        // -------- COMMON INPUT --------
-        int h, m, d, mon, y;
-        cout << "Enter time (HH MM): ";
-        cin >> h >> m;
+            // -------- COMMON INPUT --------
+            int h, m, d, mon, y;
+            cout << "Enter time (HH MM): ";
+            cin >> h >> m;
 
-        cout << "Enter date (dd mm yyyy): ";
-        cin >> d >> mon >> y;
+            cout << "Enter date (dd mm yyyy): ";
+            cin >> d >> mon >> y;
 
-        if(h<0||h>23||m<0||m>59) {
-            cout << "Invalid time!\n";
-            continue;
-        }
-
-        // Zeller for day
-        int mm = (mon < 3) ? mon + 12 : mon;
-        int yy = (mon < 3) ? y - 1 : y;
-        int K = yy % 100;
-        int J = yy / 100;
-        int hday = (d + (13*(mm+1))/5 + K + K/4 + J/4 + 5*J) % 7;
-        int dayIndex = (hday + 6) % 7;
-
-        // -------- OPTION 1 --------
-        if(choice == 1) {
-            int from, to;
-
-            cout << "\nSelect FROM zone:\n";
-            for(int i=0;i<5;i++) cout<<i+1<<"."<<zoneNames[i]<<endl;
-            cin >> from;
-
-            cout << "Select TO zone:\n";
-            for(int i=0;i<5;i++) cout<<i+1<<"."<<zoneNames[i]<<endl;
-            cin >> to;
-
-            double diff = offsets[to-1] - offsets[from-1];
-
-            int newH = h + (int)diff;
-            int newM = m + (diff - (int)diff)*60;
-
-            // adjust minutes
-            if(newM >= 60) { newH++; newM -= 60; }
-            if(newM < 0)   { newH--; newM += 60; }
-
-            int dayShift = 0;
-            if(newH >= 24) { newH -= 24; dayShift = 1; }
-            if(newH < 0)   { newH += 24; dayShift = -1; }
-
-            int newDayIndex = (dayIndex + dayShift + 7) % 7;
-
-            cout << "Converted Time = "
-                 << newH << ":" << newM << endl;
-            cout << "Day = " << days[newDayIndex] << endl;
-        }
-
-        // -------- OPTION 2 --------
-        else if(choice == 2) {
-            double from, to;
-            cout << "Enter source UTC offset: ";
-            cin >> from;
-            cout << "Enter target UTC offset: ";
-            cin >> to;
-
-            double diff = to - from;
-
-            int newH = h + (int)diff;
-            int newM = m + (diff - (int)diff)*60;
-
-            if(newM >= 60) { newH++; newM -= 60; }
-            if(newM < 0)   { newH--; newM += 60; }
-
-            int shift = 0;
-            if(newH >= 24) { newH -= 24; shift = 1; }
-            if(newH < 0)   { newH += 24; shift = -1; }
-
-            int newDayIndex = (dayIndex + shift + 7) % 7;
-
-            cout << "Converted Time = " << newH << ":" << newM << endl;
-            cout << "Day = " << days[newDayIndex] << endl;
-        }
-
-        // -------- OPTION 3 --------
-        else if(choice == 3) {
-            int format;
-            cout << "1. 24 → 12\n2. 12 → 24\nEnter: ";
-            cin >> format;
-
-            if(format == 1) {
-                string ampm = (h >= 12) ? "PM" : "AM";
-                int hour = h % 12;
-                if(hour == 0) hour = 12;
-
-                cout << "12-hour = " << hour << ":" << m << " " << ampm << endl;
+            if (h < 0 || h > 23 || m < 0 || m > 59)
+            {
+                cout << "Invalid time!\n";
+                continue;
             }
-            else {
-                int hour;
-                string ampm;
-                cout << "Enter hour minute and AM/PM: ";
-                cin >> hour >> m >> ampm;
 
-                if(ampm == "PM" && hour != 12) hour += 12;
-                if(ampm == "AM" && hour == 12) hour = 0;
+            // Zeller for day
+            int mm = (mon < 3) ? mon + 12 : mon;
+            int yy = (mon < 3) ? y - 1 : y;
+            int K = yy % 100;
+            int J = yy / 100;
+            int hday = (d + (13 * (mm + 1)) / 5 + K + K / 4 + J / 4 + 5 * J) % 7;
+            int dayIndex = (hday + 6) % 7;
 
-                cout << "24-hour = " << hour << ":" << m << endl;
-            }
-        }
+            // -------- OPTION 1 --------
+            if (choice == 1)
+            {
+                int from, to;
 
-        // -------- OPTION 4 --------
-        else if(choice == 4) {
-            cout << "\nAll Time Zones:\n";
+                cout << "\nSelect FROM zone:\n";
+                for (int i = 0; i < 5; i++)
+                    cout << i + 1 << "." << zoneNames[i] << endl;
+                cin >> from;
 
-            for(int i=0;i<5;i++) {
-                double diff = offsets[i];
+                cout << "Select TO zone:\n";
+                for (int i = 0; i < 5; i++)
+                    cout << i + 1 << "." << zoneNames[i] << endl;
+                cin >> to;
+
+                double diff = offsets[to - 1] - offsets[from - 1];
 
                 int newH = h + (int)diff;
-                int newM = m + (diff - (int)diff)*60;
+                int newM = m + (diff - (int)diff) * 60;
 
-                if(newM >= 60) { newH++; newM -= 60; }
-                if(newM < 0)   { newH--; newM += 60; }
+                // adjust minutes
+                if (newM >= 60)
+                {
+                    newH++;
+                    newM -= 60;
+                }
+                if (newM < 0)
+                {
+                    newH--;
+                    newM += 60;
+                }
+
+                int dayShift = 0;
+                if (newH >= 24)
+                {
+                    newH -= 24;
+                    dayShift = 1;
+                }
+                if (newH < 0)
+                {
+                    newH += 24;
+                    dayShift = -1;
+                }
+
+                int newDayIndex = (dayIndex + dayShift + 7) % 7;
+
+                cout << "Converted Time = "
+                     << newH << ":" << newM << endl;
+                cout << "Day = " << days[newDayIndex] << endl;
+            }
+
+            // -------- OPTION 2 --------
+            else if (choice == 2)
+            {
+                double from, to;
+                cout << "Enter source UTC offset: ";
+                cin >> from;
+                cout << "Enter target UTC offset: ";
+                cin >> to;
+
+                double diff = to - from;
+
+                int newH = h + (int)diff;
+                int newM = m + (diff - (int)diff) * 60;
+
+                if (newM >= 60)
+                {
+                    newH++;
+                    newM -= 60;
+                }
+                if (newM < 0)
+                {
+                    newH--;
+                    newM += 60;
+                }
 
                 int shift = 0;
-                if(newH >= 24) { newH -= 24; shift = 1; }
-                if(newH < 0)   { newH += 24; shift = -1; }
+                if (newH >= 24)
+                {
+                    newH -= 24;
+                    shift = 1;
+                }
+                if (newH < 0)
+                {
+                    newH += 24;
+                    shift = -1;
+                }
 
                 int newDayIndex = (dayIndex + shift + 7) % 7;
 
-                cout << zoneNames[i] << " = "
-                     << newH << ":" << newM
-                     << " (" << days[newDayIndex] << ")\n";
+                cout << "Converted Time = " << newH << ":" << newM << endl;
+                cout << "Day = " << days[newDayIndex] << endl;
             }
-        }
 
-        else if(choice == 5) {
-            cout << "Exiting...\n";
-        }
+            // -------- OPTION 3 --------
+            else if (choice == 3)
+            {
+                int format;
+                cout << "1. 24 → 12\n2. 12 → 24\nEnter: ";
+                cin >> format;
 
-        else {
-            cout << "Invalid choice!\n";
-        }
+                if (format == 1)
+                {
+                    string ampm = (h >= 12) ? "PM" : "AM";
+                    int hour = h % 12;
+                    if (hour == 0)
+                        hour = 12;
 
-    } while(choice != 5);
+                    cout << "12-hour = " << hour << ":" << m << " " << ampm << endl;
+                }
+                else
+                {
+                    int hour;
+                    string ampm;
+                    cout << "Enter hour minute and AM/PM: ";
+                    cin >> hour >> m >> ampm;
+
+                    if (ampm == "PM" && hour != 12)
+                        hour += 12;
+                    if (ampm == "AM" && hour == 12)
+                        hour = 0;
+
+                    cout << "24-hour = " << hour << ":" << m << endl;
+                }
+            }
+
+            // -------- OPTION 4 --------
+            else if (choice == 4)
+            {
+                cout << "\nAll Time Zones:\n";
+
+                for (int i = 0; i < 5; i++)
+                {
+                    double diff = offsets[i];
+
+                    int newH = h + (int)diff;
+                    int newM = m + (diff - (int)diff) * 60;
+
+                    if (newM >= 60)
+                    {
+                        newH++;
+                        newM -= 60;
+                    }
+                    if (newM < 0)
+                    {
+                        newH--;
+                        newM += 60;
+                    }
+
+                    int shift = 0;
+                    if (newH >= 24)
+                    {
+                        newH -= 24;
+                        shift = 1;
+                    }
+                    if (newH < 0)
+                    {
+                        newH += 24;
+                        shift = -1;
+                    }
+
+                    int newDayIndex = (dayIndex + shift + 7) % 7;
+
+                    cout << zoneNames[i] << " = "
+                         << newH << ":" << newM
+                         << " (" << days[newDayIndex] << ")\n";
+                }
+            }
+
+            else if (choice == 5)
+            {
+                cout << "Exiting...\n";
+            }
+
+            else
+            {
+                cout << "Invalid choice!\n";
+            }
+
+        } while (choice != 5);
         return 0;
     }
 
@@ -4814,162 +5177,195 @@ class DATE_TIME
     {
         int choice;
 
-    string days[] = {"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
+        string days[] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
 
-    do {
-        cout << "\nDate & Time Converter\n";
-        cout << "1. Date Format Conversion\n";
-        cout << "2. Time Format Conversion\n";
-        cout << "3. Date + Time Conversion\n";
-        cout << "4. Add/Subtract Days\n";
-        cout << "5. Day Name Finder\n";
-        cout << "6. Exit\n";
-        cout << "Enter choice: ";
-        cin >> choice;
+        do
+        {
+            cout << "\nDate & Time Converter\n";
+            cout << "1. Date Format Conversion\n";
+            cout << "2. Time Format Conversion\n";
+            cout << "3. Date + Time Conversion\n";
+            cout << "4. Add/Subtract Days\n";
+            cout << "5. Day Name Finder\n";
+            cout << "6. Exit\n";
+            cout << "Enter choice: ";
+            cin >> choice;
 
-        // Days in month
-        auto dim = [](int m, int y) {
-            if(m == 2)
-                return ((y%4==0 && y%100!=0) || (y%400==0)) ? 29 : 28;
-            if(m==4||m==6||m==9||m==11)
-                return 30;
-            return 31;
-        };
+            // Days in month
+            auto dim = [](int m, int y)
+            {
+                if (m == 2)
+                    return ((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0)) ? 29 : 28;
+                if (m == 4 || m == 6 || m == 9 || m == 11)
+                    return 30;
+                return 31;
+            };
 
-        // -------- OPTION 1 --------
-        if(choice == 1) {
-            int d,m,y;
-            cout << "Enter date (dd mm yyyy): ";
-            cin >> d >> m >> y;
+            // -------- OPTION 1 --------
+            if (choice == 1)
+            {
+                int d, m, y;
+                cout << "Enter date (dd mm yyyy): ";
+                cin >> d >> m >> y;
 
-            if(m<1||m>12||d<1||d>dim(m,y)) {
-                cout << "Invalid date!\n";
-                continue;
-            }
-
-            cout << "YYYY-MM-DD = " << y << "-" << m << "-" << d << endl;
-            cout << "MM-DD-YYYY = " << m << "-" << d << "-" << y << endl;
-            cout << "DD/MM/YYYY = " << d << "/" << m << "/" << y << endl;
-        }
-
-        // -------- OPTION 2 --------
-        else if(choice == 2) {
-            int h,m;
-            cout << "Enter time (HH MM): ";
-            cin >> h >> m;
-
-            if(h<0||h>23||m<0||m>59) {
-                cout << "Invalid time!\n";
-                continue;
-            }
-
-            string ampm = (h>=12) ? "PM" : "AM";
-            int hh = h % 12;
-            if(hh == 0) hh = 12;
-
-            cout << "12-hour = " << hh << ":" << m << " " << ampm << endl;
-
-            int hour;
-            string ap;
-            cout << "Enter 12-hour (hh mm AM/PM): ";
-            cin >> hour >> m >> ap;
-
-            if(ap=="PM" && hour!=12) hour+=12;
-            if(ap=="AM" && hour==12) hour=0;
-
-            cout << "24-hour = " << hour << ":" << m << endl;
-        }
-
-        // -------- OPTION 3 --------
-        else if(choice == 3) {
-            int d,m,y,h,min;
-            cout << "Enter date (dd mm yyyy): ";
-            cin >> d >> m >> y;
-            cout << "Enter time (HH MM): ";
-            cin >> h >> min;
-
-            if(m<1||m>12||d<1||d>dim(m,y)||h<0||h>23||min<0||min>59) {
-                cout << "Invalid input!\n";
-                continue;
-            }
-
-            string ampm = (h>=12) ? "PM" : "AM";
-            int hh = h % 12;
-            if(hh == 0) hh = 12;
-
-            cout << "Converted = "
-                 << y << "/" << m << "/" << d
-                 << " " << hh << ":" << min << " " << ampm << endl;
-        }
-
-        // -------- OPTION 4 --------
-        else if(choice == 4) {
-            int d,m,y,add;
-            cout << "Enter date (dd mm yyyy): ";
-            cin >> d >> m >> y;
-            cout << "Enter days to add (+/-): ";
-            cin >> add;
-
-            if(m<1||m>12||d<1||d>dim(m,y)) {
-                cout << "Invalid date!\n";
-                continue;
-            }
-
-            while(add != 0) {
-                if(add > 0) {
-                    d++;
-                    if(d > dim(m,y)) {
-                        d = 1; m++;
-                        if(m > 12) { m = 1; y++; }
-                    }
-                    add--;
-                } else {
-                    d--;
-                    if(d < 1) {
-                        m--;
-                        if(m < 1) { m = 12; y--; }
-                        d = dim(m,y);
-                    }
-                    add++;
+                if (m < 1 || m > 12 || d < 1 || d > dim(m, y))
+                {
+                    cout << "Invalid date!\n";
+                    continue;
                 }
+
+                cout << "YYYY-MM-DD = " << y << "-" << m << "-" << d << endl;
+                cout << "MM-DD-YYYY = " << m << "-" << d << "-" << y << endl;
+                cout << "DD/MM/YYYY = " << d << "/" << m << "/" << y << endl;
             }
 
-            cout << "New Date = " << d << "-" << m << "-" << y << endl;
-        }
+            // -------- OPTION 2 --------
+            else if (choice == 2)
+            {
+                int h, m;
+                cout << "Enter time (HH MM): ";
+                cin >> h >> m;
 
-        // -------- OPTION 5 --------
-        else if(choice == 5) {
-            int d,m,y;
-            cout << "Enter date (dd mm yyyy): ";
-            cin >> d >> m >> y;
+                if (h < 0 || h > 23 || m < 0 || m > 59)
+                {
+                    cout << "Invalid time!\n";
+                    continue;
+                }
 
-            if(m<1||m>12||d<1||d>dim(m,y)) {
-                cout << "Invalid date!\n";
-                continue;
+                string ampm = (h >= 12) ? "PM" : "AM";
+                int hh = h % 12;
+                if (hh == 0)
+                    hh = 12;
+
+                cout << "12-hour = " << hh << ":" << m << " " << ampm << endl;
+
+                int hour;
+                string ap;
+                cout << "Enter 12-hour (hh mm AM/PM): ";
+                cin >> hour >> m >> ap;
+
+                if (ap == "PM" && hour != 12)
+                    hour += 12;
+                if (ap == "AM" && hour == 12)
+                    hour = 0;
+
+                cout << "24-hour = " << hour << ":" << m << endl;
             }
 
-            // Zeller's Formula
-            int mm = (m < 3) ? m + 12 : m;
-            int yy = (m < 3) ? y - 1 : y;
+            // -------- OPTION 3 --------
+            else if (choice == 3)
+            {
+                int d, m, y, h, min;
+                cout << "Enter date (dd mm yyyy): ";
+                cin >> d >> m >> y;
+                cout << "Enter time (HH MM): ";
+                cin >> h >> min;
 
-            int K = yy % 100;
-            int J = yy / 100;
+                if (m < 1 || m > 12 || d < 1 || d > dim(m, y) || h < 0 || h > 23 || min < 0 || min > 59)
+                {
+                    cout << "Invalid input!\n";
+                    continue;
+                }
 
-            int h = (d + (13*(mm+1))/5 + K + K/4 + J/4 + 5*J) % 7;
-            int dayIndex = (h + 6) % 7;
+                string ampm = (h >= 12) ? "PM" : "AM";
+                int hh = h % 12;
+                if (hh == 0)
+                    hh = 12;
 
-            cout << "Day = " << days[dayIndex] << endl;
-        }
+                cout << "Converted = "
+                     << y << "/" << m << "/" << d
+                     << " " << hh << ":" << min << " " << ampm << endl;
+            }
 
-        else if(choice == 6) {
-            cout << "Exiting...\n";
-        }
+            // -------- OPTION 4 --------
+            else if (choice == 4)
+            {
+                int d, m, y, add;
+                cout << "Enter date (dd mm yyyy): ";
+                cin >> d >> m >> y;
+                cout << "Enter days to add (+/-): ";
+                cin >> add;
 
-        else {
-            cout << "Invalid choice!\n";
-        }
+                if (m < 1 || m > 12 || d < 1 || d > dim(m, y))
+                {
+                    cout << "Invalid date!\n";
+                    continue;
+                }
 
-    } while(choice != 6);
+                while (add != 0)
+                {
+                    if (add > 0)
+                    {
+                        d++;
+                        if (d > dim(m, y))
+                        {
+                            d = 1;
+                            m++;
+                            if (m > 12)
+                            {
+                                m = 1;
+                                y++;
+                            }
+                        }
+                        add--;
+                    }
+                    else
+                    {
+                        d--;
+                        if (d < 1)
+                        {
+                            m--;
+                            if (m < 1)
+                            {
+                                m = 12;
+                                y--;
+                            }
+                            d = dim(m, y);
+                        }
+                        add++;
+                    }
+                }
+
+                cout << "New Date = " << d << "-" << m << "-" << y << endl;
+            }
+
+            // -------- OPTION 5 --------
+            else if (choice == 5)
+            {
+                int d, m, y;
+                cout << "Enter date (dd mm yyyy): ";
+                cin >> d >> m >> y;
+
+                if (m < 1 || m > 12 || d < 1 || d > dim(m, y))
+                {
+                    cout << "Invalid date!\n";
+                    continue;
+                }
+
+                // Zeller's Formula
+                int mm = (m < 3) ? m + 12 : m;
+                int yy = (m < 3) ? y - 1 : y;
+
+                int K = yy % 100;
+                int J = yy / 100;
+
+                int h = (d + (13 * (mm + 1)) / 5 + K + K / 4 + J / 4 + 5 * J) % 7;
+                int dayIndex = (h + 6) % 7;
+
+                cout << "Day = " << days[dayIndex] << endl;
+            }
+
+            else if (choice == 6)
+            {
+                cout << "Exiting...\n";
+            }
+
+            else
+            {
+                cout << "Invalid choice!\n";
+            }
+
+        } while (choice != 6);
         return 0;
     }
 };
@@ -4980,251 +5376,291 @@ class Tools_and_utilites
     {
         int choice;
 
-    srand(time(0)); // for random
+        srand(time(0)); // for random
 
-    do {
-        cout << "\nTools & Utilities\n";
-        cout << "1. Unit Converter\n";
-        cout << "2. Random Number Generator\n";
-        cout << "3. Password Generator\n";
-        cout << "4. Prime Number Checker\n";
-        cout << "5. Palindrome Checker\n";
-        cout << "6. Number Tools\n";
-        cout << "7. File Size Converter\n";
-        cout << "8. Exit\n";
-        cout << "Enter choice: ";
-        cin >> choice;
+        do
+        {
+            cout << "\nTools & Utilities\n";
+            cout << "1. Unit Converter\n";
+            cout << "2. Random Number Generator\n";
+            cout << "3. Password Generator\n";
+            cout << "4. Prime Number Checker\n";
+            cout << "5. Palindrome Checker\n";
+            cout << "6. Number Tools\n";
+            cout << "7. File Size Converter\n";
+            cout << "8. Exit\n";
+            cout << "Enter choice: ";
+            cin >> choice;
 
-        // -------- 1. UNIT CONVERTER --------
-        if(choice == 1) {
-            int opt;
-            cout << "\n1. Length (m ↔ km ↔ cm)\n";
-            cout << "2. Weight (kg ↔ g)\n";
-            cout << "3. Temperature (C ↔ F)\n";
-            cin >> opt;
+            // -------- 1. UNIT CONVERTER --------
+            if (choice == 1)
+            {
+                int opt;
+                cout << "\n1. Length (m ↔ km ↔ cm)\n";
+                cout << "2. Weight (kg ↔ g)\n";
+                cout << "3. Temperature (C ↔ F)\n";
+                cin >> opt;
 
-            double val;
+                double val;
 
-            if(opt == 1) {
-                cout << "Enter meters: ";
-                cin >> val;
-                cout << "KM = " << val/1000 << endl;
-                cout << "CM = " << val*100 << endl;
-            }
-            else if(opt == 2) {
-                cout << "Enter kg: ";
-                cin >> val;
-                cout << "Grams = " << val*1000 << endl;
-            }
-            else if(opt == 3) {
-                cout << "Enter Celsius: ";
-                cin >> val;
-                cout << "Fahrenheit = " << (val*9/5)+32 << endl;
-            }
-            else cout << "Invalid!\n";
-        }
-
-        // -------- 2. RANDOM --------
-        else if(choice == 2) {
-            int a,b;
-            cout << "Enter range (min max): ";
-            cin >> a >> b;
-
-            if(a > b) swap(a,b);
-
-            int r = a + rand() % (b - a + 1);
-            cout << "Random Number = " << r << endl;
-        }
-
-        // -------- 3. PASSWORD --------
-        else if(choice == 3) {
-            int len;
-            cout << "Enter password length: ";
-            cin >> len;
-
-            if(len <= 0) {
-                cout << "Invalid length!\n";
-                continue;
-            }
-
-            string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%&";
-            cout << "Password: ";
-
-            for(int i=0;i<len;i++) {
-                cout << chars[rand() % chars.length()];
-            }
-            cout << endl;
-        }
-
-        // -------- 4. PRIME --------
-        else if(choice == 4) {
-            int n, flag=1;
-            cout << "Enter number: ";
-            cin >> n;
-
-            if(n <= 1) flag = 0;
-
-            for(int i=2;i*i<=n;i++) {
-                if(n % i == 0) {
-                    flag = 0;
-                    break;
+                if (opt == 1)
+                {
+                    cout << "Enter meters: ";
+                    cin >> val;
+                    cout << "KM = " << val / 1000 << endl;
+                    cout << "CM = " << val * 100 << endl;
                 }
+                else if (opt == 2)
+                {
+                    cout << "Enter kg: ";
+                    cin >> val;
+                    cout << "Grams = " << val * 1000 << endl;
+                }
+                else if (opt == 3)
+                {
+                    cout << "Enter Celsius: ";
+                    cin >> val;
+                    cout << "Fahrenheit = " << (val * 9 / 5) + 32 << endl;
+                }
+                else
+                    cout << "Invalid!\n";
             }
 
-            if(flag) cout << "Prime Number\n";
-            else cout << "Not Prime\n";
-        }
+            // -------- 2. RANDOM --------
+            else if (choice == 2)
+            {
+                int a, b;
+                cout << "Enter range (min max): ";
+                cin >> a >> b;
 
-        // -------- 5. PALINDROME --------
-        else if(choice == 5) {
-            int n, rev=0, temp;
-            cout << "Enter number: ";
-            cin >> n;
+                if (a > b)
+                    swap(a, b);
 
-            temp = n;
-            while(n > 0) {
-                rev = rev*10 + n%10;
-                n/=10;
+                int r = a + rand() % (b - a + 1);
+                cout << "Random Number = " << r << endl;
             }
 
-            if(temp == rev) cout << "Palindrome\n";
-            else cout << "Not Palindrome\n";
-        }
+            // -------- 3. PASSWORD --------
+            else if (choice == 3)
+            {
+                int len;
+                cout << "Enter password length: ";
+                cin >> len;
 
-        // -------- 6. NUMBER TOOLS --------
-        else if(choice == 6) {
-            int n;
-            cout << "Enter number: ";
-            cin >> n;
+                if (len <= 0)
+                {
+                    cout << "Invalid length!\n";
+                    continue;
+                }
 
-            int temp = n, sum=0, rev=0;
-            long long fact=1;
+                string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%&";
+                cout << "Password: ";
 
-            while(temp > 0) {
-                int d = temp % 10;
-                sum += d;
-                rev = rev*10 + d;
-                fact *= d;
-                temp /= 10;
+                for (int i = 0; i < len; i++)
+                {
+                    cout << chars[rand() % chars.length()];
+                }
+                cout << endl;
             }
 
-            cout << "Sum of digits = " << sum << endl;
-            cout << "Reverse = " << rev << endl;
-            cout << "Product of digits = " << fact << endl;
-        }
+            // -------- 4. PRIME --------
+            else if (choice == 4)
+            {
+                int n, flag = 1;
+                cout << "Enter number: ";
+                cin >> n;
 
-        // -------- 7. FILE SIZE --------
-        else if(choice == 7) {
-            double kb;
-            cout << "Enter size in KB: ";
-            cin >> kb;
+                if (n <= 1)
+                    flag = 0;
 
-            cout << "MB = " << kb/1024 << endl;
-            cout << "GB = " << kb/(1024*1024) << endl;
-        }
+                for (int i = 2; i * i <= n; i++)
+                {
+                    if (n % i == 0)
+                    {
+                        flag = 0;
+                        break;
+                    }
+                }
 
-        else if(choice == 8) {
-            cout << "Exiting...\n";
-        }
+                if (flag)
+                    cout << "Prime Number\n";
+                else
+                    cout << "Not Prime\n";
+            }
 
-        else {
-            cout << "Invalid choice!\n";
-        }
+            // -------- 5. PALINDROME --------
+            else if (choice == 5)
+            {
+                int n, rev = 0, temp;
+                cout << "Enter number: ";
+                cin >> n;
 
-    } while(choice != 8);
-    return 0;
+                temp = n;
+                while (n > 0)
+                {
+                    rev = rev * 10 + n % 10;
+                    n /= 10;
+                }
+
+                if (temp == rev)
+                    cout << "Palindrome\n";
+                else
+                    cout << "Not Palindrome\n";
+            }
+
+            // -------- 6. NUMBER TOOLS --------
+            else if (choice == 6)
+            {
+                int n;
+                cout << "Enter number: ";
+                cin >> n;
+
+                int temp = n, sum = 0, rev = 0;
+                long long fact = 1;
+
+                while (temp > 0)
+                {
+                    int d = temp % 10;
+                    sum += d;
+                    rev = rev * 10 + d;
+                    fact *= d;
+                    temp /= 10;
+                }
+
+                cout << "Sum of digits = " << sum << endl;
+                cout << "Reverse = " << rev << endl;
+                cout << "Product of digits = " << fact << endl;
+            }
+
+            // -------- 7. FILE SIZE --------
+            else if (choice == 7)
+            {
+                double kb;
+                cout << "Enter size in KB: ";
+                cin >> kb;
+
+                cout << "MB = " << kb / 1024 << endl;
+                cout << "GB = " << kb / (1024 * 1024) << endl;
+            }
+
+            else if (choice == 8)
+            {
+                cout << "Exiting...\n";
+            }
+
+            else
+            {
+                cout << "Invalid choice!\n";
+            }
+
+        } while (choice != 8);
+        return 0;
     }
 
     static int tip_calculator()
     {
         int choice;
 
-    do {
-        cout << "\nTip Calculator\n";
-        cout << "1. Calculate Tip & Split Bill\n";
-        cout << "2. Show Tip Amount Only\n";
-        cout << "3. Exit\n";
-        cout << "Enter choice: ";
-        cin >> choice;
-
-        if(choice == 1 || choice == 2) {
-            double bill, tipPercent;
-            int people;
-
-            cout << "Enter total bill amount: ";
-            cin >> bill;
-
-            if(bill <= 0) {
-                cout << "Invalid bill amount!\n";
-                continue;
-            }
-
-            // Tip selection
-            int tipChoice;
-            cout << "\nSelect Tip:\n";
-            cout << "1. 5%\n2. 10%\n3. 15%\n4. Custom\n";
+        do
+        {
+            cout << "\nTip Calculator\n";
+            cout << "1. Calculate Tip & Split Bill\n";
+            cout << "2. Show Tip Amount Only\n";
+            cout << "3. Exit\n";
             cout << "Enter choice: ";
-            cin >> tipChoice;
+            cin >> choice;
 
-            if(tipChoice == 1) tipPercent = 5;
-            else if(tipChoice == 2) tipPercent = 10;
-            else if(tipChoice == 3) tipPercent = 15;
-            else if(tipChoice == 4) {
-                cout << "Enter custom tip %: ";
-                cin >> tipPercent;
-                if(tipPercent < 0) {
-                    cout << "Invalid tip!\n";
+            if (choice == 1 || choice == 2)
+            {
+                double bill, tipPercent;
+                int people;
+
+                cout << "Enter total bill amount: ";
+                cin >> bill;
+
+                if (bill <= 0)
+                {
+                    cout << "Invalid bill amount!\n";
                     continue;
                 }
+
+                // Tip selection
+                int tipChoice;
+                cout << "\nSelect Tip:\n";
+                cout << "1. 5%\n2. 10%\n3. 15%\n4. Custom\n";
+                cout << "Enter choice: ";
+                cin >> tipChoice;
+
+                if (tipChoice == 1)
+                    tipPercent = 5;
+                else if (tipChoice == 2)
+                    tipPercent = 10;
+                else if (tipChoice == 3)
+                    tipPercent = 15;
+                else if (tipChoice == 4)
+                {
+                    cout << "Enter custom tip %: ";
+                    cin >> tipPercent;
+                    if (tipPercent < 0)
+                    {
+                        cout << "Invalid tip!\n";
+                        continue;
+                    }
+                }
+                else
+                {
+                    cout << "Invalid choice!\n";
+                    continue;
+                }
+
+                double tipAmount = (bill * tipPercent) / 100.0;
+
+                if (choice == 2)
+                {
+                    cout << "Tip Amount = " << tipAmount << endl;
+                    continue;
+                }
+
+                cout << "Enter number of people: ";
+                cin >> people;
+
+                if (people <= 0)
+                {
+                    cout << "Invalid number of people!\n";
+                    continue;
+                }
+
+                double total = bill + tipAmount;
+                double perPerson = total / people;
+
+                // Optional rounding
+                char roundOpt;
+                cout << "Round off per person amount? (y/n): ";
+                cin >> roundOpt;
+
+                if (roundOpt == 'y' || roundOpt == 'Y')
+                {
+                    perPerson = round(perPerson);
+                }
+
+                cout << "\n--- Result ---\n";
+                cout << "Bill Amount = " << bill << endl;
+                cout << "Tip (" << tipPercent << "%) = " << tipAmount << endl;
+                cout << "Total Amount = " << total << endl;
+                cout << "Each Person Pays = " << perPerson << endl;
             }
-            else {
+
+            else if (choice == 3)
+            {
+                cout << "Exiting...\n";
+            }
+
+            else
+            {
                 cout << "Invalid choice!\n";
-                continue;
             }
 
-            double tipAmount = (bill * tipPercent) / 100.0;
-
-            if(choice == 2) {
-                cout << "Tip Amount = " << tipAmount << endl;
-                continue;
-            }
-
-            cout << "Enter number of people: ";
-            cin >> people;
-
-            if(people <= 0) {
-                cout << "Invalid number of people!\n";
-                continue;
-            }
-
-            double total = bill + tipAmount;
-            double perPerson = total / people;
-
-            // Optional rounding
-            char roundOpt;
-            cout << "Round off per person amount? (y/n): ";
-            cin >> roundOpt;
-
-            if(roundOpt == 'y' || roundOpt == 'Y') {
-                perPerson = round(perPerson);
-            }
-
-            cout << "\n--- Result ---\n";
-            cout << "Bill Amount = " << bill << endl;
-            cout << "Tip (" << tipPercent << "%) = " << tipAmount << endl;
-            cout << "Total Amount = " << total << endl;
-            cout << "Each Person Pays = " << perPerson << endl;
-        }
-
-        else if(choice == 3) {
-            cout << "Exiting...\n";
-        }
-
-        else {
-            cout << "Invalid choice!\n";
-        }
-
-    } while(choice != 3);
+        } while (choice != 3);
 
         return 0;
     }
@@ -5233,89 +5669,100 @@ class Tools_and_utilites
     {
         int choice;
 
-    do {
-        cout << "\nLoan Eligibility Calculator\n";
-        cout << "1. Check Eligibility\n";
-        cout << "2. Estimate Loan Amount\n";
-        cout << "3. Exit\n";
-        cout << "Enter choice: ";
-        cin >> choice;
+        do
+        {
+            cout << "\nLoan Eligibility Calculator\n";
+            cout << "1. Check Eligibility\n";
+            cout << "2. Estimate Loan Amount\n";
+            cout << "3. Exit\n";
+            cout << "Enter choice: ";
+            cin >> choice;
 
-        if(choice == 1 || choice == 2) {
-            double income, expenses, emi;
+            if (choice == 1 || choice == 2)
+            {
+                double income, expenses, emi;
 
-            cout << "Enter Monthly Income: ";
-            cin >> income;
+                cout << "Enter Monthly Income: ";
+                cin >> income;
 
-            cout << "Enter Monthly Expenses: ";
-            cin >> expenses;
+                cout << "Enter Monthly Expenses: ";
+                cin >> expenses;
 
-            cout << "Enter Existing EMI: ";
-            cin >> emi;
+                cout << "Enter Existing EMI: ";
+                cin >> emi;
 
-            if(income <= 0 || expenses < 0 || emi < 0 || expenses + emi > income) {
-                cout << "Invalid financial data!\n";
-                continue;
-            }
-
-            double netIncome = income - expenses - emi;
-
-            // Bank rule: Max EMI should be 40% of income
-            double maxEMI = income * 0.4;
-
-            cout << "\n--- Result ---\n";
-            cout << "Net Available Income = " << netIncome << endl;
-            cout << "Maximum Allowed EMI = " << maxEMI << endl;
-
-            if(netIncome >= maxEMI) {
-                cout << "Status: Eligible for Loan\n";
-            } else {
-                cout << "Status: Not Eligible\n";
-            }
-
-            // -------- OPTION 2 --------
-            if(choice == 2) {
-                double rate, years;
-
-                cout << "\nEnter Interest Rate (% per year): ";
-                cin >> rate;
-
-                cout << "Enter Loan Tenure (years): ";
-                cin >> years;
-
-                if(rate <= 0 || years <= 0) {
-                    cout << "Invalid input!\n";
+                if (income <= 0 || expenses < 0 || emi < 0 || expenses + emi > income)
+                {
+                    cout << "Invalid financial data!\n";
                     continue;
                 }
 
-                // Simple estimation (not EMI formula)
-                double months = years * 12;
+                double netIncome = income - expenses - emi;
 
-                // Assume EMI = maxEMI
-                double loanAmount = maxEMI * months;
+                // Bank rule: Max EMI should be 40% of income
+                double maxEMI = income * 0.4;
 
-                cout << "\nEstimated Loan Amount = " << loanAmount << endl;
+                cout << "\n--- Result ---\n";
+                cout << "Net Available Income = " << netIncome << endl;
+                cout << "Maximum Allowed EMI = " << maxEMI << endl;
+
+                if (netIncome >= maxEMI)
+                {
+                    cout << "Status: Eligible for Loan\n";
+                }
+                else
+                {
+                    cout << "Status: Not Eligible\n";
+                }
+
+                // -------- OPTION 2 --------
+                if (choice == 2)
+                {
+                    double rate, years;
+
+                    cout << "\nEnter Interest Rate (% per year): ";
+                    cin >> rate;
+
+                    cout << "Enter Loan Tenure (years): ";
+                    cin >> years;
+
+                    if (rate <= 0 || years <= 0)
+                    {
+                        cout << "Invalid input!\n";
+                        continue;
+                    }
+
+                    // Simple estimation (not EMI formula)
+                    double months = years * 12;
+
+                    // Assume EMI = maxEMI
+                    double loanAmount = maxEMI * months;
+
+                    cout << "\nEstimated Loan Amount = " << loanAmount << endl;
+                }
             }
-        }
 
-        else if(choice == 3) {
-            cout << "Exiting...\n";
-        }
+            else if (choice == 3)
+            {
+                cout << "Exiting...\n";
+            }
 
-        else {
-            cout << "Invalid choice!\n";
-        }
+            else
+            {
+                cout << "Invalid choice!\n";
+            }
 
-    } while(choice != 3);
+        } while (choice != 3);
 
-    return 0;
+        return 0;
     }
 
     static int Fuel_Cost()
     {
         int choice;
 
-        do {
+        do
+        {
             cout << "\nFuel Cost Calculator\n";
             cout << "1. Calculate Fuel Cost\n";
             cout << "2. Round Trip Cost\n";
@@ -5326,7 +5773,8 @@ class Tools_and_utilites
 
             double distance, mileage, price;
 
-            if(choice >= 1 && choice <= 3) {
+            if (choice >= 1 && choice <= 3)
+            {
                 cout << "Enter distance (km): ";
                 cin >> distance;
 
@@ -5336,14 +5784,16 @@ class Tools_and_utilites
                 cout << "Enter fuel price (per liter): ";
                 cin >> price;
 
-                if(distance <= 0 || mileage <= 0 || price <= 0) {
+                if (distance <= 0 || mileage <= 0 || price <= 0)
+                {
                     cout << "Invalid input!\n";
                     continue;
                 }
             }
 
             // -------- OPTION 1 --------
-            if(choice == 1) {
+            if (choice == 1)
+            {
                 double fuel = distance / mileage;
                 double cost = fuel * price;
 
@@ -5352,7 +5802,8 @@ class Tools_and_utilites
             }
 
             // -------- OPTION 2 --------
-            else if(choice == 2) {
+            else if (choice == 2)
+            {
                 double totalDistance = distance * 2;
                 double fuel = totalDistance / mileage;
                 double cost = fuel * price;
@@ -5363,21 +5814,24 @@ class Tools_and_utilites
             }
 
             // -------- OPTION 3 --------
-            else if(choice == 3) {
+            else if (choice == 3)
+            {
                 double costPerKm = price / mileage;
 
                 cout << "\nCost per KM = " << costPerKm << endl;
             }
 
-            else if(choice == 4) {
+            else if (choice == 4)
+            {
                 cout << "Exiting...\n";
             }
 
-            else {
+            else
+            {
                 cout << "Invalid choice!\n";
             }
 
-        } while(choice != 4);
+        } while (choice != 4);
         return 0;
     }
 };
