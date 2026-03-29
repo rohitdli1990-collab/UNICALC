@@ -1,4 +1,6 @@
 #include <cmath>
+#include <cstdlib>
+#include <ctime>
 #include <algorithm>
 #include <iostream>
 using namespace std;
@@ -4221,7 +4223,1163 @@ class Programming
 
 class DATE_TIME
 {
+    static int Age_calculator()
+    {
+    int choice;
 
+    do {
+        cout << "\nAge Calculator\n";
+        cout << "1. Calculate Age (till today)\n";
+        cout << "2. Calculate Age (custom date)\n";
+        cout << "3. Total Days Lived\n";
+        cout << "4. Next Birthday\n";
+        cout << "5. Exit\n";
+        cout << "Enter choice: ";
+        cin >> choice;
+
+        int d1, m1, y1;
+        cout << "Enter DOB (dd mm yyyy): ";
+        cin >> d1 >> m1 >> y1;
+
+        // Validate DOB
+        int dim;
+        if(m1 == 2)
+            dim = ((y1 % 4 == 0 && y1 % 100 != 0) || (y1 % 400 == 0)) ? 29 : 28;
+        else if(m1==4||m1==6||m1==9||m1==11)
+            dim = 30;
+        else
+            dim = 31;
+
+        if(m1 < 1 || m1 > 12 || d1 < 1 || d1 > dim) {
+            cout << "Invalid DOB!\n";
+            continue;
+        }
+
+        // -------- AGE CALCULATION --------
+        if(choice == 1 || choice == 2) {
+            int d2, m2, y2;
+
+            cout << "Enter date (dd mm yyyy): ";
+            cin >> d2 >> m2 >> y2;
+
+            // Validate date
+            if(m2 == 2)
+                dim = ((y2 % 4 == 0 && y2 % 100 != 0) || (y2 % 400 == 0)) ? 29 : 28;
+            else if(m2==4||m2==6||m2==9||m2==11)
+                dim = 30;
+            else
+                dim = 31;
+
+            if(m2 < 1 || m2 > 12 || d2 < 1 || d2 > dim) {
+                cout << "Invalid date!\n";
+                continue;
+            }
+
+            if(d2 < d1) {
+                m2--;
+                int prevMonth = (m2 == 0) ? 12 : m2;
+                int prevYear = (m2 == 0) ? y2 - 1 : y2;
+
+                if(prevMonth == 2)
+                    dim = ((prevYear % 4 == 0 && prevYear % 100 != 0) || (prevYear % 400 == 0)) ? 29 : 28;
+                else if(prevMonth==4||prevMonth==6||prevMonth==9||prevMonth==11)
+                    dim = 30;
+                else
+                    dim = 31;
+
+                d2 += dim;
+            }
+
+            if(m2 < m1) {
+                y2--;
+                m2 += 12;
+            }
+
+            cout << "Age = "
+                 << (y2 - y1) << " Years, "
+                 << (m2 - m1) << " Months, "
+                 << (d2 - d1) << " Days\n";
+        }
+
+        // -------- TOTAL DAYS --------
+        else if(choice == 3) {
+            int d2, m2, y2;
+            cout << "Enter current date (dd mm yyyy): ";
+            cin >> d2 >> m2 >> y2;
+
+            int total = 0;
+
+            for(int y = y1; y < y2; y++)
+                total += ((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0)) ? 366 : 365;
+
+            for(int m = 1; m < m2; m++) {
+                if(m == 2)
+                    total += ((y2 % 4 == 0 && y2 % 100 != 0) || (y2 % 400 == 0)) ? 29 : 28;
+                else if(m==4||m==6||m==9||m==11)
+                    total += 30;
+                else
+                    total += 31;
+            }
+
+            total += d2;
+
+            for(int m = 1; m < m1; m++) {
+                if(m == 2)
+                    total -= ((y1 % 4 == 0 && y1 % 100 != 0) || (y1 % 400 == 0)) ? 29 : 28;
+                else if(m==4||m==6||m==9||m==11)
+                    total -= 30;
+                else
+                    total -= 31;
+            }
+
+            total -= d1;
+
+            cout << "Total Days Lived = " << total << endl;
+        }
+
+        // -------- NEXT BIRTHDAY --------
+        else if(choice == 4) {
+            int cd, cm, cy;
+            cout << "Enter current date (dd mm yyyy): ";
+            cin >> cd >> cm >> cy;
+
+            int nextY = cy;
+            if(cm > m1 || (cm == m1 && cd > d1))
+                nextY++;
+
+            int td = cd, tm = cm, ty = cy, days = 0;
+
+            while(td != d1 || tm != m1 || ty != nextY) {
+                td++;
+
+                int dim2;
+                if(tm == 2)
+                    dim2 = ((ty % 4 == 0 && ty % 100 != 0) || (ty % 400 == 0)) ? 29 : 28;
+                else if(tm==4||tm==6||tm==9||tm==11)
+                    dim2 = 30;
+                else
+                    dim2 = 31;
+
+                if(td > dim2) {
+                    td = 1;
+                    tm++;
+                }
+
+                if(tm > 12) {
+                    tm = 1;
+                    ty++;
+                }
+
+                days++;
+            }
+
+            cout << "Days until next birthday = " << days << endl;
+        }
+
+        else if(choice == 5) {
+            cout << "Exiting...\n";
+        }
+
+        else {
+            cout << "Invalid choice!\n";
+        }
+
+    } while(choice != 5);
+
+    return 0;
+    }
+
+    static int Date_Difference_calculator()
+    {
+        int choice;
+
+    do {
+        cout << "\nDate Difference Calculator\n";
+        cout << "1. Difference (Years, Months, Days)\n";
+        cout << "2. Total Days Difference\n";
+        cout << "3. Weeks and Days\n";
+        cout << "4. Exit\n";
+        cout << "Enter choice: ";
+        cin >> choice;
+
+        int d1, m1, y1, d2, m2, y2;
+
+        cout << "Enter First Date (dd mm yyyy): ";
+        cin >> d1 >> m1 >> y1;
+
+        cout << "Enter Second Date (dd mm yyyy): ";
+        cin >> d2 >> m2 >> y2;
+
+        // Function-like logic: days in month
+        auto daysInMonth = [](int m, int y) {
+            if(m == 2)
+                return ((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0)) ? 29 : 28;
+            if(m==4||m==6||m==9||m==11)
+                return 30;
+            return 31;
+        };
+
+        // Validate dates
+        if(m1 < 1 || m1 > 12 || d1 < 1 || d1 > daysInMonth(m1, y1) ||
+           m2 < 1 || m2 > 12 || d2 < 1 || d2 > daysInMonth(m2, y2)) {
+            cout << "Invalid date!\n";
+            continue;
+        }
+
+        // Swap if date1 > date2
+        if(y1 > y2 || (y1 == y2 && m1 > m2) || (y1 == y2 && m1 == m2 && d1 > d2)) {
+            swap(d1, d2);
+            swap(m1, m2);
+            swap(y1, y2);
+        }
+
+        // -------- OPTION 1 --------
+        if(choice == 1) {
+            int dd = d2, mm = m2, yy = y2;
+
+            if(dd < d1) {
+                mm--;
+                int prevMonth = (mm == 0) ? 12 : mm;
+                int prevYear = (mm == 0) ? yy - 1 : yy;
+                dd += daysInMonth(prevMonth, prevYear);
+            }
+
+            if(mm < m1) {
+                yy--;
+                mm += 12;
+            }
+
+            cout << "Difference = "
+                 << (yy - y1) << " Years, "
+                 << (mm - m1) << " Months, "
+                 << (dd - d1) << " Days\n";
+        }
+
+        // -------- OPTION 2 --------
+        else if(choice == 2) {
+            int total1 = 0, total2 = 0;
+
+            // Convert first date to total days
+            for(int y = 0; y < y1; y++)
+                total1 += ((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0)) ? 366 : 365;
+
+            for(int m = 1; m < m1; m++)
+                total1 += daysInMonth(m, y1);
+
+            total1 += d1;
+
+            // Convert second date to total days
+            for(int y = 0; y < y2; y++)
+                total2 += ((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0)) ? 366 : 365;
+
+            for(int m = 1; m < m2; m++)
+                total2 += daysInMonth(m, y2);
+
+            total2 += d2;
+
+            cout << "Total Days Difference = " << (total2 - total1) << endl;
+        }
+
+        // -------- OPTION 3 --------
+        else if(choice == 3) {
+            int total1 = 0, total2 = 0;
+
+            for(int y = 0; y < y1; y++)
+                total1 += ((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0)) ? 366 : 365;
+
+            for(int m = 1; m < m1; m++)
+                total1 += daysInMonth(m, y1);
+
+            total1 += d1;
+
+            for(int y = 0; y < y2; y++)
+                total2 += ((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0)) ? 366 : 365;
+
+            for(int m = 1; m < m2; m++)
+                total2 += daysInMonth(m, y2);
+
+            total2 += d2;
+
+            int diff = total2 - total1;
+
+            cout << "Weeks = " << diff / 7 << ", Days = " << diff % 7 << endl;
+        }
+
+        else if(choice == 4) {
+            cout << "Exiting...\n";
+        }
+
+        else {
+            cout << "Invalid choice!\n";
+        }
+
+    } while(choice != 4);
+
+        return 0;
+    }
+
+    static int Working_Days_calculator()
+    {
+        int choice;
+
+    do {
+        cout << "\nWorking Days Calculator\n";
+        cout << "1. Working Days (Mon–Fri)\n";
+        cout << "2. Working Days with Holidays\n";
+        cout << "3. Total Days + Working Days\n";
+        cout << "4. Exit\n";
+        cout << "Enter choice: ";
+        cin >> choice;
+
+        int d1, m1, y1, d2, m2, y2;
+
+        cout << "Enter Start Date (dd mm yyyy): ";
+        cin >> d1 >> m1 >> y1;
+
+        cout << "Enter End Date (dd mm yyyy): ";
+        cin >> d2 >> m2 >> y2;
+
+        // Days in month
+        auto dim = [](int m, int y) {
+            if(m == 2)
+                return ((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0)) ? 29 : 28;
+            if(m==4||m==6||m==9||m==11)
+                return 30;
+            return 31;
+        };
+
+        // Day name array
+        string dayName[] = {"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
+
+        // Validate
+        if(m1 < 1 || m1 > 12 || d1 < 1 || d1 > dim(m1,y1) ||
+           m2 < 1 || m2 > 12 || d2 < 1 || d2 > dim(m2,y2)) {
+            cout << "Invalid date!\n";
+            continue;
+        }
+
+        // Swap if needed
+        if(y1 > y2 || (y1==y2 && m1>m2) || (y1==y2 && m1==m2 && d1>d2)) {
+            swap(d1,d2); swap(m1,m2); swap(y1,y2);
+        }
+
+        // Weekend customization
+        bool isWeekend[7] = {false};
+
+        cout << "\nChoose weekend system:\n";
+        cout << "1. Saturday & Sunday\n";
+        cout << "2. Sunday only\n";
+        cout << "3. Friday & Saturday\n";
+        cout << "Enter option: ";
+
+        int wopt;
+        cin >> wopt;
+
+        if(wopt == 1) { isWeekend[0]=true; isWeekend[6]=true; }
+        else if(wopt == 2) { isWeekend[0]=true; }
+        else if(wopt == 3) { isWeekend[5]=true; isWeekend[6]=true; }
+        else {
+            cout << "Invalid weekend option!\n";
+            continue;
+        }
+
+        int totalDays = 0, workingDays = 0;
+
+        int d=d1, m=m1, y=y1;
+
+        while(true) {
+            // Zeller’s Formula
+            int mm = (m < 3) ? m + 12 : m;
+            int yy = (m < 3) ? y - 1 : y;
+
+            int K = yy % 100;
+            int J = yy / 100;
+
+            int h = (d + (13*(mm+1))/5 + K + K/4 + J/4 + 5*J) % 7;
+            int day = (h + 6) % 7; // 0=Sunday
+
+            cout << d << "-" << m << "-" << y << " : " << dayName[day] << endl;
+
+            totalDays++;
+
+            if(!isWeekend[day])
+                workingDays++;
+
+            if(d==d2 && m==m2 && y==y2)
+                break;
+
+            d++;
+            if(d > dim(m,y)) { d=1; m++; }
+            if(m > 12) { m=1; y++; }
+        }
+
+        // OPTIONS
+        if(choice == 1) {
+            cout << "Working Days = " << workingDays << endl;
+        }
+
+        else if(choice == 2) {
+            int holidays;
+            cout << "Enter number of holidays: ";
+            cin >> holidays;
+
+            if(holidays < 0 || holidays > workingDays) {
+                cout << "Invalid holidays!\n";
+                continue;
+            }
+
+            cout << "Working Days (excluding holidays) = "
+                 << (workingDays - holidays) << endl;
+        }
+
+        else if(choice == 3) {
+            cout << "Total Days = " << totalDays << endl;
+            cout << "Working Days = " << workingDays << endl;
+        }
+
+        else if(choice == 4) {
+            cout << "Exiting...\n";
+        }
+
+        else {
+            cout << "Invalid choice!\n";
+        }
+
+    } while(choice != 4);
+        return 0;
+    }
+
+    static int Time_Zone_Convertor()
+    {
+        int choice;
+
+    string zoneNames[] = {"UTC","IST","EST","PST","CET"};
+    double offsets[]   = {0, 5.5, -5, -8, 1};
+
+    string days[] = {"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
+
+    do {
+        cout << "\nTime Zone Converter\n";
+        cout << "1. Convert Time (Standard Zones)\n";
+        cout << "2. Convert with Custom Offset\n";
+        cout << "3. 12-hour ↔ 24-hour Format\n";
+        cout << "4. Multi Time Zone Display\n";
+        cout << "5. Exit\n";
+        cout << "Enter choice: ";
+        cin >> choice;
+
+        // -------- COMMON INPUT --------
+        int h, m, d, mon, y;
+        cout << "Enter time (HH MM): ";
+        cin >> h >> m;
+
+        cout << "Enter date (dd mm yyyy): ";
+        cin >> d >> mon >> y;
+
+        if(h<0||h>23||m<0||m>59) {
+            cout << "Invalid time!\n";
+            continue;
+        }
+
+        // Zeller for day
+        int mm = (mon < 3) ? mon + 12 : mon;
+        int yy = (mon < 3) ? y - 1 : y;
+        int K = yy % 100;
+        int J = yy / 100;
+        int hday = (d + (13*(mm+1))/5 + K + K/4 + J/4 + 5*J) % 7;
+        int dayIndex = (hday + 6) % 7;
+
+        // -------- OPTION 1 --------
+        if(choice == 1) {
+            int from, to;
+
+            cout << "\nSelect FROM zone:\n";
+            for(int i=0;i<5;i++) cout<<i+1<<"."<<zoneNames[i]<<endl;
+            cin >> from;
+
+            cout << "Select TO zone:\n";
+            for(int i=0;i<5;i++) cout<<i+1<<"."<<zoneNames[i]<<endl;
+            cin >> to;
+
+            double diff = offsets[to-1] - offsets[from-1];
+
+            int newH = h + (int)diff;
+            int newM = m + (diff - (int)diff)*60;
+
+            // adjust minutes
+            if(newM >= 60) { newH++; newM -= 60; }
+            if(newM < 0)   { newH--; newM += 60; }
+
+            int dayShift = 0;
+            if(newH >= 24) { newH -= 24; dayShift = 1; }
+            if(newH < 0)   { newH += 24; dayShift = -1; }
+
+            int newDayIndex = (dayIndex + dayShift + 7) % 7;
+
+            cout << "Converted Time = "
+                 << newH << ":" << newM << endl;
+            cout << "Day = " << days[newDayIndex] << endl;
+        }
+
+        // -------- OPTION 2 --------
+        else if(choice == 2) {
+            double from, to;
+            cout << "Enter source UTC offset: ";
+            cin >> from;
+            cout << "Enter target UTC offset: ";
+            cin >> to;
+
+            double diff = to - from;
+
+            int newH = h + (int)diff;
+            int newM = m + (diff - (int)diff)*60;
+
+            if(newM >= 60) { newH++; newM -= 60; }
+            if(newM < 0)   { newH--; newM += 60; }
+
+            int shift = 0;
+            if(newH >= 24) { newH -= 24; shift = 1; }
+            if(newH < 0)   { newH += 24; shift = -1; }
+
+            int newDayIndex = (dayIndex + shift + 7) % 7;
+
+            cout << "Converted Time = " << newH << ":" << newM << endl;
+            cout << "Day = " << days[newDayIndex] << endl;
+        }
+
+        // -------- OPTION 3 --------
+        else if(choice == 3) {
+            int format;
+            cout << "1. 24 → 12\n2. 12 → 24\nEnter: ";
+            cin >> format;
+
+            if(format == 1) {
+                string ampm = (h >= 12) ? "PM" : "AM";
+                int hour = h % 12;
+                if(hour == 0) hour = 12;
+
+                cout << "12-hour = " << hour << ":" << m << " " << ampm << endl;
+            }
+            else {
+                int hour;
+                string ampm;
+                cout << "Enter hour minute and AM/PM: ";
+                cin >> hour >> m >> ampm;
+
+                if(ampm == "PM" && hour != 12) hour += 12;
+                if(ampm == "AM" && hour == 12) hour = 0;
+
+                cout << "24-hour = " << hour << ":" << m << endl;
+            }
+        }
+
+        // -------- OPTION 4 --------
+        else if(choice == 4) {
+            cout << "\nAll Time Zones:\n";
+
+            for(int i=0;i<5;i++) {
+                double diff = offsets[i];
+
+                int newH = h + (int)diff;
+                int newM = m + (diff - (int)diff)*60;
+
+                if(newM >= 60) { newH++; newM -= 60; }
+                if(newM < 0)   { newH--; newM += 60; }
+
+                int shift = 0;
+                if(newH >= 24) { newH -= 24; shift = 1; }
+                if(newH < 0)   { newH += 24; shift = -1; }
+
+                int newDayIndex = (dayIndex + shift + 7) % 7;
+
+                cout << zoneNames[i] << " = "
+                     << newH << ":" << newM
+                     << " (" << days[newDayIndex] << ")\n";
+            }
+        }
+
+        else if(choice == 5) {
+            cout << "Exiting...\n";
+        }
+
+        else {
+            cout << "Invalid choice!\n";
+        }
+
+    } while(choice != 5);
+        return 0;
+    }
+
+    static int Date_time_convertor()
+    {
+        int choice;
+
+    string days[] = {"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
+
+    do {
+        cout << "\nDate & Time Converter\n";
+        cout << "1. Date Format Conversion\n";
+        cout << "2. Time Format Conversion\n";
+        cout << "3. Date + Time Conversion\n";
+        cout << "4. Add/Subtract Days\n";
+        cout << "5. Day Name Finder\n";
+        cout << "6. Exit\n";
+        cout << "Enter choice: ";
+        cin >> choice;
+
+        // Days in month
+        auto dim = [](int m, int y) {
+            if(m == 2)
+                return ((y%4==0 && y%100!=0) || (y%400==0)) ? 29 : 28;
+            if(m==4||m==6||m==9||m==11)
+                return 30;
+            return 31;
+        };
+
+        // -------- OPTION 1 --------
+        if(choice == 1) {
+            int d,m,y;
+            cout << "Enter date (dd mm yyyy): ";
+            cin >> d >> m >> y;
+
+            if(m<1||m>12||d<1||d>dim(m,y)) {
+                cout << "Invalid date!\n";
+                continue;
+            }
+
+            cout << "YYYY-MM-DD = " << y << "-" << m << "-" << d << endl;
+            cout << "MM-DD-YYYY = " << m << "-" << d << "-" << y << endl;
+            cout << "DD/MM/YYYY = " << d << "/" << m << "/" << y << endl;
+        }
+
+        // -------- OPTION 2 --------
+        else if(choice == 2) {
+            int h,m;
+            cout << "Enter time (HH MM): ";
+            cin >> h >> m;
+
+            if(h<0||h>23||m<0||m>59) {
+                cout << "Invalid time!\n";
+                continue;
+            }
+
+            string ampm = (h>=12) ? "PM" : "AM";
+            int hh = h % 12;
+            if(hh == 0) hh = 12;
+
+            cout << "12-hour = " << hh << ":" << m << " " << ampm << endl;
+
+            int hour;
+            string ap;
+            cout << "Enter 12-hour (hh mm AM/PM): ";
+            cin >> hour >> m >> ap;
+
+            if(ap=="PM" && hour!=12) hour+=12;
+            if(ap=="AM" && hour==12) hour=0;
+
+            cout << "24-hour = " << hour << ":" << m << endl;
+        }
+
+        // -------- OPTION 3 --------
+        else if(choice == 3) {
+            int d,m,y,h,min;
+            cout << "Enter date (dd mm yyyy): ";
+            cin >> d >> m >> y;
+            cout << "Enter time (HH MM): ";
+            cin >> h >> min;
+
+            if(m<1||m>12||d<1||d>dim(m,y)||h<0||h>23||min<0||min>59) {
+                cout << "Invalid input!\n";
+                continue;
+            }
+
+            string ampm = (h>=12) ? "PM" : "AM";
+            int hh = h % 12;
+            if(hh == 0) hh = 12;
+
+            cout << "Converted = "
+                 << y << "/" << m << "/" << d
+                 << " " << hh << ":" << min << " " << ampm << endl;
+        }
+
+        // -------- OPTION 4 --------
+        else if(choice == 4) {
+            int d,m,y,add;
+            cout << "Enter date (dd mm yyyy): ";
+            cin >> d >> m >> y;
+            cout << "Enter days to add (+/-): ";
+            cin >> add;
+
+            if(m<1||m>12||d<1||d>dim(m,y)) {
+                cout << "Invalid date!\n";
+                continue;
+            }
+
+            while(add != 0) {
+                if(add > 0) {
+                    d++;
+                    if(d > dim(m,y)) {
+                        d = 1; m++;
+                        if(m > 12) { m = 1; y++; }
+                    }
+                    add--;
+                } else {
+                    d--;
+                    if(d < 1) {
+                        m--;
+                        if(m < 1) { m = 12; y--; }
+                        d = dim(m,y);
+                    }
+                    add++;
+                }
+            }
+
+            cout << "New Date = " << d << "-" << m << "-" << y << endl;
+        }
+
+        // -------- OPTION 5 --------
+        else if(choice == 5) {
+            int d,m,y;
+            cout << "Enter date (dd mm yyyy): ";
+            cin >> d >> m >> y;
+
+            if(m<1||m>12||d<1||d>dim(m,y)) {
+                cout << "Invalid date!\n";
+                continue;
+            }
+
+            // Zeller's Formula
+            int mm = (m < 3) ? m + 12 : m;
+            int yy = (m < 3) ? y - 1 : y;
+
+            int K = yy % 100;
+            int J = yy / 100;
+
+            int h = (d + (13*(mm+1))/5 + K + K/4 + J/4 + 5*J) % 7;
+            int dayIndex = (h + 6) % 7;
+
+            cout << "Day = " << days[dayIndex] << endl;
+        }
+
+        else if(choice == 6) {
+            cout << "Exiting...\n";
+        }
+
+        else {
+            cout << "Invalid choice!\n";
+        }
+
+    } while(choice != 6);
+        return 0;
+    }
+};
+
+class Tools_and_utilites
+{
+    static int tool_unit()
+    {
+        int choice;
+
+    srand(time(0)); // for random
+
+    do {
+        cout << "\nTools & Utilities\n";
+        cout << "1. Unit Converter\n";
+        cout << "2. Random Number Generator\n";
+        cout << "3. Password Generator\n";
+        cout << "4. Prime Number Checker\n";
+        cout << "5. Palindrome Checker\n";
+        cout << "6. Number Tools\n";
+        cout << "7. File Size Converter\n";
+        cout << "8. Exit\n";
+        cout << "Enter choice: ";
+        cin >> choice;
+
+        // -------- 1. UNIT CONVERTER --------
+        if(choice == 1) {
+            int opt;
+            cout << "\n1. Length (m ↔ km ↔ cm)\n";
+            cout << "2. Weight (kg ↔ g)\n";
+            cout << "3. Temperature (C ↔ F)\n";
+            cin >> opt;
+
+            double val;
+
+            if(opt == 1) {
+                cout << "Enter meters: ";
+                cin >> val;
+                cout << "KM = " << val/1000 << endl;
+                cout << "CM = " << val*100 << endl;
+            }
+            else if(opt == 2) {
+                cout << "Enter kg: ";
+                cin >> val;
+                cout << "Grams = " << val*1000 << endl;
+            }
+            else if(opt == 3) {
+                cout << "Enter Celsius: ";
+                cin >> val;
+                cout << "Fahrenheit = " << (val*9/5)+32 << endl;
+            }
+            else cout << "Invalid!\n";
+        }
+
+        // -------- 2. RANDOM --------
+        else if(choice == 2) {
+            int a,b;
+            cout << "Enter range (min max): ";
+            cin >> a >> b;
+
+            if(a > b) swap(a,b);
+
+            int r = a + rand() % (b - a + 1);
+            cout << "Random Number = " << r << endl;
+        }
+
+        // -------- 3. PASSWORD --------
+        else if(choice == 3) {
+            int len;
+            cout << "Enter password length: ";
+            cin >> len;
+
+            if(len <= 0) {
+                cout << "Invalid length!\n";
+                continue;
+            }
+
+            string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%&";
+            cout << "Password: ";
+
+            for(int i=0;i<len;i++) {
+                cout << chars[rand() % chars.length()];
+            }
+            cout << endl;
+        }
+
+        // -------- 4. PRIME --------
+        else if(choice == 4) {
+            int n, flag=1;
+            cout << "Enter number: ";
+            cin >> n;
+
+            if(n <= 1) flag = 0;
+
+            for(int i=2;i*i<=n;i++) {
+                if(n % i == 0) {
+                    flag = 0;
+                    break;
+                }
+            }
+
+            if(flag) cout << "Prime Number\n";
+            else cout << "Not Prime\n";
+        }
+
+        // -------- 5. PALINDROME --------
+        else if(choice == 5) {
+            int n, rev=0, temp;
+            cout << "Enter number: ";
+            cin >> n;
+
+            temp = n;
+            while(n > 0) {
+                rev = rev*10 + n%10;
+                n/=10;
+            }
+
+            if(temp == rev) cout << "Palindrome\n";
+            else cout << "Not Palindrome\n";
+        }
+
+        // -------- 6. NUMBER TOOLS --------
+        else if(choice == 6) {
+            int n;
+            cout << "Enter number: ";
+            cin >> n;
+
+            int temp = n, sum=0, rev=0;
+            long long fact=1;
+
+            while(temp > 0) {
+                int d = temp % 10;
+                sum += d;
+                rev = rev*10 + d;
+                fact *= d;
+                temp /= 10;
+            }
+
+            cout << "Sum of digits = " << sum << endl;
+            cout << "Reverse = " << rev << endl;
+            cout << "Product of digits = " << fact << endl;
+        }
+
+        // -------- 7. FILE SIZE --------
+        else if(choice == 7) {
+            double kb;
+            cout << "Enter size in KB: ";
+            cin >> kb;
+
+            cout << "MB = " << kb/1024 << endl;
+            cout << "GB = " << kb/(1024*1024) << endl;
+        }
+
+        else if(choice == 8) {
+            cout << "Exiting...\n";
+        }
+
+        else {
+            cout << "Invalid choice!\n";
+        }
+
+    } while(choice != 8);
+    return 0;
+    }
+
+    static int tip_calculator()
+    {
+        int choice;
+
+    do {
+        cout << "\nTip Calculator\n";
+        cout << "1. Calculate Tip & Split Bill\n";
+        cout << "2. Show Tip Amount Only\n";
+        cout << "3. Exit\n";
+        cout << "Enter choice: ";
+        cin >> choice;
+
+        if(choice == 1 || choice == 2) {
+            double bill, tipPercent;
+            int people;
+
+            cout << "Enter total bill amount: ";
+            cin >> bill;
+
+            if(bill <= 0) {
+                cout << "Invalid bill amount!\n";
+                continue;
+            }
+
+            // Tip selection
+            int tipChoice;
+            cout << "\nSelect Tip:\n";
+            cout << "1. 5%\n2. 10%\n3. 15%\n4. Custom\n";
+            cout << "Enter choice: ";
+            cin >> tipChoice;
+
+            if(tipChoice == 1) tipPercent = 5;
+            else if(tipChoice == 2) tipPercent = 10;
+            else if(tipChoice == 3) tipPercent = 15;
+            else if(tipChoice == 4) {
+                cout << "Enter custom tip %: ";
+                cin >> tipPercent;
+                if(tipPercent < 0) {
+                    cout << "Invalid tip!\n";
+                    continue;
+                }
+            }
+            else {
+                cout << "Invalid choice!\n";
+                continue;
+            }
+
+            double tipAmount = (bill * tipPercent) / 100.0;
+
+            if(choice == 2) {
+                cout << "Tip Amount = " << tipAmount << endl;
+                continue;
+            }
+
+            cout << "Enter number of people: ";
+            cin >> people;
+
+            if(people <= 0) {
+                cout << "Invalid number of people!\n";
+                continue;
+            }
+
+            double total = bill + tipAmount;
+            double perPerson = total / people;
+
+            // Optional rounding
+            char roundOpt;
+            cout << "Round off per person amount? (y/n): ";
+            cin >> roundOpt;
+
+            if(roundOpt == 'y' || roundOpt == 'Y') {
+                perPerson = round(perPerson);
+            }
+
+            cout << "\n--- Result ---\n";
+            cout << "Bill Amount = " << bill << endl;
+            cout << "Tip (" << tipPercent << "%) = " << tipAmount << endl;
+            cout << "Total Amount = " << total << endl;
+            cout << "Each Person Pays = " << perPerson << endl;
+        }
+
+        else if(choice == 3) {
+            cout << "Exiting...\n";
+        }
+
+        else {
+            cout << "Invalid choice!\n";
+        }
+
+    } while(choice != 3);
+
+        return 0;
+    }
+
+    static int Loan_Eligibility_Calculator()
+    {
+        int choice;
+
+    do {
+        cout << "\nLoan Eligibility Calculator\n";
+        cout << "1. Check Eligibility\n";
+        cout << "2. Estimate Loan Amount\n";
+        cout << "3. Exit\n";
+        cout << "Enter choice: ";
+        cin >> choice;
+
+        if(choice == 1 || choice == 2) {
+            double income, expenses, emi;
+
+            cout << "Enter Monthly Income: ";
+            cin >> income;
+
+            cout << "Enter Monthly Expenses: ";
+            cin >> expenses;
+
+            cout << "Enter Existing EMI: ";
+            cin >> emi;
+
+            if(income <= 0 || expenses < 0 || emi < 0 || expenses + emi > income) {
+                cout << "Invalid financial data!\n";
+                continue;
+            }
+
+            double netIncome = income - expenses - emi;
+
+            // Bank rule: Max EMI should be 40% of income
+            double maxEMI = income * 0.4;
+
+            cout << "\n--- Result ---\n";
+            cout << "Net Available Income = " << netIncome << endl;
+            cout << "Maximum Allowed EMI = " << maxEMI << endl;
+
+            if(netIncome >= maxEMI) {
+                cout << "Status: Eligible for Loan\n";
+            } else {
+                cout << "Status: Not Eligible\n";
+            }
+
+            // -------- OPTION 2 --------
+            if(choice == 2) {
+                double rate, years;
+
+                cout << "\nEnter Interest Rate (% per year): ";
+                cin >> rate;
+
+                cout << "Enter Loan Tenure (years): ";
+                cin >> years;
+
+                if(rate <= 0 || years <= 0) {
+                    cout << "Invalid input!\n";
+                    continue;
+                }
+
+                // Simple estimation (not EMI formula)
+                double months = years * 12;
+
+                // Assume EMI = maxEMI
+                double loanAmount = maxEMI * months;
+
+                cout << "\nEstimated Loan Amount = " << loanAmount << endl;
+            }
+        }
+
+        else if(choice == 3) {
+            cout << "Exiting...\n";
+        }
+
+        else {
+            cout << "Invalid choice!\n";
+        }
+
+    } while(choice != 3);
+
+    return 0;
+    }
+
+    static int Fuel_Cost()
+    {
+        int choice;
+
+        do {
+            cout << "\nFuel Cost Calculator\n";
+            cout << "1. Calculate Fuel Cost\n";
+            cout << "2. Round Trip Cost\n";
+            cout << "3. Cost per KM\n";
+            cout << "4. Exit\n";
+            cout << "Enter choice: ";
+            cin >> choice;
+
+            double distance, mileage, price;
+
+            if(choice >= 1 && choice <= 3) {
+                cout << "Enter distance (km): ";
+                cin >> distance;
+
+                cout << "Enter mileage (km/l): ";
+                cin >> mileage;
+
+                cout << "Enter fuel price (per liter): ";
+                cin >> price;
+
+                if(distance <= 0 || mileage <= 0 || price <= 0) {
+                    cout << "Invalid input!\n";
+                    continue;
+                }
+            }
+
+            // -------- OPTION 1 --------
+            if(choice == 1) {
+                double fuel = distance / mileage;
+                double cost = fuel * price;
+
+                cout << "\nFuel Needed = " << fuel << " liters\n";
+                cout << "Total Cost = " << cost << endl;
+            }
+
+            // -------- OPTION 2 --------
+            else if(choice == 2) {
+                double totalDistance = distance * 2;
+                double fuel = totalDistance / mileage;
+                double cost = fuel * price;
+
+                cout << "\nRound Trip Distance = " << totalDistance << " km\n";
+                cout << "Fuel Needed = " << fuel << " liters\n";
+                cout << "Total Cost = " << cost << endl;
+            }
+
+            // -------- OPTION 3 --------
+            else if(choice == 3) {
+                double costPerKm = price / mileage;
+
+                cout << "\nCost per KM = " << costPerKm << endl;
+            }
+
+            else if(choice == 4) {
+                cout << "Exiting...\n";
+            }
+
+            else {
+                cout << "Invalid choice!\n";
+            }
+
+        } while(choice != 4);
+        return 0;
+    }
 };
 int main()
 {
