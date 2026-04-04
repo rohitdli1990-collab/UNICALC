@@ -121,6 +121,7 @@ public:
 
 class Scientific_calculation
 {
+public :
     static float Trigonometric()
     {
         int choice;
@@ -1644,6 +1645,7 @@ public:
 
 class Fitness
 {
+public:
     static float BMI()
     {
         cout << "Welcome to Body Mass index(BMI)" << endl;
@@ -1901,6 +1903,7 @@ class Fitness
 
 class Student_calculation
 {
+public:
     static float percentage()
     {
         int subject1;
@@ -2440,6 +2443,7 @@ class Student_calculation
 
 class Engineering_tool
 {
+public:
     static int ohm_Law()
     {
         int voltage;
@@ -2778,8 +2782,7 @@ class Engineering_tool
         float Velocity;
         float momentum;
 
-        cout << "welcome to Mechanical calculator\n"
-             << endl;
+        cout << "welcome to Mechanical calculator\n";
         cout << "1. Speed calculator\n";
         cout << "2. Force calculator\n";
         cout << "3. torque Calculator\n";
@@ -3011,6 +3014,7 @@ class Engineering_tool
 
 class Statices
 {
+public:
     static float Mean()
     {
         float count;
@@ -3569,6 +3573,7 @@ class Statices
 
 class Programming
 {
+public:
     static float Number_System_Convertors()
     {
         int choice;
@@ -3903,7 +3908,7 @@ class Programming
 
         do
         {
-            cout << "\nBitwise Calculator\n";
+            cout << "Bitwise Calculator\n";
             cout << "1. AND (&)\n";
             cout << "2. OR (|)\n";
             cout << "3. XOR (^)\n";
@@ -4463,6 +4468,7 @@ class Programming
 
 class DATE_TIME
 {
+public:
     static int Age_calculator()
     {
         int choice;
@@ -5370,8 +5376,9 @@ class DATE_TIME
     }
 };
 
-class Tools_and_utilites
+class Tools_and_Utilities
 {
+public:
     static int tool_unit()
     {
         int choice;
@@ -5838,6 +5845,540 @@ class Tools_and_utilites
 
 int main()
 {
+    Basic_Calc basic_calc;
+    Scientific_calculation scientific_calculation;
+    Unit_Converters unit_converters;
+    Currency_Convertor currency_convertor;
+    Finance finance;
+    Fitness fitness;
+    Student_calculation student_calculation;
+    Engineering_tool engineering_tool;
+    Statices statices;
+    Programming programming;
+    DATE_TIME date_time;
+    Tools_and_Utilities tools_and_utilities;
+    int Choose;
 
+
+    cout<<"Welcome to UNICALC(Universal Calculator)\n";
+    cout<<"1. Basic Calculation\n";
+    cout<<"2. Scientific calculator\n";
+    cout<<"3. Unit Convertor\n";
+    cout<<"4. Currency COnvertor\n";
+    cout<<"5. Finance Calculations\n";
+    cout<<"6. Fitness calculations\n";
+    cout<<"7. School Calculations\n";
+    cout<<"8. Engineering calculations\n";
+    cout<<"9. Statics\n";
+    cout<<"10. Programming calculations\n";
+    cout<<"11. Date and time Calculations\n";
+    cout<<"12. Tool and Utilities\n";
+    cout<<"Enter your Choose:- ";
+    cin>>Choose;
+
+    switch (Choose)
+    {
+    case 1:
+        int Bas_choose;
+
+        cout<<"Welcome to Basic Calculations\n";
+        cout<<"1. add\n";
+        cout<<"2. subtract\n";
+        cout<<"3. multiplication\n";
+        cout<<"4. Percentage\n";
+        cout<<"5. square\n";
+        cout<<"6. square root\n";
+        cout<<"7. cube\n";
+        cout<<"8. cube root\n";
+        cout<<"Enter your Choose:- ";
+        cin>>Bas_choose;
+
+        if (Bas_choose == 1)
+        {
+            basic_calc.add();
+        }
+        else if (Bas_choose == 2)
+        {
+            basic_calc.subtract();
+        }
+        else if (Bas_choose == 3)
+        {
+            basic_calc.multiplication();
+        }
+        else if (Bas_choose == 4)
+        {
+            basic_calc.Percentage();
+        }
+        else if (Bas_choose == 5)
+        {
+            basic_calc.square();
+        }
+        else if (Bas_choose == 6)
+        {
+            basic_calc.square_root();
+        }
+        else if (Bas_choose == 7)
+        {
+            basic_calc.cube();
+        }
+        else if (Bas_choose == 8)
+        {
+            basic_calc.cube_root();
+        }
+        else
+        {
+            cout<<"Invaild input";
+        }
+        break;
+
+    case 2:
+        int Sec_choose;
+
+        cout<<"Welcome to Scientific calculation\n";
+        cout<<"1. Trignometric Calculations\n";
+        cout<<"2. log calculations\n";
+        cout<<"3, Power calculations\n";
+        cout<<"4. factorial\n";
+        cout<<"5. Constants\n";
+        cout<<"6. Mode\n";
+        cout<<"Enter your Choose";
+        cin>>Sec_choose;
+
+        if (Sec_choose == 1)
+        {
+            scientific_calculation.Trigonometric();
+        }
+        else if (Sec_choose == 2)
+        {
+            scientific_calculation.log();
+        }
+        else if (Sec_choose == 3)
+        {
+            scientific_calculation.Power();
+        }
+        else if (Sec_choose == 4)
+        {
+            scientific_calculation.factorial();
+        }
+        else if (Sec_choose == 5)
+        {
+            scientific_calculation.Constants();
+        }
+        else if (Sec_choose == 6)
+        {
+            scientific_calculation.Mode();
+        }
+        break;
+
+    case 3:
+        int uni_Choose;
+
+        cout<<"Welcome to Unit Convertor\n";
+        cout<<"1. Length\n";
+        cout<<"2. Weight\n";
+        cout<<"3. Area\n";
+        cout<<"4. Volume\n";
+        cout<<"5. Speed\n";
+        cout<<"6. Temperature\n";
+        cout<<"7. Time\n";
+        cout<<"Enter the choose:- ";
+        cin>>uni_Choose;
+
+        if (uni_Choose == 1)
+        {
+            unit_converters.Length();
+        }
+        else if (uni_Choose == 2)
+        {
+            unit_converters.Weight();
+        }
+        else if (uni_Choose == 3)
+        {
+            unit_converters.Area();
+        }
+        else if (uni_Choose == 3)
+        {
+            unit_converters.Volume();
+        }
+        else if (uni_Choose == 4)
+        {
+            unit_converters.Speed();
+        }
+        else if (uni_Choose == 5)
+        {
+            unit_converters.Temperature();
+        }
+        else if (uni_Choose == 6)
+        {
+            unit_converters.Time();
+        }
+        else
+        {
+            cout<<"Invaild input\n";
+        }
+        break;
+
+    case 4:
+        currency_convertor.currency();
+        break;
+
+    case 5:
+        int fin_choose;
+
+        cout<<"Welcome to Finance calculator.\n";
+        cout<<"1. Simple interest Calculator\n";
+        cout<<"2. Compound Interset calculator\n";
+        cout<<"4. EMI Calculator\n";
+        cout<<"5. GST calculator\n";
+        cout<<"6. Discount calculator\n";
+        cout<<"Enter your choose:- ";
+        cin>>fin_choose;
+
+        if (fin_choose == 1)
+        {
+            finance.Simple_interest();
+        }
+        else if (fin_choose == 2)
+        {
+            finance.Compound_interest();
+        }
+        else if (fin_choose == 3)
+        {
+            finance.EMI_calculator();
+        }
+        else if (fin_choose == 4)
+        {
+            finance.GST_calculator();
+        }
+        else if (fin_choose == 5)
+        {
+            finance.Discount_Calculator();
+        }
+        else
+        {
+            cout<<"Invaild input";
+        }
+        break;
+
+    case 6:
+        int fit_choose;
+
+        cout<<"Welcome to Fitness Calculator\n";
+        cout<<"1. BMI calculator\n";
+        cout<<"2. BMR Calculator\n";
+        cout<<"3. TDEE calculator\n";
+        cout<<"4. BFP calculator\n";
+        cout<<"5. IBW calculator\n";
+        cout<<"6. Deadlift Calculator\n";
+        cout<<"7. Bench press Calculator\n";
+        cout<<"8. Squat calculator\n";
+        cout<<"Enter the Choose:- ";
+        cin>>fit_choose;
+
+        if (fit_choose == 1)
+        {
+            fitness.BMI();
+        }
+        else if (fit_choose == 2)
+        {
+            fitness.BMR();
+        }
+        else if (fit_choose == 3)
+        {
+            fitness.TDEE();
+        }
+        else if (fit_choose == 4)
+        {
+            fitness.BFP();
+        }
+        else if (fit_choose == 5)
+        {
+            fitness.IBW();
+        }
+        else if (fit_choose == 6)
+        {
+            fitness.DC();
+        }
+        else if (fit_choose == 7)
+        {
+            fitness.BP();
+        }
+        else if (fit_choose == 8)
+        {
+            fitness.Squat();
+        }
+        else
+        {
+            cout<<"Invaild input!\n";
+        }
+        break;
+
+    case 7:
+        int stu_Choose;
+
+        cout<<"Welcome to Student calculation\n";
+        cout<<"1. Percentage calculator\n";
+        cout<<"2. CGPA calculator\n";
+        cout<<"3. Average Marks calculator\n";
+        cout<<"4. Grade calculator\n";
+        cout<<"5. Age calculator\n";
+        cout<<"6. Attendance calculator\n";
+        cout<<"Enter your Choose:- ";
+        cin>>stu_Choose;
+
+        if (stu_Choose == 1)
+        {
+            student_calculation.percentage();
+        }
+        else if (stu_Choose == 2)
+        {
+            student_calculation.CGPA();
+        }
+        else if (stu_Choose == 3)
+        {
+            student_calculation.averageMarks();
+        }
+        else if (stu_Choose == 4)
+        {
+            student_calculation.gradeCalculate();
+        }
+        else if (stu_Choose == 5)
+        {
+            student_calculation.age_Calculator();
+        }
+        else if (stu_Choose == 6)
+        {
+            student_calculation.attendance_Calculator();
+        }
+        else
+        {
+            cout<<"Invaild input"<<endl;
+            break;
+        }
+    break;
+
+    case 8:
+        int Eng_choose;
+
+        cout<<"Welcome to Engineering calculator\n";
+        cout<<"1. Ohw law calculator\n";
+        cout<<"2. Power Calculator\n";
+        cout<<"3. Energy calculator\n";
+        cout<<"4. Series resistance calculator\n";
+        cout<<"5. Parallel resistance calculator\n";
+        cout<<"6. current calculation\n";
+        cout<<"7. Voltage Divide calculator\n";
+        cout<<"8. Area calculator\n";
+        cout<<"9. Volume calculator\n";
+        cout<<"10. Machanical Calculator\n";
+        cout<<"11. Electrial calculator\n";
+        cout<<"Enter your choose:- ";
+        cin>>Eng_choose;
+
+        switch (Eng_choose)
+        {
+        case 1:
+            engineering_tool.ohm_Law();
+            break;
+        case 2:
+            engineering_tool.Electrical_Power();
+            break;
+        case 3:
+            engineering_tool.Energy_Calculator();
+            break;
+        case 4:
+            engineering_tool.Series_resistance_calculator();
+            break;
+        case 5:
+            engineering_tool.Parallel_resistance_calculator();
+            break;
+        case 6:
+            engineering_tool.current_calculator();
+            break;
+        case 7:
+            engineering_tool.Voltage_Divide();
+            break;
+        case 8:
+            engineering_tool.Area_calculators();
+            break;
+        case 9:
+            engineering_tool.Volume_Calculators();
+            break;
+        case 10:
+            engineering_tool.Mechanical_calculator();
+            break;
+        case 11:
+            engineering_tool.Electrial();
+        default:
+            cout<<"Invaild input";
+        }
+        break;
+
+    case 9:
+        int sat_Choose;
+
+        cout<<"Welcome to Statics calculator\n";
+        cout<<"1. Mean Calculation\n";
+        cout<<"2. Median calculation\n";
+        cout<<"3. Mode calculation\n";
+        cout<<"4. Range Calculation\n";
+        cout<<"5. Count Number\n";
+        cout<<"6. Standard deviation calculation\n";
+        cout<<"7. Variance calculation\n";
+        cout<<"8. Probability calculation\n";
+        cout<<"9. Regression Calculation\n";
+        cout<<"Enter your choose:- ";
+        cin>>sat_Choose;
+
+        switch (sat_Choose)
+        {
+        case 1:
+            statices.Mean();
+            break;
+
+        case 2:
+            statices.Median();
+            break;
+
+        case 3:
+            statices.Mode();
+            break;
+
+        case 4:
+            statices.Range();
+            break;
+
+        case 5:
+            statices.count_number();
+            break;
+
+        case 6:
+            statices.Standard_Deviation();
+            break;
+
+        case 7:
+            statices.Variance();
+            break;
+
+        case 8:
+            statices.Probability();
+            break;
+
+        case 9:
+            statices.Regression();
+            break;
+
+        default:
+            cout<<"Invaild input";
+            break;
+        }
+        break;
+
+    case 10:
+        int Pro_choose;
+
+        cout<<"Welcome to Programming calculator\n";
+        cout<<"1. Number System convertor\n";
+        cout<<"2. Bitwise Operator Calculator\n";
+        cout<<"3. ASCII convertor\n";
+        cout<<"4. base Conversion\n";
+        cout<<"Enter your choose:- ";
+        cin>>Pro_choose;
+
+        if (Pro_choose == 1)
+        {
+            programming.Number_System_Convertors();
+        }
+        else if (Pro_choose == 2)
+        {
+            programming.BitWise_Operations();
+        }
+        else if (Pro_choose == 3)
+        {
+            programming.ASCII_Convertor();
+        }
+        else if (Pro_choose == 4)
+        {
+            programming.base_conversion();
+        }
+        else
+        {
+            cout<<"Invaild input";
+        }
+        break;
+
+    case 11:
+        int Dat_choose;
+
+        cout<<"Welcome to Date and time Calculator\n";
+        cout<<"1. Age Calculator\n";
+        cout<<"2. Date Difference Calculator\n";
+        cout<<"3. Working Days Calculator\n";
+        cout<<"4. Time Zone Convertor\n";
+        cout<<"5. Date and Time Convertor\n";
+        cout<<"Enter your choose:- ";
+        cin>>Dat_choose;
+
+        if (Dat_choose == 1)
+        {
+            date_time.Age_calculator();
+        }
+        else if (Dat_choose == 2)
+        {
+            date_time.Date_Difference_calculator();
+        }
+        else if (Dat_choose == 3)
+        {
+            date_time.Working_Days_calculator();
+        }
+        else if (Dat_choose == 4)
+        {
+            date_time.Time_Zone_Convertor();
+        }
+        else if (Dat_choose == 5)
+        {
+            date_time.Date_time_convertor();
+        }
+        else
+        {
+            cout<<"Invaild input";
+        }
+        break;
+
+    case 12:
+        int tool_Choose;
+
+        cout<<"Welcome to Tool and utilities Calculator\n";
+        cout<<"1. Tool unit calculator\n";
+        cout<<"2. tip Calculator\n";
+        cout<<"3. Loan Eligibility calculator\n";
+        cout<<"4. flue Cost calculator\n";
+        cout<<"Enter your choose:- ";
+        cin>>tool_Choose;
+
+        if (tool_Choose == 1)
+        {
+            tools_and_utilities.tool_unit();
+        }
+        else if (tool_Choose == 2)
+        {
+            tools_and_utilities.tip_calculator();
+        }
+        else if (tool_Choose == 3)
+        {
+            tools_and_utilities.Loan_Eligibility_Calculator();
+        }
+        else if (tool_Choose == 4)
+        {
+            tools_and_utilities.Fuel_Cost();
+        }
+        else
+        {
+            cout<<"Invaild input";
+        }
+        break;
+    default:
+        cout<<"Invaild Input";
+    }
     return 0;
 }
